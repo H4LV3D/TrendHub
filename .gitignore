@@ -1,0 +1,19 @@
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# Install dependencies
+npm install
+node_modules
+package-lock.json
+*DS_Store
+
+# Build folder
+build
+
+# Coverage folder
+coverage
+
