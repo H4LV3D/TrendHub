@@ -4,10 +4,13 @@
 
 TrendHub is a Next.js version 13 website that serves as a central hub for newsletters, podcasts, and blogs. It provides an intuitive platform for Gen Z users to explore, discover, and stay updated with the latest content trends.
 
+## Still in Construction !!!
+
 ## Table of Contents
 
 - [TrendHub](#trendhub)
   - [Description](#description)
+  - [Still in Construction !!!](#still-in-construction-)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Demo](#demo)
