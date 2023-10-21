@@ -6,98 +6,98 @@
   font-family: 'oleo';
   font-weight: 400;
   font-style: normal;
-  src: url('/src/fonts/Oleo_Script/OleoScript-Regular.ttf');
+  src: url('/assets/fonts/Oleo_Script/OleoScript-Regular.ttf');
 }
 
 @font-face {
   font-family: 'oleo';
   font-weight: 700;
   font-style: Bold;
-  src: url('/src/fonts/Oleo_Script/OleoScript-Bold.ttf');
+  src: url('/assets/fonts/Oleo_Script/OleoScript-Bold.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 100;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-Thin.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-Thin.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 200;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-ExtraLight.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-ExtraLight.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 300;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-Light.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-Light.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 400;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-Regular.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-Regular.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 500;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-Medium.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-Medium.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 600;
   font-style: normal;
-  src: url('/src/fonts/Raleway/static/Raleway-SemiBold.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-SemiBold.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 700;
   font-style: Bold;
-  src: url('/src/src/fonts/Raleway/static/Raleway-Bold.ttf');
+  src: url('/assets/src/fonts/Raleway/static/Raleway-Bold.ttf');
 }
 
 @font-face {
   font-family: 'raleway';
   font-weight: 800;
   font-style: Bold;
-  src: url('/src/fonts/Raleway/static/Raleway-Black.ttf');
+  src: url('/assets/fonts/Raleway/static/Raleway-Black.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 400;
   font-style: normal;
-  src: url('/src/fonts/Poppins/static/Poppins-Regular.ttf');
+  src: url('/assets/fonts/Poppins/static/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 500;
   font-style: normal;
-  src: url('/src/fonts/Poppins/static/Poppins-Medium.ttf');
+  src: url('/assets/fonts/Poppins/static/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 600;
   font-style: normal;
-  src: url('/src/fonts/Poppins/static/Poppins-SemiBold.ttf');
+  src: url('/assets/fonts/Poppins/static/Poppins-SemiBold.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 700;
   font-style: Bold;
-  src: url('/src/fonts/Poppins/static/Poppins-Bold.ttf');
+  src: url('/assets/fonts/Poppins/static/Poppins-Bold.ttf');
 }
 
 .number {
