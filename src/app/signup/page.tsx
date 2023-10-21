@@ -15,8 +15,8 @@ const page = (props: Props) => {
         <SignUpForm />
         <div className="mt-8">
           <p className="text-sm mb-2 text-neutral-500">Sign up with</p>
-          <SecondaryButton text="Google" />
-          <SecondaryButton text="Apple" />
+          <SecondaryButton link="https://google.com" text="Google" />
+          <SecondaryButton link="https://apple.com" text="Apple" />
         </div>
       </AuthLayout>
     </>
