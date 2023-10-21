@@ -12,7 +12,17 @@ const Toggle = () => {
   return (
     <div className="flex items-center justify-center">
       <label htmlFor="checkbox">
-        {theme === "dark" ? <Icons icon={moon} /> : <Icons icon={sun} />}
+        {theme === "dark" ? (
+          <Icons
+            icon={moon}
+            action={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
+        ) : (
+          <Icons
+            icon={sun}
+            action={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
+        )}
       </label>
       <div className="hidden xxl:block">
         <label className="toggleDarkBtn">
@@ -20,7 +30,7 @@ const Toggle = () => {
             type="checkbox"
             id="checkbox"
             className="dark:bg-gray-300"
-            defaultChecked={theme === "light"}
+            defaultChecked={theme === "dark"}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           />
           <span className="slideBtnTg round"></span>
