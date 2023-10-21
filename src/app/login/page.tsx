@@ -32,8 +32,8 @@ const Login = (props: Props) => {
       )}
       <AuthLayout form="login">
         <LoginForm setNotify={setNotify} setMessage={setMessage} />
-        <div className="mt-8">
-          <p className="text-sm mb-2 text-neutral-500">Sign in with ...</p>
+        <div className="mt-8 flex flex-col space-y-2">
+          <p className="text-sm text-neutral-500">Sign in with ...</p>
           <SecondaryButton link="https://google.com" text="Google" />
           <SecondaryButton link="https://apple.com" text="Apple" />
         </div>

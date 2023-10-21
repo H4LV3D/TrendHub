@@ -13,8 +13,8 @@ const page = (props: Props) => {
     <>
       <AuthLayout form="signup">
         <SignUpForm />
-        <div className="mt-8">
-          <p className="text-sm mb-2 text-neutral-500">Sign up with</p>
+        <div className="mt-8 flex flex-col space-y-2">
+          <p className="text-sm text-neutral-500">Sign up with</p>
           <SecondaryButton link="https://google.com" text="Google" />
           <SecondaryButton link="https://apple.com" text="Apple" />
         </div>
