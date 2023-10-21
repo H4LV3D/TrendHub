@@ -83,9 +83,7 @@ const Step3: React.FC<Props> = ({ register, errors, isSubmitting }) => {
             action={() => {}}
           />
         </div>
-        <div className="grid place-items-center">
-          <SecondaryButton text="Login" link="/login" />
-        </div>
+        <SecondaryButton text="Login" link="/login" />
       </div>
     </>
   );
