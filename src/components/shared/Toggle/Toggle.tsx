@@ -13,15 +13,9 @@ const Toggle = () => {
     <div className="flex items-center justify-center">
       <label htmlFor="checkbox">
         {theme === "dark" ? (
-          <Icons
-            icon={moon}
-            action={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
+          <Icons icon={moon} action={() => setTheme("light")} />
         ) : (
-          <Icons
-            icon={sun}
-            action={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
+          <Icons icon={sun} action={() => setTheme("dark")} />
         )}
       </label>
       <div className="hidden xxl:block">
