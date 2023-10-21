@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'oleo';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Oleo_Script/OleoScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'oleo';
+  font-weight: 700;
+  font-style: Bold;
+  src: url('/fonts/Oleo_Script/OleoScript-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 100;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 200;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-Light.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/fonts/Raleway/static/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 700;
+  font-style: Bold;
+  src: url('/src/fonts/Raleway/static/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: 800;
+  font-style: Bold;
+  src: url('/src/fonts/Raleway/static/Raleway-Black.ttf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/src/fonts/Poppins/static/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/src/fonts/Poppins/static/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/src/fonts/Poppins/static/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  font-weight: 700;
+  font-style: Bold;
+  src: url('/src/fonts/Poppins/static/Poppins-Bold.ttf');
+}
+
+.number {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 200 !important;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(calc(0px - 50%));
+  }
+}
+
+.animate-marquee {
+  animation-name: marquee;
+  animation-duration: 180s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animate-marquee-login {
+  animation-name: marquee;
+  animation-duration: 270s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.marquee-height {
+  height: 90vh !important;
+}
+
+.cursor {
+  background-color: #111;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
