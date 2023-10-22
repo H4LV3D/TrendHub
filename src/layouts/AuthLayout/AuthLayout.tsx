@@ -35,7 +35,9 @@ function AuthLayout({ children, form }: Props) {
           {form !== "signup" && step !== 2 ? (
             <>
               <div className="flex flex-col justify-center items-center min-h-screen">
-                <BrandLogo />
+                <dv className="mb-3">
+                  <BrandLogo />
+                </dv>
                 <div className="w-[275px] h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-xl ">
                   {avatarId === null ? (
                     <div className="w-full h-[330px] flex items-center justify-center">
@@ -109,7 +111,7 @@ function AuthLayout({ children, form }: Props) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
-          className={` bg-[#F7F7F7] `}
+          className={` `}
         >
           <div className="border rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
             <div className="mb-1">
