@@ -6,7 +6,7 @@ function Collaborative({}: Props) {
   return (
     <>
       <div className="relative py-20 bg-[#F7F7F7] dark:bg-neutral-800/75 w-full overflow-hidden flex flex-col items-center justify-center dark:border-neutral-700">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center dark:text-neutral-400">
           <div className="flex flex-col justify-center items-center lg:w-[900px]">
             <p className="text-2xl mb-4">Introducing</p>
             <h1 className="text-5xl sm:text-6xl dark:text-neutral-200 font-oleo font-normal text-center text-black">
