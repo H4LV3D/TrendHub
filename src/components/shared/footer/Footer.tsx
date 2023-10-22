@@ -9,23 +9,23 @@ const footerData = {
   about: [
     {
       title: "FAQ's",
-      link: "/about",
+      link: "/faq",
     },
     {
       title: "Careers",
-      link: "/about",
+      link: "/career",
     },
     {
       title: "Feedback",
-      link: "/about",
+      link: "/feedback",
     },
     {
       title: "Privacy Policy",
-      link: "/about",
+      link: "/privacy",
     },
     {
       title: "Terms & Conditions",
-      link: "/about",
+      link: "/terms",
     },
   ],
   resources: [
