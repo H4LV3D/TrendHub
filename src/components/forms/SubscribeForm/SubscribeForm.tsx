@@ -55,7 +55,7 @@ function ForgotPasswordForm({ setNotify, setMessage }: Props) {
                 id="email"
                 type="email"
                 autoComplete="on"
-                placeholder="Email"
+                placeholder=""
                 required
                 // {...register("email")}
                 className="w-full font-raleway rounded-md py-2.5 px-5 font-light text-neutral-600 text-base focus:text-black focus:border-black dark:text-neutral-400 dark:focus:text-neutral-300 bg-transparent border border-neutral-300 hover:border-neutral-700 dark:border-neutral-800 focus:outline-none dark:focus:border-neutral-700 placeholder-neutral-400"
