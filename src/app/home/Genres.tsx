@@ -36,8 +36,8 @@ function Genres({}: Props) {
           item.name === "Romance & Relationships" ? "flex-row-reverse" : ""
         } items-center`}
       >
-        <div className="w-1/2 bg-[#F7F7F7] dark:bg-neutral-700 h-[70vh] flex flex-col justify-center items-center">
-          <h4 className="font-oleo text-3xl mb-4 text-neutral-400/10">
+        <div className="w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[70vh] flex flex-col justify-center items-center">
+          <h4 className="font-oleo text-3xl mb-4 text-neutral-400">
             {item.name}
           </h4>
           <div className="w-4/5 md:w-3/5 mx-auto">
