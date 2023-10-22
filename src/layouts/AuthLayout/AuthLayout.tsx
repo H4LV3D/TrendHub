@@ -28,7 +28,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 100, opacity: 0.8 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-screen border bg-white hidden lg:block"
+        className="w-full h-screen border bg-white dark:bg-[#191919] hidden lg:block"
       >
         <div className="mx-8 min-h-screen overflow-hidden">
           {form !== "signup" && step !== 2 ? (
@@ -101,7 +101,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.5 }}
         transition={{ duration: 0.5 }}
-        className={`w-full min-h-screen flex items-center justify-center bg-[#F7F7F7]`}
+        className={`w-full min-h-screen flex items-center justify-center bg-[#F7F7F7] dark:bg-neutral-800 `}
       >
         <motion.div
           initial={{ x: -100, opacity: 0.3 }}
