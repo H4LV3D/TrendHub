@@ -113,7 +113,7 @@ function AuthLayout({ children, form }: Props) {
           transition={{ duration: 1 }}
           className={` `}
         >
-          <div className="border rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
+          <div className="border dark:border-neutral-700 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>

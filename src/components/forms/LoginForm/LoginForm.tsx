@@ -46,9 +46,9 @@ function LoginForm({ setNotify, setMessage }: Props) {
   };
   return (
     <>
-      <p className="text-sm sm:text-base md:text-2xl font-normal md:font-medium text-gray-800 dark:text-neutral-400 font-raleway mb-3">
+      <h3 className="text-sm sm:text-base md:text-2xl font-normal md:font-medium text-gray-800 dark:text-neutral-400 font-raleway mb-3">
         Welcome back, Login.
-      </p>
+      </h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full sm:w-[350px]">
           <Input
