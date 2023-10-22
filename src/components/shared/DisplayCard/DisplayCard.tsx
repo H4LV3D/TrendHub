@@ -40,7 +40,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
     <>
       <Link href={display.link}>
         <div
-          className={`border dark:border-neutral-600 rounded-xl flex hover:border-neutral-600 ${
+          className={`border dark:border-neutral-700 rounded-xl flex hover:border-neutral-600 ${
             arrangement === "double" ? "" : "w-full items-center"
           } ${arrangement === "cards" ? "flex-col " : ""} `}
         >
@@ -60,7 +60,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 : arrangement === "double"
                 ? "md:w-[100%] xl:w-[65%] rounded-r-xl min-h-[16rem]"
                 : "w-full rounded-b-xl min-h-[19rem]"
-            }   p-6  border  dark:text-neutral-300 dark:border-neutral-600 `}
+            }   p-6  border  dark:text-neutral-400 dark:border-neutral-700 `}
           >
             <div className="mb-2 flex justify-between ">
               <p className="text-sm">{display.episode}</p>
@@ -71,7 +71,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 arrangement !== "single"
                   ? "text-xl md:text-2xl mb-2"
                   : "text-xl md:text-3xl mb-2 md:mb-4"
-              } font-[500] text-[#000] line-clamp-2`}
+              } font-[500] text-[#000] dark:text-neutral-200 line-clamp-2`}
             >
               {display.title}
             </h1>
