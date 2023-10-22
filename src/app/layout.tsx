@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/contexts/themeContext";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import Head from "next/head";
+import { ThemeContext } from "@/contexts/themeContext";
+import { useContext } from "react";
 
 const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,7 +24,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const theme = localStorage.getItem("current-theme");
+  const { theme } = useContext(ThemeContext);
   console.log(theme);
   return (
     <html lang="en">
