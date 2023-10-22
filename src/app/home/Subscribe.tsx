@@ -10,7 +10,7 @@ type Props = {
 function Subscribe({ setNotify, setMessage }: Props) {
   return (
     <>
-      <div className="dark:bg-neutral-800 h-[88vh] w-full flex flex-col items-center justify-center">
+      <div className="dark:bg-[#191919] h-[88vh] w-full flex flex-col items-center justify-center">
         <h4 className="text-4xl md:text-6xl font-oleo font-light dark:text-neutral-400 text-black mb-2">
           Do you want more?
         </h4>
