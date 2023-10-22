@@ -51,7 +51,7 @@ function AuthLayout({ children, form }: Props) {
                     />
                   )}
                 </div>
-                <p className="w-1/2 mx-auto mt-8 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
+                <p className="w-1/2 mx-auto mt-6 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
                   {form === "login"
                     ? avatarId === null
                       ? "Enter your email to see your custom illustration"
