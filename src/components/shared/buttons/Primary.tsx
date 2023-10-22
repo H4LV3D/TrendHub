@@ -12,7 +12,7 @@ function PrimaryButton({ loading, text, type, action }: Props) {
   return (
     <>
       <button
-        className={` bg-black dark:bg-neutral-800 dark:hover:bg-neutral-700 w-full h-[3.5rem] rounded-md font-raleway font-normal text-lg text-white dark:text-neutral-400 border border-black hover:shadow-xl hover:text-gray-500 ${
+        className={` bg-black dark:bg-neutral-800 dark:hover:bg-neutral-700 w-full h-[3.5rem] rounded-md font-raleway font-normal text-lg text-white dark:text-neutral-400 border border-black dark:border-neutral-800 hover:shadow-xl hover:text-gray-300 ${
           loading ? " h-[3.5rem] py-1 bg-black" : "cursor-pointer"
         }`}
         type={type}
