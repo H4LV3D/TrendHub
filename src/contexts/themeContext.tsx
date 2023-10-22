@@ -43,7 +43,7 @@ export const ThemeProvider = ({
 
     root.classList.remove(isDark ? "light" : "dark");
     root.classList.add(existing);
-
+    setTheme(existing);
     localStorage.setItem("current-theme", existing);
   };
 
