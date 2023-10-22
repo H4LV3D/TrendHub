@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { hideMobileSidebar } from "../../../store/slices/mobileSidebar/mobileSidebarSlice";
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { usePathname } from "next/navigation";
+import BrandLogo from "../BrandLogo/BrandLogo";
 
 const MobileSidebar: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -102,12 +103,12 @@ const MobileSidebar: React.FC = () => {
             duration: 0.3,
           },
         }}
-        className="h-full w-[18rem] px-3 bg-white"
+        className="h-full w-[18rem] px-3 bg-white dark:bg-neutral-800"
       >
         <div
-          className={`h-[5.375rem] border-b border-gray-200 dark:border-border-bg-dark flex items-center pt-6 pl-3`}
+          className={`h-[5.375rem] border-b border-gray-200 dark:border-neutral-700 flex items-center pt-6 pl-3`}
         >
-          <h3 className="font-oleo font-normal text-3xl md:text-4xl">Gen-Z</h3>
+          <BrandLogo />
         </div>
         <div className="h-[calc(100%-5.375rem)] flex flex-col justify-between py-8">
           <ul className="mb-10">

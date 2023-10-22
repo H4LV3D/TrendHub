@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { useRouter } from "next/navigation";
+import BrandLogo from "@/components/shared/BrandLogo/BrandLogo";
 
 type Props = {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ function AuthLayout({ children, form }: Props) {
           {form !== "signup" && step !== 2 ? (
             <>
               <div className="flex flex-col justify-center items-center min-h-screen">
-                <h3 className="font-oleo font-normal text-4xl mb-6">Gen-Z</h3>
+                <BrandLogo />
                 <div className="w-[275px] h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-xl ">
                   {avatarId === null ? (
                     <div className="w-full h-[330px] flex items-center justify-center">
@@ -47,7 +48,7 @@ function AuthLayout({ children, form }: Props) {
                       alt="A vector illustration of a boy holding a laptop open before him"
                     />
                   )}
-                </div>
+                B</div>
                 <p className="w-1/2 mx-auto mt-8 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
                   {form === "login"
                     ? avatarId === null

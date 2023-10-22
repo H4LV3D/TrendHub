@@ -14,6 +14,7 @@ import { showMobileSidebar } from "@/store/slices/mobileSidebar/mobileSidebarSli
 import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
 import { showSearchBox } from "@/store/slices/searchbox/searchBoxSlice";
 import PrimaryButton from "../buttons/Primary";
+import BrandLogo from "../BrandLogo/BrandLogo";
 
 type Props = {
   nav?: boolean;
@@ -66,9 +67,7 @@ function Header({ nav }: Props) {
         <div className={`${headerClasses}`}>
           <Link href="/" className="hidden lg:block" shallow={true}>
             <div className="group relative flex justify-center items-center border-gray-400 hover:border-gray-700 dark:border-gray-600 dark:hover:border-gray-300 rounded-md dark:text-neutral-300 py-2 cursor-pointer">
-              <h3 className="font-oleo font-normal text-blacktext-3xl lg:text-4xl">
-                Gen-Z
-              </h3>
+              <BrandLogo />
               <div className="opacity-0 bg-black dark:bg-neutral-900 dark:text-neutral-400 text-white text-center text-xs font-raleway rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-4 mt-4 px-4 pointer-events-none">
                 Home
               </div>
@@ -78,9 +77,7 @@ function Header({ nav }: Props) {
             className="lg:hidden"
             onClick={() => dispatch(showMobileSidebar())}
           >
-            <h3 className="font-oleo font-normal text-3xl lg:text-4xl lg:hidden">
-              Gen-Z
-            </h3>
+            <BrandLogo />
           </button>
 
           <div className="hidden lg:block">
