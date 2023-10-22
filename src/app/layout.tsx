@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/contexts/themeContext";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import Head from "next/head";
+import { ThemeContext } from "@/contexts/themeContext";
+import { useContext } from "react";
 
 const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,6 +24,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { theme } = useContext(ThemeContext);
   return (
     <html lang="en">
       <Head key="app-head">
@@ -46,7 +49,11 @@ export default function RootLayout({
           href="/assets/fontawesome-free-6.2.1-web/css/fontawesome.css"
         />
       </Head>
-      <body className={`${raleway.className} `}>
+      <body
+        className={`${raleway.className} ${
+          theme === light ? "bg-white" : "bg-neutral-800"
+        }`}
+      >
         <Provider store={store}>
           <ThemeProvider>{children}</ThemeProvider>
         </Provider>
