@@ -62,7 +62,7 @@ function Header({ nav }: Props) {
   } ${hasShadow ? "shadow-sm border-gray-200" : ""}`;
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white dark:bg-[#191919] z-20">
+    <div className="fixed top-0 left-0 w-full bg-white dark:bg-neutral-800 z-20">
       <MaxWidthProvider>
         <div className={`${headerClasses}`}>
           <Link href="/" className="hidden lg:block" shallow={true}>

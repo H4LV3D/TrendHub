@@ -51,7 +51,7 @@ export default function RootLayout({
       </Head>
       <body
         className={`${raleway.className} ${
-          theme === light ? "bg-white" : "bg-neutral-800"
+          theme === "light" ? "bg-white" : "bg-neutral-800"
         }`}
       >
         <Provider store={store}>
