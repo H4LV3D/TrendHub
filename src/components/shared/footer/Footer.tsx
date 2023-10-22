@@ -132,7 +132,7 @@ function Footer({}: Props) {
             </div>
           </div>
 
-          <hr className="mb-4 dark:border-neutral-800" />
+          <hr className="mb-4 dark:border-neutral-700" />
 
           <div className="sm:grid grid-cols-1 sm:grid-cols-2 items-center py-2 mt-4">
             <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4">
@@ -144,7 +144,7 @@ function Footer({}: Props) {
                 <a
                   href={item.link}
                   key={index}
-                  className="border p-1 rounded-md hover:border-black dark:hover:border-white"
+                  className="border dark:border-neutral-700 p-1 rounded-md hover:border-black dark:hover:border-white"
                 >
                   <div className="group relative font-raleway font-normal cursor-pointer dark:text-white text-black pr-8 hover:text-xl py-3.5">
                     <i className={`${item.icon} fa-lg fa-fw`}></i>
