@@ -29,7 +29,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 100, opacity: 0.8 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-screen border bg-white dark:bg-[#191919] hidden lg:block"
+        className="w-full h-screen bg-white dark:bg-[#191919] hidden lg:block"
       >
         <div className="mx-8 min-h-screen overflow-hidden">
           {form !== "signup" && step !== 2 ? (
@@ -48,7 +48,7 @@ function AuthLayout({ children, form }: Props) {
                       alt="A vector illustration of a boy holding a laptop open before him"
                     />
                   )}
-                B</div>
+                </div>
                 <p className="w-1/2 mx-auto mt-8 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
                   {form === "login"
                     ? avatarId === null
