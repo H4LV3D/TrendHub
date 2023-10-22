@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import ButtonLoader from "../ButtonLoader/ButtonLoader";
+import BrandLogo from "../BrandLogo/BrandLogo";
 
 const Loader: React.FC = () => {
   return (
@@ -14,9 +15,7 @@ const Loader: React.FC = () => {
       <div className="h-screen w-screen bg-block-bg grid place-items-center">
         <div>
           <div className="mb-4">
-            <h3 className="font-oleo font-normal text-3xl sm:text-4xl">
-              Gen-Z
-            </h3>
+            <BrandLogo />
           </div>
           <ButtonLoader color="#000" />
         </div>
