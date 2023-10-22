@@ -24,7 +24,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
 
   return (
     <div>
-      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b mb-8">
+      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-600 mb-8">
         <div className="w-full  flex items-center space-x-2">
           <Icons icon={plus} small={true} />
           {Nav.map((nav, index: number) => (
@@ -35,7 +35,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
                         : "text-lg p-2 text-neutral-400 dark:text-neutral-400 hover:text-black"
                      ${
                        navTab === nav.text
-                         ? "!text-black dark:text-neutral-400"
+                         ? "text-black dark:text-neutral-200"
                          : ""
                      } `}
               >
