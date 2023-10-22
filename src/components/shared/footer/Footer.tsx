@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import pageData from "@/data/index.json";
+import BrandLogo from "../BrandLogo/BrandLogo";
 
 type Props = {};
 
@@ -78,11 +79,11 @@ function Footer({}: Props) {
   const { socials } = pageData;
   return (
     <>
-      <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 py-20">
+      <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
         <div className="px-6 lg:px-0 md:container mx-auto xl:w-[950px]">
           <div className="sm:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-1/3 lg:w-full">
-              <h3 className="font-oleo font-normal text-4xl">Gen-Z</h3>
+              <BrandLogo />
             </div>
 
             <div className="hidden w-full sm:w-2/3 md:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
