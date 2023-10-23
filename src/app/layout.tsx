@@ -25,7 +25,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
   return (
     <html lang="en">
       <Head key="app-head">
