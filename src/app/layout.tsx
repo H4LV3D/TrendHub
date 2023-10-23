@@ -51,11 +51,7 @@ export default function RootLayout({
           href="/assets/fontawesome-free-6.2.1-web/css/fontawesome.css"
         />
       </Head>
-      <body
-        className={`${raleway.className} ${
-          theme === "light" ? "bg-white" : "bg-[#191919]"
-        }`}
-      >
+      <body className={`${raleway.className} bg-[#191919] `}>
         <Provider store={store}>
           <ThemeProvider>{children}</ThemeProvider>
         </Provider>
