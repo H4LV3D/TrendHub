@@ -5,10 +5,10 @@ import pageData from "@/data/index.json";
 import Genres from "./home/Genres";
 import Collaborative from "./home/Collaborative";
 import Review from "./home/Reviews";
+import Generations from "./home/Generations";
 import Subscribe from "./home/Subscribe";
 import Footer from "@/components/shared/footer/Footer";
 import Banner from "@/components/shared/Banner/Banner";
-import Generations from "./home/Generations";
 import Head from "next/head";
 
 export default function Home({}: {}) {
@@ -45,7 +45,7 @@ export default function Home({}: {}) {
       )}
 
       <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="md:container mx-auto px-6 lg:px-0 font-raleway ">
           <Banner
             heading={{
