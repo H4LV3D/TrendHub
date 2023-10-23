@@ -29,7 +29,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 100, opacity: 0.8 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-screen bg-white dark:bg-[#191919] hidden lg:block"
+        className="w-full h-screen bg-white dark:bg-neutral-800 hidden md:block"
       >
         <div className="mx-8 min-h-screen overflow-hidden">
           {form !== "signup" && step !== 2 ? (
@@ -104,7 +104,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.5 }}
         transition={{ duration: 0.5 }}
-        className={`w-full min-h-screen flex items-center justify-center bg-[#F7F7F7] dark:bg-neutral-800 `}
+        className={`w-full min-h-screen flex items-center justify-center bg-[#F7F7F7] dark:bg-[#191919] `}
       >
         <motion.div
           initial={{ x: -100, opacity: 0.3 }}
@@ -113,7 +113,7 @@ function AuthLayout({ children, form }: Props) {
           transition={{ duration: 1 }}
           className={` `}
         >
-          <div className="border dark:border-neutral-700 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
+          <div className="border dark:border-neutral-800 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>

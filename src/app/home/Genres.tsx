@@ -19,11 +19,13 @@ function Genres({}: Props) {
 
   const subSections = ({ title, teaser }: TitleAndTeaser) => {
     return (
-      <div className="border dark:border-neutral-400 rounded-lg p-3 mb-3">
-        <h5 className="font-raleway font-medium text-lg pb-1 text-neutral-400">
+      <div className="border border-neutral-400 dark:border-neutral-400 rounded-lg p-3 mb-3">
+        <h5 className="font-raleway font-medium text-lg pb-1 dark:text-neutral-400">
           {title}
         </h5>
-        <p className="text-sm text-neutral-400">{teaser}</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          {teaser}
+        </p>
       </div>
     );
   };
@@ -37,7 +39,7 @@ function Genres({}: Props) {
         } items-center`}
       >
         <div className="w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[70vh] flex flex-col justify-center items-center">
-          <h4 className="font-oleo text-3xl mb-4 text-neutral-200">
+          <h4 className="font-oleo text-3xl mb-4 dark:text-neutral-200">
             {item.name}
           </h4>
           <div className="w-4/5 md:w-3/5 mx-auto">
