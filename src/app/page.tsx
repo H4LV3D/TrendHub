@@ -45,7 +45,7 @@ export default function Home({}: {}) {
       )}
 
       <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="md:container mx-auto px-6 lg:px-0 font-raleway ">
           <Banner
             heading={{

@@ -4,8 +4,8 @@ import TetiaryButton from "@/components/shared/buttons/Tetiary";
 import { motion } from "framer-motion";
 import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
 import { useAppSelector } from "@/hooks/useAppSelector";
-import { useRouter } from "next/navigation";
 import BrandLogo from "@/components/shared/BrandLogo/BrandLogo";
+import { useRouter } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -13,8 +13,7 @@ type Props = {
 };
 
 function AuthLayout({ children, form }: Props) {
-  const [loading, setLoading] = useState(true);
-  const [currentImageIndex, setCurrentImageIndex] = useState(7);
+  const [loading, setLoading] = useState(false);
   const [selectedImage, setSelectedImage] = useState(8);
   const step = useAppSelector((state) => state.passwordRecoveryStep.step);
   const avatarId = useAppSelector((state) => state.user.avatarId);
@@ -111,9 +110,9 @@ function AuthLayout({ children, form }: Props) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
-          className={` `}
+          className={`shadow-lg `}
         >
-          <div className="border dark:border-neutral-800 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-lg">
+          <div className="border dark:border-neutral-800 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-xl ">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>
