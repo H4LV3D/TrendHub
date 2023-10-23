@@ -4,6 +4,8 @@
 .env.test.local
 .env.production.local
 
+.next
+
 
 # Install dependencies
 npm install
