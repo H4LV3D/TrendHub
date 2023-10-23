@@ -22,8 +22,8 @@ interface ThemeContextType {
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: "light", // Default value for theme
-  setTheme: () => {}, // Default value for setTheme
+  theme: "light",
+  setTheme: () => {},
 });
 
 interface ThemeProviderProps {
