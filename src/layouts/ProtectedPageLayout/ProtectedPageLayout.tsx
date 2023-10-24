@@ -15,9 +15,9 @@ const ProtectedPageLayout: React.FC<Props> = ({ children }) => {
     return <Loader />;
   }
   return (
-    <div>
+    <>
       <ModalProvider>{children}</ModalProvider>
-    </div>
+    </>
   );
 };
 
