@@ -96,22 +96,24 @@ function Header({ nav }: Props) {
           </div>
 
           <div>
-            <div className="hidden sm:flex items-center space-x-4 text-black dark:text-neutral-400">
-              <div className="border-r border-neutral-500 items-center space-x-2 hidden md:flex text-black dark:text-neutral-400">
+            <div className="sm:flex items-center space-x-4 text-black dark:text-neutral-400">
+              <div className="sm:border-r border-neutral-500 items-center space-x-4 flex text-black dark:text-neutral-400">
                 {hasShadow && !nav && (
                   <Icons
                     icon={search}
                     action={() => handleClickScroll("search")}
                   />
                 )}
-                {nav && (
-                  <div className="lg:hidden">
-                    <Icons
-                      icon={search}
-                      action={() => dispatch(showSearchBox())}
-                    />
-                  </div>
-                )}
+                <div className="hidden sm:block">
+                  {nav && (
+                    <div className="lg:hidden">
+                      <Icons
+                        icon={search}
+                        action={() => dispatch(showSearchBox())}
+                      />
+                    </div>
+                  )}
+                </div>
 
                 <Toggle />
               </div>
