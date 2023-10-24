@@ -3,13 +3,15 @@ import SidebarLink from "./SidebarLink/SidebarLink";
 import { motion } from "framer-motion";
 import { hideMobileSidebar } from "../../../store/slices/mobileSidebar/mobileSidebarSlice";
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
+import { useAppSelector } from "@/hooks/useAppSelector";
 import { usePathname } from "next/navigation";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
 const MobileSidebar: React.FC = () => {
   const dispatch = useAppDispatch();
   const path = usePathname();
-  const links = [
+  const user = useAppSelector((state) => state.user.isNull);
+  const ProtectedLinks = [
     {
       page: "Dashboard",
       link: "/dashboard",
@@ -31,6 +33,28 @@ const MobileSidebar: React.FC = () => {
       link: "/settings",
     },
   ];
+  const NavigationLinks = [
+    {
+      page: "Home",
+      link: "/",
+    },
+    {
+      page: "Blogs",
+      link: "/blogs",
+    },
+    {
+      page: "Podcasts",
+      link: "/podcasts",
+    },
+    {
+      page: "Newsletters",
+      link: "/newsletters",
+    },
+    {
+      page: "About",
+      link: "/about",
+    },
+  ];
   const variants = {
     hidden: {
       opacity: 0,
@@ -44,6 +68,19 @@ const MobileSidebar: React.FC = () => {
       },
     },
   };
+
+  const allLinks = [...ProtectedLinks, ...NavigationLinks];
+
+  // Determine the category based on the current path
+  console.log(path);
+  const category = allLinks.find((link) => link.link === path);
+
+  // Render the appropriate category based on the path
+  const renderLinks = category
+    ? category.link === path
+      ? NavigationLinks
+      : ProtectedLinks
+    : ProtectedLinks;
 
   const handleResize = () => {
     if (window.innerWidth >= 1280) {
@@ -112,7 +149,7 @@ const MobileSidebar: React.FC = () => {
         </div>
         <div className="h-[calc(100%-5.375rem)] flex flex-col justify-between py-8">
           <ul className="mb-10">
-            {links.map((item, index) => {
+            {renderLinks.map((item, index) => {
               return (
                 <SidebarLink key={index} href={item.link} text={item.page} />
               );
@@ -121,7 +158,11 @@ const MobileSidebar: React.FC = () => {
           <ul>
             <SidebarLink href="/help" text="Get Help" />
             <SidebarLink href="/contact" text="Contact Us" />
-            <SidebarLink href="/logout" text="Log Out" />
+            {user ? (
+              <SidebarLink href="/logout" text="Log Out" />
+            ) : (
+              <SidebarLink href="/login" text="Log In" />
+            )}
           </ul>
         </div>
       </motion.div>
