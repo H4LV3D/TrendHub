@@ -76,28 +76,28 @@
   font-family: 'poppins';
   font-weight: 400;
   font-style: normal;
-  src: url('/assets/fonts/Poppins/static/Poppins-Regular.ttf');
+  src: url('/assets/fonts/Poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 500;
   font-style: normal;
-  src: url('/assets/fonts/Poppins/static/Poppins-Medium.ttf');
+  src: url('/assets/fonts/Poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 600;
   font-style: normal;
-  src: url('/assets/fonts/Poppins/static/Poppins-SemiBold.ttf');
+  src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf');
 }
 
 @font-face {
   font-family: 'poppins';
   font-weight: 700;
   font-style: Bold;
-  src: url('/assets/fonts/Poppins/static/Poppins-Bold.ttf');
+  src: url('/assets/fonts/Poppins/Poppins-Bold.ttf');
 }
 
 .number {

@@ -104,16 +104,16 @@ const Blog = ({ params }: Props) => {
               <div className="w-full">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-6">
-                    <Link href={blogs[id - 1]?.link}>
+                    <>
                       <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-600 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
                         <i className="fas fa-chevron-left fa-xl fa-fw"></i>
                       </button>
-                    </Link>
-                    <Link href={blogs[id + 1]?.link}>
+                    </>
+                    <>
                       <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-600 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
                         <i className="fas fa-chevron-right fa-xl fa-fw"></i>
                       </button>
-                    </Link>
+                    </>
                   </div>
                   <div className="">
                     <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-400 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-neutral-300">

@@ -58,7 +58,7 @@ function Header({ nav }: Props) {
   }, []);
 
   const headerClasses = ` font-raleway flex items-center justify-between py-3 ${
-    nav ? `lg:border-b border-neutral-50` : ""
+    nav ? `lg:border-b border-neutral-50 dark:border-neutral-800` : ""
   } ${hasShadow ? "shadow-sm border-gray-200" : ""}`;
 
   return (
