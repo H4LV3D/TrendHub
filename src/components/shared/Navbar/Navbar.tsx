@@ -13,7 +13,6 @@ import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { showMobileSidebar } from "@/store/slices/mobileSidebar/mobileSidebarSlice";
 import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
 import { showSearchBox } from "@/store/slices/searchbox/searchBoxSlice";
-import PrimaryButton from "../buttons/Primary";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
 type Props = {
@@ -33,7 +32,7 @@ function Header({ nav }: Props) {
   ];
 
   const [hasShadow, setHasShadow] = useState(false);
-  const { search } = icons.icons;
+  const { search, bars } = icons.icons;
   const user = useAppSelector((state) => state.user.data);
 
   const [blogs, setBlogs] = useState([]);
@@ -73,12 +72,9 @@ function Header({ nav }: Props) {
               </div>
             </div>
           </Link>
-          <button
-            className="lg:hidden"
-            onClick={() => dispatch(showMobileSidebar())}
-          >
-            <BrandLogo />
-          </button>
+          <div className="lg:hidden">
+            <Icons icon={bars} action={() => dispatch(showMobileSidebar())} />
+          </div>
 
           <div className="hidden lg:block">
             {nav ? (
