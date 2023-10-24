@@ -76,11 +76,7 @@ function Header({ nav }: Props) {
           </div>
 
           <div className="hidden lg:block">
-            {!nav ? (
-              <div className="">
-                <SearchBox blogs={blogs} />
-              </div>
-            ) : (
+            {nav ? (
               <div className="flex items-center space-x-5">
                 {navItems.map((item, index) => (
                   <TetiaryButton
@@ -91,6 +87,10 @@ function Header({ nav }: Props) {
                     active={path === item.link}
                   />
                 ))}
+              </div>
+            ) : (
+              <div className="">
+                <SearchBox blogs={blogs} />
               </div>
             )}
           </div>
@@ -116,7 +116,9 @@ function Header({ nav }: Props) {
                 <Toggle />
               </div>
               {user === null ? (
-                <SecondaryButton text="Login" link="/login" />
+                <div className="hidden sm:flex">
+                  <SecondaryButton text="Login" link="/login" />
+                </div>
               ) : (
                 <div className=" pr-6 flex flex-row items-center space-x-3 ">
                   <div className="">
