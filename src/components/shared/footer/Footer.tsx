@@ -82,8 +82,13 @@ function Footer({}: Props) {
       <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
         <div className="px-6 lg:px-0 md:container mx-auto xl:w-[950px]">
           <div className="sm:flex flex-row lg:grid sm:grid-cols-2 mb-8">
-            <div className="w-1/3 lg:w-full">
+            <div className="w-full sm:w-1/3 lg:w-full">
               <BrandLogo />
+              <p className="text-sm sm:text-base lg:text-lg mt-4">
+                A community of young writers, readers, and storytellers who
+                understand art is about self-expression, not just the end
+                product.
+              </p>
             </div>
 
             <div className="hidden w-full sm:w-2/3 md:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
@@ -135,7 +140,7 @@ function Footer({}: Props) {
           <hr className="mb-4 dark:border-neutral-700" />
 
           <div className="sm:grid grid-cols-1 sm:grid-cols-2 items-center py-2 mt-4">
-            <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4">
+            <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4 mb-3 sm:mb-0">
               <span className=" ">All rights reserved.</span>
               <span className="font-number ">© 2023 </span>
             </div>
