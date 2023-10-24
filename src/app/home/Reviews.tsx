@@ -12,9 +12,9 @@ type Review = {
 
 function ReviewComponent({ reviews }: Props) {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center py-8 mt-8">
-      <div className="flex justify-center items-center">
-        <h4 className="text-5xl font-oleo font-medium dark:text-neutral-400 text-black">
+    <div className="min-h-screen flex flex-col justify-center sm:items-center py-8 mt-8">
+      <div className="mb-4">
+        <h4 className="text-3xl xs:text-4xl sm:text-5xl sm:text-center font-oleo font-medium dark:text-neutral-400 text-black">
           Our Community.
         </h4>
       </div>
@@ -34,7 +34,7 @@ function ReviewComponent({ reviews }: Props) {
                   alt="An SVG illustration of a person dressed in different clothings"
                 />
                 <div>
-                  <p className="font-raleway font-medium text-2xl line-clamp-1 dark:text-neutral-500">
+                  <p className="font-raleway font-medium text-xl line-clamp-1 dark:text-neutral-500">
                     {review.name}
                   </p>
                   <span className="font-raleway text-xs sm:text-sm mt-2 dark:text-neutral-600">
@@ -42,7 +42,7 @@ function ReviewComponent({ reviews }: Props) {
                   </span>
                 </div>
               </div>
-              <p className="font-raleway text-sm sm:text-base mt-2 line-clamp-2 dark:text-neutral-500">
+              <p className="font-raleway text-sm sm:text-sm lg:text-base mt-2 line-clamp-3 leading-5 dark:text-neutral-500">
                 {review.relation}
               </p>
             </div>
