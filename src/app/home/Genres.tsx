@@ -38,17 +38,24 @@ function Genres({}: Props) {
           item.name === "Romance & Relationships" ? "flex-row-reverse" : ""
         } items-center`}
       >
-        <div className="w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[70vh] flex flex-col justify-center items-center">
+        <div className="w-full md:w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[70vh] flex flex-col justify-center items-center">
           <h4 className="font-oleo text-3xl mb-4 dark:text-neutral-200">
             {item.name}
           </h4>
           <div className="w-4/5 md:w-3/5 mx-auto">
-            {item.titlesAndTeasers.map((tt, index) => (
+            {item.titlesAndTeasers.splice(0, 1).map((tt, index) => (
               <div key={index}>{subSections(tt)}</div>
             ))}
           </div>
+          <div className="md:hidden">
+            <img
+              src={item.illustrativeImage}
+              className="xs:w-[220px] sm:w-[45%] md:w-[48%] lg:w-[48%] xl:w-[55%] dark:opacity-80 mx-auto"
+              alt="A vector illustration of a boy holding a laptop open before him"
+            />
+          </div>
         </div>
-        <div className="w-1/2 h-[70vh] flex justify-center items-center">
+        <div className="hidden w-1/2 h-[70vh] md:flex justify-center items-center">
           <img
             src={item.illustrativeImage}
             className="xs:w-[220px] sm:w-[45%] md:w-[48%] lg:w-[48%] xl:w-[55%] dark:opacity-80 mx-auto"
@@ -62,18 +69,18 @@ function Genres({}: Props) {
   return (
     <>
       <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center">
-        <div className="mb-4">
+        <div className="mb-4 md:container mx-auto">
           <div className="flex flex-col justify-center items-center lg:w-[900px]">
-            <h1 className="text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal text-center">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal sm:text-center">
               Genres and Themes.
             </h1>
           </div>
 
           <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-            <p className="text-sm md:text-lg text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
-              Ready to learn more? Dive into a world of playful, exciting, and
-              interesting experience of my personal journey in the world of
-              Tech.
+            <p className="text-sm md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
+              Dive into a world of captivating genres and trending themes.
+              Discover your next obsession with our hand-picked selection
+              tailored for the young enthusiast.
             </p>
           </div>
         </div>
