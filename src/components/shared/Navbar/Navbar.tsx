@@ -34,7 +34,6 @@ function Header({ nav }: Props) {
   const [hasShadow, setHasShadow] = useState(false);
   const { search, bars } = icons.icons;
   const user = useAppSelector((state) => state.user.data);
-
   const [blogs, setBlogs] = useState([]);
 
   const handleClickScroll = (link: any) => {
@@ -56,7 +55,7 @@ function Header({ nav }: Props) {
     };
   }, []);
 
-  const headerClasses = ` font-raleway flex items-center justify-between py-3 ${
+  const headerClasses = `font-raleway flex items-center justify-between py-3 md:container mx-auto ${
     nav ? `lg:border-b border-neutral-50 dark:border-neutral-800` : ""
   } ${hasShadow ? "shadow-sm border-gray-200" : ""}`;
 
@@ -77,7 +76,7 @@ function Header({ nav }: Props) {
           </div>
 
           <div className="hidden lg:block">
-            {nav ? (
+            {!nav ? (
               <div className="">
                 <SearchBox blogs={blogs} />
               </div>
