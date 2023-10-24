@@ -10,6 +10,7 @@ import Subscribe from "./home/Subscribe";
 import Footer from "@/components/shared/footer/Footer";
 import Banner from "@/components/shared/Banner/Banner";
 import Head from "next/head";
+import PageLayout from "@/layouts/ViewLayout/ViewLayout";
 
 export default function Home({}: {}) {
   const [notify, setNotify] = useState(false);
@@ -44,15 +45,14 @@ export default function Home({}: {}) {
         </div>
       )}
 
-      <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        <Navbar />
+      <PageLayout>
         <div className="md:container mx-auto px-6 lg:px-0 font-raleway ">
           <Banner
             heading={{
               line1: "Articles, Blogs,",
               line2: "Newsletters & Podcasts.",
             }}
-            text="Ready to learn more? Dive into a world of playful, exciting, and interesting experience of my personal journey in the world of Tech."
+            text="Explore our vibrant mix of articles, blogs, newsletters, and podcasts tailored for your curious mind. Stay in the loop with our trendy, informative content, just for you."
             data={blogs}
           />
 
@@ -68,8 +68,7 @@ export default function Home({}: {}) {
 
           <Subscribe setNotify={setNotify} setMessage={setMessage} />
         </div>
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 }
