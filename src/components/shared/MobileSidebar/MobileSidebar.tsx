@@ -62,12 +62,12 @@ const MobileSidebar: React.FC = () => {
   });
 
   // Prevent the rest of the page from scrolling
-  // useEffect(() => {
-  //   document.body.classList.add("no-scroll");
-  //   return () => {
-  //     document.body.classList.remove("no-scroll");
-  //   };
-  // }, []);
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
 
   return (
     <motion.div
@@ -90,7 +90,7 @@ const MobileSidebar: React.FC = () => {
           duration: 0.1,
         },
       }}
-      className="h-screen w-screen flex fixed top-0 left-0 z-40 bg-black bg-opacity-80"
+      className="h-screen w-screen flex fixed top-0 left-0 z-50 bg-black bg-opacity-80"
     >
       <motion.div
         initial="hidden"
