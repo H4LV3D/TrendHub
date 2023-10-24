@@ -32,17 +32,16 @@ const Blog = ({ params }: Props) => {
   const id = 2;
   const link = params.link;
   const { blogs } = pageData;
-  const arrangement = "cards";
-  const randomNumber = () => {
-    return Math.floor(Math.random() * 104).toString();
-  };
 
   return (
     <>
       <PageLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
-          <div className="font-raleway w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto">
-            <div className="flex justify-center sm:border dark:border-neutral-800 rounded-xl mt-24 mb-4">
+          <div className="font-raleway w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto mt-20">
+            <div className="mt-20">
+              <br />
+            </div>
+            <div className="flex justify-center sm:border dark:border-neutral-800 rounded-xl mt-0 mb-4">
               <img
                 src={`/assets/Bust/peep-${Math.floor(
                   Math.random() * 104

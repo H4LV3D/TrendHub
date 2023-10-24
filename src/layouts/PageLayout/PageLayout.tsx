@@ -12,8 +12,8 @@ const PageLayout = ({ children }: Props) => {
     <>
       <div className="bg-white dark:bg-black/90 min-h-screen w-full cursor-black">
         <Navbar nav={true} />
-        <main className=" mb-12">
-          <div className="mt-24">{children}</div>
+        <main className="bg-white">
+          <div className="mt-20 mb-12">{children}</div>
         </main>
         <Footer />
       </div>
