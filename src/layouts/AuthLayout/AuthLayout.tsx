@@ -37,7 +37,7 @@ function AuthLayout({ children, form }: Props) {
                 <div className="mb-3">
                   <BrandLogo />
                 </div>
-                <div className="w-[275px] h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-xl ">
+                <div className="w-[275px] h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-md ">
                   {avatarId === null ? (
                     <div className="w-full h-[330px] flex items-center justify-center">
                       <ButtonLoader color="#000" />
@@ -50,7 +50,7 @@ function AuthLayout({ children, form }: Props) {
                     />
                   )}
                 </div>
-                <p className="w-1/2 mx-auto mt-6 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
+                <p className="w-1/2 mx-auto mt-6 text-center text-sm sm:text-base md:text-lg font-normal text-gray-700 dark:text-neutral-400 font-raleway">
                   {form === "login"
                     ? avatarId === null
                       ? "Enter your email to see your custom illustration"
@@ -110,9 +110,9 @@ function AuthLayout({ children, form }: Props) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
-          className={`shadow-lg `}
+          className={``}
         >
-          <div className="border dark:border-neutral-800 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-xl ">
+          <div className="border dark:border-neutral-800 rounded-xl p-6 sm:p-12 lg:p-10 mx-12 xl:p-12 shadow-md ">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>
