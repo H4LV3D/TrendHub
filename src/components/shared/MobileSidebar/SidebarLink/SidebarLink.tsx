@@ -20,7 +20,8 @@ const SidebarLink: React.FC<Props> = ({ text, href }) => {
       <Link
         href={href}
         className={`flex items-center group relative gap-6 h-12 px-4 rounded-xl dark:text-neutral-400 ${
-          isActive && "!text-white bg-neutral-700 font-bold"
+          isActive &&
+          "dark:text-white bg-neutral-200 dark:bg-neutral-700 font-bold"
         }`}
       >
         <p className={`font-[500] text-sm sm:text-base whitespace-nowrap `}>

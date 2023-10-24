@@ -44,11 +44,11 @@ const MobileSidebar: React.FC = () => {
     },
     {
       page: "Podcasts",
-      link: "/podcasts",
+      link: "/podcast",
     },
     {
       page: "Newsletters",
-      link: "/newsletters",
+      link: "/newsletter",
     },
     {
       page: "About",

@@ -1,9 +1,8 @@
 "use client";
-import React, { useState } from "react";
-import Navbar from "@/components/shared/Navbar/Navbar";
+import React from "react";
 import pageData from "@/data/index.json";
-import Footer from "@/components/shared/footer/Footer";
 import Banner from "@/components/shared/Banner/Banner";
+import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 type Props = {};
 
@@ -12,9 +11,7 @@ const About = ({}: Props) => {
 
   return (
     <>
-      <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        <Navbar />
-
+      <PageLayout>
         <Banner
           heading={{
             line1: "We are the",
@@ -25,9 +22,7 @@ const About = ({}: Props) => {
                 interesting experience of my personal journey in the world of
                 Tech."
         />
-
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 };
