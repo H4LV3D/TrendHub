@@ -43,7 +43,7 @@ function Genres({}: Props) {
             {item.name}
           </h4>
           <div className="w-4/5 md:w-3/5 mx-auto">
-            {item.titlesAndTeasers.splice(0, 1).map((tt, index) => (
+            {item.titlesAndTeasers.map((tt, index) => (
               <div key={index}>{subSections(tt)}</div>
             ))}
           </div>
@@ -69,20 +69,15 @@ function Genres({}: Props) {
   return (
     <>
       <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center">
-        <div className="mb-4 md:container mx-auto">
-          <div className="flex flex-col justify-center items-center lg:w-[900px]">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal sm:text-center">
-              Genres and Themes.
-            </h1>
-          </div>
-
-          <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-            <p className="text-sm md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
-              Dive into a world of captivating genres and trending themes.
-              Discover your next obsession with our hand-picked selection
-              tailored for the young enthusiast.
-            </p>
-          </div>
+        <div className="mb-4 md:container mx-auto flex flex-col justify-center sm:items-center">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal sm:text-center">
+            Genres and Themes.
+          </h1>
+          <p className="text-sm md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 my-6 lg:w-[600px]">
+            Dive into a world of captivating genres and trending themes.
+            Discover your next obsession with our hand-picked selection tailored
+            for the young enthusiast.
+          </p>
         </div>
         <div className="pt-8 w-full overflow-hidden">
           <div className="relative w-full mx-auto md:w-[900px] lg:w-[1100px] h-[210vh]">
