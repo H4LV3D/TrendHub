@@ -18,7 +18,7 @@ const Suggested = () => {
   return (
     <>
       <div className="py-4 md:grid grid-cols-2 gap-x-6">
-        {blogs.splice(0, 3).map((blog, index) => (
+        {blogs.splice(0, 4).map((blog, index) => (
           <div key={index} className="mb-6">
             <DisplayCard display={blog} arrangement={arrangement} />
           </div>
