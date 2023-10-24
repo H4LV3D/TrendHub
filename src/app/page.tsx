@@ -10,7 +10,7 @@ import Subscribe from "./home/Subscribe";
 import Footer from "@/components/shared/footer/Footer";
 import Banner from "@/components/shared/Banner/Banner";
 import Head from "next/head";
-import PageLayout from "@/layouts/ViewLayout/ViewLayout";
+import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 export default function Home({}: {}) {
   const [notify, setNotify] = useState(false);
@@ -46,7 +46,7 @@ export default function Home({}: {}) {
       )}
 
       <PageLayout>
-        <div className="md:container mx-auto px-5 xs:px-0 font-raleway ">
+        <div className=" md:container mx-auto px-5 xs:px-0 font-raleway">
           <Banner
             heading={{
               line1: "Articles, Blogs,",
@@ -63,7 +63,7 @@ export default function Home({}: {}) {
 
         <Collaborative />
 
-        <div className="md:container mx-auto px-5 xs:px-0 font-raleway ">
+        <div className="px-5 xs:px-0 font-raleway ">
           <Review reviews={reviews} />
 
           <Subscribe setNotify={setNotify} setMessage={setMessage} />
