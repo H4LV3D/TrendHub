@@ -1,13 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Navbar from "@/components/shared/Navbar/Navbar";
 import pageData from "@/data/index.json";
 import Genres from "./home/Genres";
 import Collaborative from "./home/Collaborative";
 import Review from "./home/Reviews";
 import Generations from "./home/Generations";
 import Subscribe from "./home/Subscribe";
-import Footer from "@/components/shared/footer/Footer";
 import Banner from "@/components/shared/Banner/Banner";
 import Head from "next/head";
 import PageLayout from "@/layouts/PageLayout/PageLayout";

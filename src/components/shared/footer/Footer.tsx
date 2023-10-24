@@ -84,7 +84,7 @@ function Footer({}: Props) {
           <div className="sm:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-full sm:w-1/3 lg:w-full">
               <BrandLogo />
-              <p className="text-sm sm:text-base lg:text-base mt-4 lg:w-3/4">
+              <p className="text-sm sm:text-base lg:text-base leading-6 font-[400] mt-4 lg:w-3/4">
                 A community of young writers, readers, and storytellers who
                 understand art is about self-expression, not just the end
                 product.
