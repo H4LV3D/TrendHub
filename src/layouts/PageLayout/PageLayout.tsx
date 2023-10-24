@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/footer/Footer";
+import ModalProvider from "@/components/page-wrappers/ModalProvider/ModalProvider";
 
 type Props = {
   children: React.ReactNode;
@@ -10,13 +11,13 @@ type Props = {
 const PageLayout = ({ children }: Props) => {
   return (
     <>
-      <div className="bg-white dark:bg-black/90 min-h-screen w-full cursor-black">
-        <Navbar nav={true} />
-        <main className="">
-          <div className="mt-20">{children}</div>
-        </main>
-        <Footer />
-      </div>
+      <ModalProvider>
+        <div className="relative bg-white dark:bg-[#191919] min-h-screen w-full">
+          <Navbar />
+          <main className="">{children}</main>
+          <Footer />
+        </div>
+      </ModalProvider>
     </>
   );
 };
