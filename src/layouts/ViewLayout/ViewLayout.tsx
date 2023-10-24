@@ -8,12 +8,12 @@ type Props = {
   children: React.ReactNode;
 };
 
-const PageLayout = ({ children }: Props) => {
+const ViewLayout = ({ children }: Props) => {
   return (
     <>
       <ModalProvider>
-        <div className="relative bg-white dark:bg-black/90 min-h-screen w-full">
-          <Navbar nav={true} />
+        <div className="relative bg-white  min-h-screen w-full">
+          <Navbar nav={false} />
           <main className="">{children}</main>
           <Footer />
         </div>
@@ -22,4 +22,4 @@ const PageLayout = ({ children }: Props) => {
   );
 };
 
-export default PageLayout;
+export default ViewLayout;
