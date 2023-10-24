@@ -27,7 +27,9 @@ function Icons({ icon, action, small, color }: Props) {
             xmlns="http://www.w3.org/2000/svg"
             stroke={color ? color : "currentColor"}
             fill={color ? color : "currentColor"}
-            className={`${small ? "w-5 h-5" : "w-6 h-6"} `}
+            className={`${
+              small ? "w-5 h-5" : "w-6 h-6"
+            } dark:fill-neutral-300 `}
             viewBox={icon.viewBox}
           >
             <path
