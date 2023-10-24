@@ -13,8 +13,8 @@ const PageLayout = ({ children }: Props) => {
     <>
       <ModalProvider>
         <div className="relative bg-white dark:bg-[#191919] min-h-screen w-full">
-          <Navbar nav={false} />
-          <main className="">{children}</main>
+          <Navbar nav={true} />
+          <main className="bg-white dark:bg-[#191919]">{children}</main>
           <Footer />
         </div>
       </ModalProvider>
