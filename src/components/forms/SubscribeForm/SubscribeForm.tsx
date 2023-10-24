@@ -42,7 +42,7 @@ function ForgotPasswordForm({ setNotify, setMessage }: Props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="w-full md:max-w-lg">
+        <div className="w-full md:w-[450px]">
           <div className="form-container font-number text-black dark:text-white mb-3">
             <div className="mb-3 w-full">
               <label
