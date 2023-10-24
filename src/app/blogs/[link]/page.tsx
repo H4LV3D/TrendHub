@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import pageData from "@/data/index.json";
-import PageLayout from "@/layouts/PageLayout/PageLayout";
+import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import DisplayCard from "@/components/shared/DisplayCard/DisplayCard";
 
 type Props = {
@@ -35,7 +34,7 @@ const Blog = ({ params }: Props) => {
 
   return (
     <>
-      <PageLayout>
+      <ViewLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
           <div className="font-raleway w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto mt-20">
             <div className="mt-20">
@@ -121,27 +120,6 @@ const Blog = ({ params }: Props) => {
                     </button>
                   </div>
                 </div>
-                {/* <div className="text-center sm:flex items-center justify-between mt-4">
-                  <div className="flex justify-center sm:justify-start items-center">
-                    {blogs.map((project, index) => (
-                      <div
-                        className={`${
-                          blogs.length > 6 ? "h-3 w-3" : "h-2 w-10"
-                        } w-10 rounded-md mr-2 mb-2 ${
-                          blogs[link].title === blogs[index].title
-                            ? "bg-black dark:bg-neutral-500"
-                            : "bg-gray-300 dark:bg-neutral-800"
-                        }`}
-                        key={index}
-                      ></div>
-                    ))}
-                  </div>
-                  <p className="font-raleway font-medium text-base md:text-base text-neutral-700 dark:text-neutral-400">
-                    Episode{" "}
-                    <span className="font-sans">{Number(link) + 1}</span> of{" "}
-                    <span className="font-sans">{blogs.length}</span>
-                  </p>
-                </div> */}
               </div>
 
               <hr className="mt-6 mb-4 dark:border-neutral-800" />
@@ -155,7 +133,7 @@ const Blog = ({ params }: Props) => {
             </div>
           </div>
         </div>
-      </PageLayout>
+      </ViewLayout>
     </>
   );
 };
