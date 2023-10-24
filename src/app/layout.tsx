@@ -1,13 +1,18 @@
 "use client";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, Poppins } from "next/font/google";
 import { ThemeProvider } from "@/contexts/themeContext";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import Head from "next/head";
 
 const raleway = Raleway({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
@@ -22,11 +27,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  let theme = "";
-  if (typeof window !== "undefined") {
-    theme = localStorage.getItem("current-theme") || "light";
-    console.log(theme);
-  }
   return (
     <html lang="en">
       <Head key="app-head">
@@ -50,8 +50,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="/assets/fontawesome-free-6.2.1-web/css/fontawesome.css"
         />
+        <meta name="theme-color" content="#000000" />
       </Head>
-      <body className={`${raleway.className} bg-[#191919] `}>
+      <body className={`${raleway.className}`}>
         <Provider store={store}>
           <ThemeProvider>{children}</ThemeProvider>
         </Provider>

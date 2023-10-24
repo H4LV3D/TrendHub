@@ -44,6 +44,10 @@ export const ThemeProvider = ({
     root.classList.remove(isDark ? "light" : "dark");
     root.classList.add(existing);
 
+    const body = window.document.body;
+    body.classList.remove(existing === "light" ? "bg-[#191919]" : "bg-white");
+    body.classList.add(existing === "light" ? "bg-white" : "bg-[#191919]");
+
     setTheme(existing);
     localStorage.setItem("current-theme", existing);
   };
