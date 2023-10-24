@@ -12,7 +12,7 @@ interface Props {
 const ProtectedPageLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="bg-white dark:bg-black/90 min-h-screen w-full">
+      <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
         <Navbar nav={true} />
         <div className="mt-20 mb-12">
           <Header />
