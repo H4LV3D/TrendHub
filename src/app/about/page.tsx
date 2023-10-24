@@ -12,7 +12,7 @@ const About = ({}: Props) => {
 
   return (
     <>
-      <div className="bg-white dark:bg-black/90 min-h-screen w-full cursor-black">
+      <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
         <Navbar />
 
         <Banner
