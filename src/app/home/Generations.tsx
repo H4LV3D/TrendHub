@@ -15,9 +15,9 @@ const Generations = (props: Props) => {
           </div>
           <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
             <p className="text-sm md:text-lg text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
-              Ready to learn more? Dive into a world of playful, exciting, and
-              interesting experience of my personal journey in the world of
-              Tech.
+              The art of modern communication leans on messages, mediums, and
+              the ever-evolving media landscape with fresh perspectives and
+              engaging discussions for everyone.
             </p>
           </div>
         </div>
