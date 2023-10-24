@@ -8,13 +8,13 @@ const Generations = (props: Props) => {
       <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center">
         <div className="mb-4">
           <div className="flex flex-col justify-center items-center lg:w-[900px]">
-            <h1 className="text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal text-center">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl text-black dark:text-neutral-200 font-oleo font-normal sm:text-center">
               The message, medium
               <br className="xs:hidden sm:block" /> & media
             </h1>
           </div>
           <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-            <p className="text-sm md:text-lg text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
+            <p className="text-sm md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
               The art of modern communication leans on messages, mediums, and
               the ever-evolving media landscape with fresh perspectives and
               engaging discussions for everyone.
