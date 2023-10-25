@@ -35,10 +35,6 @@ const MobileSidebar: React.FC = () => {
   ];
   const NavigationLinks = [
     {
-      page: "Home",
-      link: "/",
-    },
-    {
       page: "Blogs",
       link: "/blogs",
     },
@@ -72,15 +68,20 @@ const MobileSidebar: React.FC = () => {
   const allLinks = [...ProtectedLinks, ...NavigationLinks];
 
   // Determine the category based on the current path
-  console.log(path);
   const category = allLinks.find((link) => link.link === path);
+  console.log(path, category);
+
+  // Check if NavigationLinks contains the category object
+  const isProtected = ProtectedLinks.some(
+    (link) => link.page === category?.page && link.link === category.link
+  );
 
   // Render the appropriate category based on the path
   const renderLinks = category
-    ? category.link === path
-      ? NavigationLinks
-      : ProtectedLinks
-    : ProtectedLinks;
+    ? isProtected
+      ? ProtectedLinks
+      : NavigationLinks
+    : NavigationLinks;
 
   const handleResize = () => {
     if (window.innerWidth >= 1280) {
@@ -143,11 +144,11 @@ const MobileSidebar: React.FC = () => {
         className="h-full w-[18rem] px-3 bg-white dark:bg-neutral-800"
       >
         <div
-          className={`h-[5.375rem] border-b border-gray-200 dark:border-neutral-700 flex items-center pt-6 pl-3`}
+          className={`h-[5.375rem] border-b border-gray-200 dark:border-neutral-700 flex items-center py-6 pl-3`}
         >
           <BrandLogo />
         </div>
-        <div className="h-[calc(100%-5.375rem)] flex flex-col justify-between py-8">
+        <div className="h-[calc(100%-5.375rem)] flex flex-col justify-between py-6">
           <ul className="mb-10">
             {renderLinks.map((item, index) => {
               return (
