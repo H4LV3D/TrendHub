@@ -80,18 +80,18 @@ function Footer({}: Props) {
   return (
     <>
       <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
-        <div className="px-6 lg:px-0 md:container mx-auto xl:w-[950px]">
-          <div className="sm:flex flex-row lg:grid sm:grid-cols-2 mb-8">
-            <div className="w-full sm:w-1/3 lg:w-full">
+        <div className="px-6 xs:px-0 md:container mx-auto xl:w-[950px]">
+          <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
+            <div className="w-full sm:w-1/3 lg:w-full mb-4">
               <BrandLogo />
-              <p className="text-sm sm:text-base lg:text-base leading-6 font-[400] mt-4 lg:w-3/4">
+              <p className="text-sm sm:text-base lg:text-base leading-6 font-[400] mt-4 sm:hidden xl:block lg:w-3/4">
                 A community of young writers, readers, and storytellers who
                 understand art is about self-expression, not just the end
                 product.
               </p>
             </div>
 
-            <div className="hidden w-full sm:w-2/3 md:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
+            <div className="hidden w-full md:w-2/3 sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
               <div className="flex flex-col">
                 <h3 className="font-raleway font-normal text-lg text-black dark:text-neutral-400 mb-4">
                   Resource
@@ -139,12 +139,12 @@ function Footer({}: Props) {
 
           <hr className="mb-4 dark:border-neutral-700" />
 
-          <div className="sm:grid grid-cols-1 sm:grid-cols-2 items-center py-2 mt-4">
-            <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4 mb-3 sm:mb-0">
+          <div className="md:grid grid-cols-1 sm:grid-cols-2 items-center py-2 mt-4">
+            <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4 mb-3 md:mb-0">
               <span className=" ">All rights reserved.</span>
               <span className="font-number ">© 2023 </span>
             </div>
-            <div className="flex space-x-2 items-center sm:justify-end">
+            <div className="flex space-x-2 items-center md:justify-end">
               {socials.map((item, index) => (
                 <a
                   href={item.link}
