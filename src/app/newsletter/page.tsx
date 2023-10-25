@@ -1,13 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Navbar from "@/components/shared/Navbar/Navbar";
 import pageData from "@/data/index.json";
-import Footer from "@/components/shared/footer/Footer";
-import icons from "@/data/icons.json";
 import DisplayCard from "@/components/shared/DisplayCard/DisplayCard";
 import Banner from "@/components/shared/Banner/Banner";
 import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
 import { useAppSelector } from "@/hooks/useAppSelector";
+import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 type Props = {};
 
@@ -24,21 +22,19 @@ const Newsletter = ({}: Props) => {
 
   return (
     <>
-      <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        <Navbar />
-
-        <Banner
-          heading={{
-            line1: "The news,",
-            line2: "noise & newness.",
-          }}
-          data={blogs}
-          text="Ready to learn more? Dive into a world of playful, exciting, and
+      <PageLayout>
+        <div className="md:container mx-auto px-6 xs:px-0 font-raleway mb-12">
+          <Banner
+            heading={{
+              line1: "The news,",
+              line2: "noise & newness.",
+            }}
+            data={blogs}
+            text="Ready to learn more? Dive into a world of playful, exciting, and
                 interesting experience of my personal journey in the world of
                 Tech."
-        />
+          />
 
-        <div className="container mx-auto px-6 lg:px-0 font-raleway mb-12">
           <DisplayNavBar Nav={podcastNav} />
 
           <div
@@ -47,7 +43,7 @@ const Newsletter = ({}: Props) => {
                 ? "grid-cols-1"
                 : arrangement === "double"
                 ? "grid-cols-2 gap-8"
-                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-6"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:space-x-6"
             } `}
           >
             {blogs.map((blog, index) => (
@@ -57,9 +53,7 @@ const Newsletter = ({}: Props) => {
             ))}
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 };
