@@ -45,18 +45,18 @@ const DisplayNavBar = ({ Nav }: Props) => {
           ))}
         </div>
 
-        <div className="">
-          <div className="flex">
+        <div className="w-full flex justify-end">
+          <div className="flex space-x-4">
             <Icons
               icon={square}
               color={arrangement === "single" ? "#000" : "#a3a3a3"}
               action={() => dispatch(setArrangement("single"))}
             />
-            <Icons
+            {/* <Icons
               icon={grid2}
               color={arrangement === "double" ? "#000" : "#a3a3a3"}
               action={() => dispatch(setArrangement("double"))}
-            />
+            /> */}
             <Icons
               icon={grid3}
               color={arrangement === "cards" ? "#000" : "#a3a3a3"}
