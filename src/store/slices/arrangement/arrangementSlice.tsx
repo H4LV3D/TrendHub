@@ -6,9 +6,9 @@ interface ArrangementState {
 
 const getInitialArrangement = () => {
   if (typeof window !== "undefined") {
-    return localStorage.getItem("arrangement") || "single";
+    return localStorage.getItem("arrangement") || "cards";
   }
-  return "single"; // Set a default value for server-side rendering
+  return "cards";
 };
 
 const initialState: ArrangementState = {
