@@ -10,6 +10,7 @@ import Banner from "@/components/shared/Banner/Banner";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { setArrangement } from "@/store/slices/arrangement/arrangementSlice";
+import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 type Props = {};
 
@@ -38,18 +39,16 @@ const Blogs = ({}: Props) => {
 
   return (
     <>
-      <div className="bg-white dark:bg-[#191919] min-h-screen w-full cursor-black">
-        <Header />
-
-        <Banner
-          heading={{ line1: "The message,", line2: "medium & media." }}
-          data={blogs}
-          text="Ready to learn more? Dive into a world of playful, exciting, and
+      <PageLayout>
+        <div className="md:container mx-auto px-6 xs:px-0 font-raleway mb-12">
+          <Banner
+            heading={{ line1: "The message,", line2: "medium & media." }}
+            data={blogs}
+            text="Ready to learn more? Dive into a world of playful, exciting, and
                 interesting experience of my personal journey in the world of
                 Tech."
-        />
+          />
 
-        <div className="md:container mx-auto px-6 lg:px-0 font-raleway mb-12">
           <DisplayNavBar Nav={Nav} />
           <div
             className={`"w-full grid ${
@@ -67,9 +66,7 @@ const Blogs = ({}: Props) => {
             ))}
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 };
