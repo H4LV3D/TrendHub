@@ -36,7 +36,7 @@ const Podcast = ({}: Props) => {
           />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-0 font-raleway mb-12">
+        <div className="container mx-auto px-6 xs:px-0 font-raleway mb-12">
           <DisplayNavBar Nav={podcastNav} />
 
           <div
@@ -45,7 +45,7 @@ const Podcast = ({}: Props) => {
                 ? "grid-cols-1"
                 : arrangement === "double"
                 ? "grid-cols-2 gap-8"
-                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-6"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:space-x-6"
             } `}
           >
             {blogs.map((blog, index) => (
