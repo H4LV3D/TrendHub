@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Icons from "@/components/icons/Icons";
 import icons from "@/data/icons.json";
 import Link from "next/link";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { setArrangement } from "@/store/slices/arrangement/arrangementSlice";
 
 type Article = {
   p: string;
@@ -36,6 +38,24 @@ const DisplayCard = ({ display, arrangement }: Props) => {
 
   const [filled, setFilled] = useState(false);
   const [bad, setBad] = useState(false);
+  const dispatch = useAppDispatch();
+
+  const handleResize = () => {
+    if (window.innerWidth >= 1280) {
+      dispatch(setArrangement("cards"));
+    }
+  };
+
+  // Listen for window resize when sidebar is open
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup - remove event listener when sidebar is closed
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <>
       <Link href={display.link}>
@@ -59,11 +79,11 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 ? "w-[70%] lg:w-[75%] xl:w-[80%] rounded-r-xl h-[16rem]"
                 : arrangement === "double"
                 ? "md:w-[100%] xl:w-[65%] rounded-r-xl min-h-[16rem]"
-                : "w-full rounded-b-xl min-h-[19rem]"
+                : "w-full rounded-b-xl min-h-[18rem]"
             }   p-6 dark:text-neutral-400 `}
           >
             <div className="mb-2 flex justify-between ">
-              <p className="text-sm">{display.episode}</p>
+              <p className="text-sm md:text-base">Toluwalope Akinkunmi</p>
               <p className="text-sm">{display.readTime}</p>
             </div>
             <h1
@@ -78,11 +98,14 @@ const DisplayCard = ({ display, arrangement }: Props) => {
             <p className="mb-1 sm:mb-2 line-clamp-3 !text-justify text-sm md:text-base ">
               {display.description}
             </p>
-            <p className="mb-0 sm:mb-2 line-clamp-3 text-sm md:text-base">
-              Author : <span className="font-[500]">Toluwalope Akinkunmi</span>
-            </p>
+            <div className="mt-3">
+              <p className="mb-0 sm:mb-2 line-clamp-3 text-sm md:text-base">
+                Author :{" "}
+                <span className="font-[500]">Toluwalope Akinkunmi</span>
+              </p>
+            </div>
             <div className="flex justify-between items-center">
-              {display.reactions && "good" in display.reactions && (
+              {/* {display.reactions && "good" in display.reactions && (
                 <div className="reactions flex items-center space-x-1">
                   <div className="flex items-center space-x-0">
                     {filled ? (
@@ -118,7 +141,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                     <p className="number">{display?.reactions?.bad}</p>
                   </div>
                 </div>
-              )}
+              )} */}
               {/* <div className="flex justify-end">
                 {display.article.length > 0 ? (
                   <TetiaryButton
