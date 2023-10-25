@@ -61,7 +61,7 @@ export default function Home({}: {}) {
 
         <Collaborative />
 
-        <div className="md:container mx-auto px-5 sm:px-0 font-raleway ">
+        <div className="md:container mx-auto px-5 xs:px-0 font-raleway ">
           <Review reviews={reviews} />
 
           <Subscribe setNotify={setNotify} setMessage={setMessage} />
