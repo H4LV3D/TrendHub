@@ -12,16 +12,18 @@ const About = ({}: Props) => {
   return (
     <>
       <PageLayout>
-        <Banner
-          heading={{
-            line1: "We are the",
-            line2: "new Generation!",
-          }}
-          data={blogs}
-          text="Ready to learn more? Dive into a world of playful, exciting, and
+        <div className="md:container mx-auto px-6 xs:px-0">
+          <Banner
+            heading={{
+              line1: "We are the",
+              line2: "new Generation!",
+            }}
+            data={blogs}
+            text="Ready to learn more? Dive into a world of playful, exciting, and
                 interesting experience of my personal journey in the world of
                 Tech."
-        />
+          />
+        </div>
       </PageLayout>
     </>
   );
