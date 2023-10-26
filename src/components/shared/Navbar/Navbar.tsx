@@ -96,7 +96,7 @@ function Header({ nav }: Props) {
           <div>
             <div className="sm:flex items-center space-x-4 text-black dark:text-neutral-400">
               <div className="sm:border-r border-neutral-500 items-center space-x-4 flex text-black dark:text-neutral-400">
-                {hasShadow && !nav && (
+                {hasShadow && nav && (
                   <Icons
                     icon={search}
                     action={() => handleClickScroll("search")}

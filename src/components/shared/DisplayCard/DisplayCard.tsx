@@ -79,7 +79,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 ? "w-[70%] lg:w-[75%] xl:w-[80%] rounded-r-xl h-[16rem]"
                 : arrangement === "double"
                 ? "md:w-[100%] xl:w-[65%] rounded-r-xl min-h-[16rem]"
-                : "w-full rounded-b-xl min-h-[18rem]"
+                : "w-full rounded-b-xl min-h-[14rem]"
             }   p-6 dark:text-neutral-400 `}
           >
             <div className="mb-2 flex justify-between ">

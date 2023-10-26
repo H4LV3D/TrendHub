@@ -14,7 +14,7 @@ const ViewLayout = ({ children }: Props) => {
       <ModalProvider>
         <div className="relative bg-white  min-h-screen w-full">
           <Navbar nav={false} />
-          <main className="md:container mx-auto xs:px-0 px-6 ">{children}</main>
+          <main className="">{children}</main>
           <Footer />
         </div>
       </ModalProvider>
