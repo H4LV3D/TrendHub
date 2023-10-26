@@ -97,7 +97,7 @@ function Footer({}: Props) {
                   Resource
                 </h3>
                 <div className="flex flex-col space-y-2">
-                  {footerData.resources.map((item, index) => (
+                  {footerData.resources.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
                       <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}
@@ -111,7 +111,7 @@ function Footer({}: Props) {
                   Pages
                 </h3>
                 <div className="flex flex-col space-y-2">
-                  {footerData.pages.map((item, index) => (
+                  {footerData.pages.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
                       <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}
@@ -125,7 +125,7 @@ function Footer({}: Props) {
                   Company
                 </h3>
                 <div className="flex flex-col space-y-2">
-                  {footerData.about.map((item, index) => (
+                  {footerData.about.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
                       <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}

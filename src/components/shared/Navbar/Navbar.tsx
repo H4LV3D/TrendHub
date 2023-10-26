@@ -63,14 +63,12 @@ function Header({ nav }: Props) {
     <div className="fixed top-0 left-0 w-full bg-white dark:bg-[#191919] z-20">
       <MaxWidthProvider>
         <div className={`${headerClasses}`}>
-          <Link href="/" className="hidden lg:block" shallow={true}>
-            <div className="group relative flex justify-center items-center border-gray-400 hover:border-gray-700 dark:border-gray-600 dark:hover:border-gray-300 rounded-md dark:text-neutral-300 py-2 cursor-pointer">
-              <BrandLogo />
-              <div className="opacity-0 bg-black dark:bg-neutral-900 dark:text-neutral-400 text-white text-center text-xs font-raleway rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-4 mt-4 px-4 pointer-events-none">
-                Home
-              </div>
-            </div>
-          </Link>
+          <div className="hidden lg:block group relative dark:border-gray-600 dark:text-neutral-300 py-2 cursor-pointer">
+            <BrandLogo />
+            <p className="opacity-0 bg-black dark:bg-neutral-900 dark:text-neutral-400 text-white text-center text-xs font-raleway rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-4 mt-4 px-4 pointer-events-none">
+              Home
+            </p>
+          </div>
           <div className="lg:hidden">
             <Icons icon={bars} action={() => dispatch(showMobileSidebar())} />
           </div>
