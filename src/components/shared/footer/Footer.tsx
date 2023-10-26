@@ -91,7 +91,7 @@ function Footer({}: Props) {
               </p>
             </div>
 
-            <div className="hidden w-full md:w-2/3 sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
+            <div className="hidden w-full md:w-2/3 lg:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
               <div className="flex flex-col">
                 <h3 className="font-raleway font-normal text-lg text-black dark:text-neutral-400 mb-4">
                   Resource
