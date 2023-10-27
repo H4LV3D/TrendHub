@@ -1,9 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Header from "@/components/shared/Navbar/Navbar";
 import pageData from "@/data/index.json";
-import Footer from "@/components/shared/footer/Footer";
-import icons from "@/data/icons.json";
 import DisplayCard from "@/components/shared/DisplayCard/DisplayCard";
 import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
 import Banner from "@/components/shared/Banner/Banner";
@@ -16,6 +13,7 @@ type Props = {};
 
 const Blogs = ({}: Props) => {
   const { blogs } = pageData;
+  console.log(blogs.length);
   const dispatch = useAppDispatch();
   const arrangement = useAppSelector((state) => state.arrangement.value);
 

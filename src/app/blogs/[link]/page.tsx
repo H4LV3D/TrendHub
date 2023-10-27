@@ -29,17 +29,15 @@ const Suggested = () => {
 };
 
 const Blog = ({ params }: Props) => {
-  // const id = 2;
   const link = params.link;
   const { blogs, tags } = pageData;
 
-  // use useffect to avoid hydration errors
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (link !== undefined || link !== null) {
       setLoading(false);
     }
-    console.log(blogs[link]);
   }, []);
 
   return loading ? (
@@ -123,7 +121,7 @@ const Blog = ({ params }: Props) => {
                     Tuned!
                   </p>
                 )}
-                <div className="mt-8 flex flex-wrap items-center space-x-3">
+                <div className="mt-6 flex flex-wrap items-center space-x-3">
                   {tags.splice(0, 5).map((tag, index) => (
                     <p
                       className="py-2 px-4 text-sm md:text-base rounded-full bg-[#f7f7f7] mb-2"
@@ -133,7 +131,7 @@ const Blog = ({ params }: Props) => {
                     </p>
                   ))}
                 </div>
-                <div className="w-full mt-10">
+                <div className="w-full mt-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-6">
                       <>
@@ -162,29 +160,50 @@ const Blog = ({ params }: Props) => {
           </div>
           <div className="h-[70vh] bg-[#f7f7f7] w-full mt-10">
             <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-6 xs:px-0">
-              <div className="h-20 w-20 flex items-center justify-center rounded-[50%]">
-                <img
-                  src={`/assets/Bust/peep-8.svg`}
-                  className="w-[75%]"
-                  alt="An SVG illustration of a person dressed in different clothings"
-                />
+              <div className="flex items-center justify-between">
+                <div className="left">
+                  <div className="h-20 w-20 flex items-center justify-center rounded-[50%]">
+                    <img
+                      src={`/assets/Bust/peep-8.svg`}
+                      className="w-[75%]"
+                      alt="An SVG illustration of a person dressed in different clothings"
+                    />
+                  </div>
+                  <div className="writer mt-3">
+                    <h2 className="font-[500] text-2xl ">
+                      Toluwalope Akinkunmi
+                    </h2>
+                    <p className="text-sm mt-1">
+                      2.7k Followers | Senior software developer{" "}
+                    </p>
+                    <p className="text-sm mt-2">
+                      Senior software developer at{" "}
+                      <span className="font-semibold">Gen-Z Tales</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="right flex items-center justify-end space-x-5">
+                  <p className="py-2 px-4 text-sm md:text-base rounded-full bg-[#d6d6d6]">
+                    Follow
+                  </p>
+                  <button className="left flex items-center justify-center h-12 w-12 rounded-[50%] text-black dark:text-neutral-600 border dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
+                    <i className="fas fa-chevron-left fa-xl fa-fw"></i>
+                  </button>
+                </div>
               </div>
-              <div className="writer mt-3">
-                <h2 className="font-[500] text-2xl ">Toluwalope Akinkunmi</h2>
-                <p className="text-sm mt-1">
-                  2.7k Followers | Senior software developer{" "}
-                </p>
-                <p className="text-sm mt-1">
-                  Senior software developer at{" "}
-                  <span className="font-semibold">Gen-Z Tales</span>
-                </p>
 
-                <hr className="mt-6 mb-4 dark:border-neutral-800" />
+              <hr className="mt-6 mb-4 dark:border-neutral-800" />
+
+              <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-4">
+                <h3 className="text-lg font-normal">
+                  More from this <span className="font-medium">Author</span>.
+                </h3>
+                {/* <Suggested /> */}
               </div>
             </div>
           </div>
 
-          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10">
+          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 my-10">
             <h3 className="text-lg font-normal">
               Suggested <span className="font-medium">For you</span>.
             </h3>
