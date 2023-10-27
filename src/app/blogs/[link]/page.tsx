@@ -158,7 +158,7 @@ const Blog = ({ params }: Props) => {
               </div>
             </div>
           </div>
-          <div className="h-[70vh] bg-[#f7f7f7] w-full mt-10">
+          <div className="min-h-[70vh] bg-[#f7f7f7] w-full mt-10">
             <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-6 xs:px-0">
               <div className="flex items-center justify-between">
                 <div className="left">
