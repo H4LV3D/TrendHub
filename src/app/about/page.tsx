@@ -19,9 +19,7 @@ const About = ({}: Props) => {
               line2: "new Generation!",
             }}
             data={blogs}
-            text="Ready to learn more? Dive into a world of playful, exciting, and
-                interesting experience of my personal journey in the world of
-                Tech."
+            text="We are the vanguards of progress, trailblazing a future where boundless creativity and collective empowerment redefine what's possible."
           />
         </div>
       </PageLayout>

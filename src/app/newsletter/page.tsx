@@ -30,9 +30,7 @@ const Newsletter = ({}: Props) => {
               line2: "noise & newness.",
             }}
             data={blogs}
-            text="Ready to learn more? Dive into a world of playful, exciting, and
-                interesting experience of my personal journey in the world of
-                Tech."
+            text="Navigate the dynamic realm of information, distinguishing the essential from the noise, while embracing the ever-evolving landscape of novelty and change."
           />
 
           <DisplayNavBar Nav={podcastNav} />

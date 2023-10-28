@@ -29,7 +29,7 @@ function TetiaryButton({ text, link, small, active, action }: Props) {
             small
               ? "text-sm text-neutral-400 hover:text-black"
               : "text-lg p-2 text-neutral-400 dark:text-neutral-400 hover:text-black"
-          } ${active ? "!text-black dark:text-neutral-400" : ""} `}
+          } ${active ? "text-black font-medium dark:text-neutral-400" : ""} `}
           onClick={() => action}
         >
           {text}
