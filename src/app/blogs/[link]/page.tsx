@@ -1,8 +1,9 @@
-"use client";
+// "use client";
 import React from "react";
 import pageData from "@/data/index.json";
 import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
 type Blog = {
   title: string;
@@ -25,14 +26,24 @@ type Blog = {
 type Props = {
   params: {
     link: number;
-    blog: Blog[];
   };
 };
 
-const Blog = ({ params }: Props) => {
+export async function generateStaticParams() {
+  const { blogs } = pageData;
+  return blogs.map((blog) => ({
+    link: blog.link,
+  }));
+}
+
+async function getBlog(id: number) {
+  const { blogs } = pageData;
+  return blogs[id];
+}
+
+const Blog = async ({ params }: Props) => {
   const link = params.link;
-  const { blogs, tags } = pageData;
-  const selectedBlog = blogs[link];
+  const selectedBlog = await getBlog(link);
 
   return (
     <>
@@ -55,7 +66,7 @@ const Blog = ({ params }: Props) => {
 
               <div className="w-full text-black dark:text-neutral-400">
                 <h1 className="font-raleway font-semibold text-2xl sm:text-3xl md:text-4xl mt-4">
-                  {blogs[link].title}
+                  {selectedBlog.title}
                 </h1>
                 <p className="font-raleway text-sm sm:text-base mt-2">
                   Toluwalope Akinkunmi
@@ -70,18 +81,18 @@ const Blog = ({ params }: Props) => {
                     </p>
                     <p className="font-raleway font-normal text-sm">
                       <i className="fas fa-clock fa-sm fa-fw mr-2"></i>
-                      {blogs[link]?.readTime}
+                      {selectedBlog.readTime}
                     </p>
                     <p className="font-raleway font-normal text-sm">
                       <i className="fas fa-calendar-days fa-sm fa-fw mr-2"></i>
-                      {blogs[link]?.date}
+                      {selectedBlog.date}
                     </p>
                   </div>
                   <hr className="mb-3 mt-1 dark:border-neutral-800" />
                 </div>
 
-                {blogs[link]?.article ? (
-                  blogs[link].article.map((item, index) => (
+                {selectedBlog.article ? (
+                  selectedBlog.article.map((item, index) => (
                     <p
                       className="font-raleway text-sm md:text-base mt-6 text-justify !leading-8"
                       key={index}
@@ -107,7 +118,7 @@ const Blog = ({ params }: Props) => {
                   </p>
                 )}
                 <div className="mt-6 flex flex-wrap items-center space-x-3">
-                  {tags.splice(0, 5).map((tag, index) => (
+                  {selectedBlog.tags.map((tag, index) => (
                     <p
                       className="py-2 px-4 text-sm md:text-base rounded-full dark:text-neutral-400 bg-[#f7f7f7] dark:bg-neutral-800 mb-2"
                       key={index}
@@ -188,9 +199,7 @@ const Blog = ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10 pb-6">
-            <SuggestedInfo data={blogs} />
-          </div>
+          {/* <SuggestedInfo data={blogs} /> */}
         </div>
       </ViewLayout>
     </>

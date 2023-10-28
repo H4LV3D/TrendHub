@@ -35,7 +35,7 @@ const Blogs = ({}: Props) => {
                 router.refresh();
               }}
             />
-            <SuggestedInfo />
+            {/* <SuggestedInfo /> */}
           </div>
         </MaxWidthProvider>
       </PageLayout>

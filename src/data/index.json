@@ -49,7 +49,14 @@
       "reactions": {
         "good": 450,
         "bad": 5
-      }
+      },
+      "tags": [
+        "Technology",
+        "Programming",
+        "Web Development",
+        "JavaScript",
+        "React"
+      ]
     },
     {
       "title": "Still Confused? Read This!",
@@ -97,7 +104,14 @@
         "bad": 5
       },
       "link": "/blogs/1",
-      "image": "./assets/images/blog2.png"
+      "image": "./assets/images/blog2.png",
+      "tags": [
+        "Python",
+        "Data Science",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Blockchain"
+      ]
     },
     {
       "title": "You really think you know?",
@@ -144,7 +158,14 @@
       "readTime": "8 minutes",
       "date": "May 23, 2023",
       "link": "/blogs/2",
-      "image": "./assets/images/blog3.png"
+      "image": "./assets/images/blog3.png",
+      "tags": [
+        "Cryptocurrency",
+        "Cybersecurity",
+        "Digital Marketing",
+        "SEO",
+        "Content Marketing"
+      ]
     },
     {
       "title": "Embracing Continuous Learning",
@@ -189,7 +210,15 @@
       "reactions": {
         "good": 420,
         "bad": 3
-      }
+      },
+      "tags": [
+        "UI/UX Design",
+        "Social Media",
+        "Graphic Design",
+        "UI/UX Design",
+        "Mobile App Development",
+        "iOS Development"
+      ]
     },
     {
       "title": "Dealing with Frustration and Burnout in the Tech World",
@@ -234,7 +263,15 @@
       "reactions": {
         "good": 350,
         "bad": 10
-      }
+      },
+      "tags": [
+        "Web Development",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ]
     },
     {
       "title": "Building a Strong Foundation: Essential Concepts for Beginner Developers",
@@ -276,7 +313,14 @@
       "reactions": {
         "good": 300,
         "bad": 12
-      }
+      },
+      "tags": [
+        "Android Development",
+        "Game Development",
+        "Virtual Reality",
+        "Augmented Reality",
+        "Cloud Computing"
+      ]
     },
     {
       "title": "Beyond Syntax: Understanding Software Architecture and Design Patterns",
@@ -314,7 +358,14 @@
       "link": "/blogs/6",
       "image": "./assets/images/blog6.png",
       "date": "June 21, 2023",
-      "readTime": "8 minutes"
+      "readTime": "8 minutes",
+      "tags": [
+        "Data Structures",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning"
+      ]
     },
     {
       "title": "Effective Problem-Solving Techniques for Developers",
@@ -355,7 +406,14 @@
       "readTime": "7 minutes",
       "date": "June 28, 2023",
       "link": "/blogs/7",
-      "image": "./assets/images/blog8.png"
+      "image": "./assets/images/blog8.png",
+      "tags": [
+        "Big Data",
+        "IoT (Internet of Things)",
+        "Startups",
+        "Entrepreneurship",
+        "E-commerce"
+      ]
     }
   ],
   "socials": [
@@ -439,38 +497,6 @@
     "The Future of Tech: Emerging Technologies and Trends",
     "Mastering Time Management for Beginner Developers",
     "Building Effective Communication Skills in Tech"
-  ],
-  "tags": [
-    "Technology",
-    "Programming",
-    "Web Development",
-    "JavaScript",
-    "React",
-    "Python",
-    "Data Science",
-    "Machine Learning",
-    "Artificial Intelligence",
-    "Blockchain",
-    "Cryptocurrency",
-    "Cybersecurity",
-    "Digital Marketing",
-    "SEO",
-    "Content Marketing",
-    "Social Media",
-    "Graphic Design",
-    "UI/UX Design",
-    "Mobile App Development",
-    "iOS Development",
-    "Android Development",
-    "Game Development",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Cloud Computing",
-    "Big Data",
-    "IoT (Internet of Things)",
-    "Startups",
-    "Entrepreneurship",
-    "E-commerce"
   ],
   "genres": [
     {

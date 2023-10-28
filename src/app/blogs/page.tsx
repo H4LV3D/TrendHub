@@ -14,7 +14,6 @@ type Props = {};
 
 const Blogs = ({}: Props) => {
   const { blogs } = pageData;
-  console.log(blogs.length);
   const dispatch = useAppDispatch();
   const arrangement = useAppSelector((state) => state.arrangement.value);
 
