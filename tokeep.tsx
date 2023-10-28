@@ -1,13 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pageData from "@/data/index.json";
 import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
-import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
+import DisplayCard from "@/components/shared/DisplayCard/DisplayCard";
+import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
 
 type Blog = {
   title: string;
   episode?: string;
-  description?: string;
+  desciption?: string;
   readTime: string;
   date: string;
   article: {
@@ -25,16 +26,63 @@ type Blog = {
 type Props = {
   params: {
     link: number;
-    blog: Blog[];
+    blog: Blog;
   };
 };
 
+export async function generateStaticParams() {
+  if (typeof window === "undefined") {
+    const { blogs } = pageData;
+    return blogs.map((blog) => ({
+      params: {
+        link: blog.link,
+        blog: blog,
+      },
+    }));
+  } else {
+    return [];
+  }
+}
+
+const Suggested = () => {
+  const { blogs } = pageData;
+  const arrangement = "cards";
+  return (
+    <>
+      <div className="py-4 md:grid grid-cols-2 gap-x-6">
+        {blogs.splice(0, 4).map((blog, index) => (
+          <div key={index} className="mb-6">
+            <DisplayCard display={blog} arrangement={arrangement} />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
 const Blog = ({ params }: Props) => {
+  console.log(params);
   const link = params.link;
   const { blogs, tags } = pageData;
-  const selectedBlog = blogs[link];
 
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (link !== undefined || link !== null) {
+      setLoading(false);
+    }
+  }, []);
+
+  return loading ? (
+    <ViewLayout>
+      <div className="h-[90vh] flex justify-center items-center">
+        <div className="grid place-items-center">
+          <h1>Loading</h1>
+          <ButtonLoader color="#000" />
+        </div>
+      </div>
+    </ViewLayout>
+  ) : (
     <>
       <ViewLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
@@ -145,8 +193,8 @@ const Blog = ({ params }: Props) => {
           </div>
           <div className="min-h-[70vh] bg-[#f7f7f7] dark:bg-neutral-800 w-full mt-10">
             <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-6 xs:px-0">
-              <div className="sm:flex items-center justify-between dark:text-neutral-400">
-                <div className="left mb-3 sm:mb-0">
+              <div className="sm:flex items-center justify-between">
+                <div className="left">
                   <div className="h-20 w-20 flex items-center justify-center rounded-[50%]">
                     <img
                       src={`/assets/Bust/peep-8.svg`}
@@ -167,8 +215,8 @@ const Blog = ({ params }: Props) => {
                     </p>
                   </div>
                 </div>
-                <div className="right flex items-center sm:justify-end space-x-5">
-                  <p className="py-2 px-4 text-sm md:text-base rounded-full bg-[#d6d6d6] dark:bg-neutral-700">
+                <div className="right flex items-center justify-end space-x-5">
+                  <p className="py-2 px-4 text-sm md:text-base rounded-full bg-[#d6d6d6]">
                     Follow
                   </p>
                   <button className="left flex items-center justify-center h-12 w-12 rounded-[50%] text-black dark:text-neutral-600 border dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
@@ -177,7 +225,7 @@ const Blog = ({ params }: Props) => {
                 </div>
               </div>
 
-              <hr className="mt-6 mb-4 dark:border-neutral-700" />
+              <hr className="mt-6 mb-4 dark:border-neutral-800" />
 
               <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-4">
                 <h3 className="text-lg font-normal">
@@ -189,7 +237,10 @@ const Blog = ({ params }: Props) => {
           </div>
 
           <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10 pb-6">
-            <SuggestedInfo data={blogs} />
+            <h3 className="text-lg font-normal">
+              Suggested <span className="font-medium">For you</span>.
+            </h3>
+            <Suggested />
           </div>
         </div>
       </ViewLayout>
