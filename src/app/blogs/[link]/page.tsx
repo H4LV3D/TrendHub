@@ -124,7 +124,7 @@ const Blog = ({ params }: Props) => {
                 <div className="mt-6 flex flex-wrap items-center space-x-3">
                   {tags.splice(0, 5).map((tag, index) => (
                     <p
-                      className="py-2 px-4 text-sm md:text-base rounded-full bg-[#f7f7f7] mb-2"
+                      className="py-2 px-4 text-sm md:text-base rounded-full dark:text-neutral-400 bg-[#f7f7f7] dark:bg-neutral-800 mb-2"
                       key={index}
                     >
                       {tag}
@@ -158,9 +158,9 @@ const Blog = ({ params }: Props) => {
               </div>
             </div>
           </div>
-          <div className="min-h-[70vh] bg-[#f7f7f7] w-full mt-10">
+          <div className="min-h-[70vh] bg-[#f7f7f7] dark:bg-neutral-800 w-full mt-10">
             <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-6 xs:px-0">
-              <div className="flex items-center justify-between">
+              <div className="sm:flex items-center justify-between">
                 <div className="left">
                   <div className="h-20 w-20 flex items-center justify-center rounded-[50%]">
                     <img
@@ -203,7 +203,7 @@ const Blog = ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 my-10">
+          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10 pb-6">
             <h3 className="text-lg font-normal">
               Suggested <span className="font-medium">For you</span>.
             </h3>
