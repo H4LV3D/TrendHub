@@ -30,9 +30,7 @@ const Podcast = ({}: Props) => {
               line2: "Vote & Video.",
             }}
             data={blogs}
-            text="Ready to learn more? Dive into a world of playful, exciting, and
-                interesting experience of my personal journey in the world of
-                Tech."
+            text="Amplify your voice, wield your vote, and harness the power of video to shape narratives and drive impactful societal transformations."
           />
         </div>
 
