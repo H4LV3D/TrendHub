@@ -42,9 +42,7 @@ const Blogs = ({}: Props) => {
           <Banner
             heading={{ line1: "The message,", line2: "medium & media." }}
             data={blogs}
-            text="Ready to learn more? Dive into a world of playful, exciting, and
-                interesting experience of my personal journey in the world of
-                Tech."
+            text="leverage diverse mediums, and harness the power of media to forge authentic connections and catalyze cultural conversations."
           />
 
           <DisplayNavBar Nav={Nav} />
