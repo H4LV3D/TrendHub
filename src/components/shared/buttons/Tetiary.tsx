@@ -18,8 +18,12 @@ function TetiaryButton({ text, link, small, active, action }: Props) {
           className={`"w-full  ${
             small
               ? "text-sm text-neutral-400 hover:text-black"
-              : "text-lg p-2 text-neutral-400 dark:text-neutral-400 hover:text-black"
-          } ${active ? "text-black font-medium dark:text-neutral-300" : ""} `}
+              : `p-2 ${
+                  active
+                    ? "text-lg text-black font-medium dark:text-neutral-300"
+                    : "text-lg text-neutral-400 dark:text-neutral-400 hover:text-black"
+                } `
+          }  `}
         >
           {text}
         </Link>
