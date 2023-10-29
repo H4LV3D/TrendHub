@@ -21,6 +21,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
   const [navTab, setNavTab] = useState("For You");
   const arrangement = useAppSelector((state) => state.arrangement.value);
   const dispatch = useAppDispatch();
+  const filter = ["For You", "Following", "Followers", "Feed"];
 
   return (
     <div>
@@ -43,6 +44,24 @@ const DisplayNavBar = ({ Nav }: Props) => {
               </button>
             </div>
           ))}
+        </div>
+        <div className="md:hidden">
+          <div className="pr-[1rem] border rounded-[0.5rem] bg-[#f7f7f7] dark:bg-neutral-700 dark:border-neutral-600 cursor-pointer">
+            <select
+              name=""
+              id=""
+              className="py-[0.75rem] px-[1rem] text-[#000] w-[20rem] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-600 outline-none"
+            >
+              <option value="all_transactions">
+                <span>All Transactions</span>
+              </option>
+              {filter.map((item, index) => (
+                <option value={item} key={index}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div className="w-full flex justify-end">
