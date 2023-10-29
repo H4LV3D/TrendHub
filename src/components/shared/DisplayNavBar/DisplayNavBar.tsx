@@ -25,7 +25,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
 
   return (
     <div>
-      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-600 mb-8">
+      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-600 mb-8 pb-2">
         <div className="w-full hidden md:flex items-center space-x-2">
           <Icons icon={plus} small={true} />
           {Nav.map((nav, index: number) => (
@@ -50,7 +50,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
             <select
               name=""
               id=""
-              className="py-[0.75rem] px-[1rem] text-[#000] w-[20rem] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-600 outline-none"
+              className="py-[0.75rem] px-[1rem] text-[#000] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-600 outline-none"
             >
               <option value="all_transactions">
                 <span>All Transactions</span>
