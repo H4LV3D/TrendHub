@@ -24,7 +24,7 @@ const Banner = ({ heading, text, data }: Props) => {
           </h1>
         </div>
         <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-          <p className="text-sm sm:text-base md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 md:w-2/3 mb-8">
+          <p className="text-sm !leading-6 md:!leading-7 sm:text-base md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 md:w-2/3 mb-8">
             {text}
           </p>
         </div>
