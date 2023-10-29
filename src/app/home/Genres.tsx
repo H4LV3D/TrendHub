@@ -47,7 +47,7 @@ function Genres({}: Props) {
               <div key={index}>{subSections(tt)}</div>
             ))}
           </div>
-          <div className="md:hidden">
+          <div className="hidden sm:block md:hidden">
             <img
               src={item.illustrativeImage}
               className="xs:w-[220px] sm:w-[45%] md:w-[48%] lg:w-[48%] xl:w-[55%] dark:opacity-80 mx-auto"
