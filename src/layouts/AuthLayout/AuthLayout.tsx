@@ -103,14 +103,13 @@ function AuthLayout({ children, form }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.5 }}
         transition={{ duration: 0.5 }}
-        className={`w-full min-h-screen flex items-center justify-center bg-[#F7F7F7] dark:bg-[#191919] `}
+        className={`w-full min-h-screen grid items-center bg-[#F7F7F7] dark:bg-[#191919] `}
       >
         <motion.div
           initial={{ x: -100, opacity: 0.3 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
-          className={``}
         >
           <div className="sm:border dark:border-neutral-800 rounded-xl sm:p-12 lg:p-10 mx-12 xl:p-12 sm:shadow-md ">
             <div className="mb-1">
