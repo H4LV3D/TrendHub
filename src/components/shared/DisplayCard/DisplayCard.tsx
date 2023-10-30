@@ -6,25 +6,22 @@ import Link from "next/link";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { setArrangement } from "@/store/slices/arrangement/arrangementSlice";
 
-type Article = {
-  p: string;
-};
-type Reactions = {
-  good: number;
-  bad: number;
-};
-
 type Blog = {
   title: string;
-  episode: string;
-  description: string;
-  article: Article[];
-  author?: string;
-  link: string;
-  image: string;
+  episode?: string;
+  description?: string;
   readTime: string;
   date: string;
-  reactions?: Reactions | undefined;
+  article: {
+    p: string;
+  }[];
+  link: string;
+  image: string;
+  tags?: string[];
+  reactions?: {
+    good: number;
+    bad: number;
+  };
 };
 
 type Props = {
