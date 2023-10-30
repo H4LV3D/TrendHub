@@ -51,7 +51,7 @@ function SignUpForm({}: Props) {
 
   return (
     <>
-      <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-700 dark:text-neutral-400 font-raleway mb-3">
+      <p className="text-lg sm:text-xl md:text-2xl font-medium dark:text-neutral-400 font-raleway mb-3">
         It's Easy, Sign Up.
       </p>
       <form onSubmit={handleSubmit(onSubmit)}>
