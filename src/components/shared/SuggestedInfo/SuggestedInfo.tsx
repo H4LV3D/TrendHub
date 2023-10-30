@@ -25,7 +25,6 @@ type Props = {
 };
 
 const SuggestedInfo = ({ data, split }: Props) => {
-  console.log(data);
   const arrangement = "cards";
   const dataCopy = [...data];
   const splitData = split ? split : 4;

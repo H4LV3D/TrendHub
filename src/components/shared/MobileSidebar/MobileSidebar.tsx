@@ -69,7 +69,6 @@ const MobileSidebar: React.FC = () => {
 
   // Determine the category based on the current path
   const category = allLinks.find((link) => link.link === path);
-  console.log(path, category);
 
   // Check if NavigationLinks contains the category object
   const isProtected = ProtectedLinks.some(

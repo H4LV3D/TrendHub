@@ -103,7 +103,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.5 }}
         transition={{ duration: 0.5 }}
-        className={`w-full min-h-screen grid items-center bg-[#F7F7F7] dark:bg-[#191919] `}
+        className={`w-full min-h-screen grid items-center md:flex justify-center bg-[#F7F7F7] dark:bg-[#191919] `}
       >
         <motion.div
           initial={{ x: -100, opacity: 0.3 }}
@@ -111,7 +111,7 @@ function AuthLayout({ children, form }: Props) {
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
         >
-          <div className="w-full sm:w-[450px] md:mx-auto sm:border dark:border-neutral-800 rounded-xl sm:p-12 lg:p-10 mx-12 xl:p-12 sm:shadow-md ">
+          <div className="md:mx-auto sm:border dark:border-neutral-800 rounded-xl sm:p-12 lg:p-10 mx-12 xl:p-12 sm:shadow-md ">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>

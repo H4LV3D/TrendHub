@@ -40,7 +40,6 @@ function SearchBox({ blogs }: Props) {
       }
       return false;
     });
-    console.log(filtered);
     setFilteredResults(filtered);
   };
 
