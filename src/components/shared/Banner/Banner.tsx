@@ -31,11 +31,25 @@ const Banner = ({ heading, text, data }: Props) => {
           </motion.h1>
         </div>
         <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-          <p className="text-sm !leading-6 md:!leading-7 sm:text-base md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 md:w-2/3 mb-8">
+          <motion.p
+            initial={{ x: 100, opacity: 0.3 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0.5 }}
+            transition={{ duration: 1 }}
+            className="text-sm !leading-6 md:!leading-7 sm:text-base md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 md:w-2/3 mb-8"
+          >
             {text}
-          </p>
+          </motion.p>
         </div>
-        <SearchBox blogs={data} />
+        <motion.div
+          initial={{ y: 100, opacity: 0.3 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0.5 }}
+          transition={{ duration: 1 }}
+          className="w-full"
+        >
+          <SearchBox blogs={data} />
+        </motion.div>
       </div>
     </>
   );
