@@ -6,6 +6,7 @@ import Banner from "@/components/shared/Banner/Banner";
 import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import PageLayout from "@/layouts/PageLayout/PageLayout";
+import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ const Podcast = ({}: Props) => {
   const { blogs } = pageData;
   const arrangement = useAppSelector((state) => state.arrangement.value);
 
-  const podcastNav = [
+  const Nav = [
     { text: "For You", link: "#foryou" },
     { text: "Following", link: "#following" },
     { text: "Followers", link: "#following" },
@@ -34,16 +35,15 @@ const Podcast = ({}: Props) => {
           />
         </div>
 
-        <div className="container mx-auto px-6 xs:px-0 font-raleway mb-12">
-          <DisplayNavBar Nav={podcastNav} />
-
+        <MaxWidthProvider>
+          <DisplayNavBar Nav={Nav} />
           <div
             className={`"w-full grid ${
               arrangement === "single"
                 ? "grid-cols-1"
                 : arrangement === "double"
                 ? "grid-cols-2 gap-8"
-                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:space-x-6"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6"
             } `}
           >
             {blogs.map((blog, index) => (
@@ -52,7 +52,7 @@ const Podcast = ({}: Props) => {
               </div>
             ))}
           </div>
-        </div>
+        </MaxWidthProvider>
       </PageLayout>
     </>
   );
