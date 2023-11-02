@@ -108,12 +108,12 @@ const Blog = ({ params }: Props) => {
                 )}
                 <div className="mt-6 flex flex-wrap items-center">
                   {blogs[link]?.tags.map((tag: any, index: number) => (
-                    <p
+                    <button
                       className="py-2 px-4 text-sm md:text-base rounded-full dark:text-neutral-400 bg-[#f7f7f7] dark:bg-neutral-800 mb-2 mr-3"
                       key={index}
                     >
                       {tag}
-                    </p>
+                    </button>
                   ))}
                 </div>
                 <div className="w-full mt-6">
@@ -180,7 +180,7 @@ const Blog = ({ params }: Props) => {
               <hr className="mt-6 mb-4 dark:border-neutral-700" />
 
               <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-4">
-                <h3 className="text-lg font-normal">
+                <h3 className="text-lg font-normal dark:text-neutral-400 ">
                   More from this <span className="font-medium">Author</span>.
                 </h3>
                 <SuggestedInfo split={2} data={blogs} />
@@ -189,7 +189,7 @@ const Blog = ({ params }: Props) => {
           </div>
 
           <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10 pb-6">
-            <h3 className="text-lg font-normal">
+            <h3 className="text-lg font-normal dark:text-neutral-400 ">
               Suggested <span className="font-medium">For you</span>.
             </h3>
             <hr className="mt-4 mb-4 dark:border-neutral-800" />
