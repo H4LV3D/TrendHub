@@ -60,7 +60,7 @@ function SearchBox({ blogs }: Props) {
           </button>
         </div>
         {searchQuery && (
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-12 mt-3 h-64 w-full sm:w-[430px] md:w-[485px] bg-white rounded-lg z-50 border-gray-400 hover:border-gray-700 dark:border-gray-600 dark:hover:border-gray-300 overflow-y-auto flex flex-col items-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-12 mt-4 h-64 w-full sm:w-[430px] md:w-[485px] dark:text-neutral-400 rounded-lg z-50 border-gray-400 hover:border-gray-700 dark:border-neutral-700 dark:hover:border-neutral-300 overflow-y-auto flex flex-col items-center">
             {filteredResults.length ? (
               filteredResults.map((item: any) => (
                 <Link
@@ -68,7 +68,7 @@ function SearchBox({ blogs }: Props) {
                   key={item.title}
                   onClick={() => setSearchQuery("")}
                 >
-                  <div className="w-full border border-gray-300 hover:border-black rounded-md p-2 mb-2">
+                  <div className="w-full border border-gray-300 hover:border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-md p-2 mb-2">
                     <p className="text-xs font-normal">{item.episode}</p>
                     <h2 className="font-medium text-base line-clamp-1">
                       {item.title}
