@@ -60,24 +60,33 @@ const Blog = ({ params }: Props) => {
                 <p className="font-raleway text-sm sm:text-base mt-2">
                   Toluwalope Akinkunmi
                 </p>
+                {/* <p className="font-raleway text-sm sm:text-base mt-2">
+                  {blogs[link]?.date} | {blogs[link]?.readTime}
+                </p> */}
 
                 <div className="mt-4">
-                  <hr className="mt-6 mb-4 dark:border-neutral-800" />
+                  <hr className="mt-4 mb-4 dark:border-neutral-800" />
                   <div className="flex justify-between pb-2">
+                    <div className="flex items-center space-x-4 pb-2">
+                      <p className="font-raleway font-normal text-sm text-neutral-600 flex items-center space-x-2">
+                        <i className="fa-solid fa-hands-clapping fa-xl fa-fw"></i>
+                        <span>100</span>
+                      </p>
+                      <p className="font-raleway font-normal flex items-center space-x-2 text-sm text-neutral-600">
+                        <i className="fas fa-users fa-lg fa-fw"></i>
+                        <span>32</span>
+                      </p>
+                    </div>
                     <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-users fa-sm fa-fw mr-2"></i>
-                      100
-                    </p>
-                    <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-clock fa-md fa-fw mr-2"></i>
+                      {/* <i className="fas fa-clock fa-md fa-fw mr-2"></i> */}
                       {blogs[link]?.readTime}
                     </p>
                     <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-calendar-days fa-lg fa-fw mr-2"></i>
+                      {/* <i className="fas fa-calendar-days fa-lg fa-fw mr-2"></i> */}
                       {blogs[link]?.date}
                     </p>
                   </div>
-                  <hr className="mb-3 mt-1 dark:border-neutral-800" />
+                  <hr className="mb-3 dark:border-neutral-800" />
                 </div>
 
                 {blogs[link]?.article ? (
@@ -120,22 +129,22 @@ const Blog = ({ params }: Props) => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-6">
                       <>
-                        <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-600 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
-                          <i className="fas fa-chevron-left fa-xl fa-fw"></i>
-                        </button>
-                      </>
-                      <>
-                        <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-600 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
-                          <i className="fas fa-chevron-right fa-xl fa-fw"></i>
+                        <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-neutral-700 dark:text-neutral-600 border dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
+                          <i className="fas fa-heart fa-xl fa-fw"></i>
                         </button>
                       </>
                     </div>
-                    <div className="flex items-center space-x-6">
-                      <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-400 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-neutral-300">
-                        <i className="fas fa-envelope fa-xl fa-fw"></i>
+                    <div className="flex items-center space-x-2">
+                      <>
+                        <button className="flex items-center justify-center h-10 w-10 rounded-md text-black dark:text-neutral-600 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-black">
+                          <i className="fas fa-paper-plane fa-xl fa-fw"></i>
+                        </button>
+                      </>
+                      <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
+                        <i className="far fa-bookmark fa-xl fa-fw"></i>
                       </button>
-                      <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-black dark:text-neutral-400 border border-black dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-neutral-300">
-                        <i className="fas fa-envelope fa-xl fa-fw"></i>
+                      <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
+                        <i className="fa-solid fa-ellipsis fa-xl fa-fw"></i>
                       </button>
                     </div>
                   </div>
