@@ -65,15 +65,15 @@ const Blog = ({ params }: Props) => {
                   <hr className="mt-6 mb-4 dark:border-neutral-800" />
                   <div className="flex justify-between pb-2">
                     <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-user fa-sm fa-fw mr-2"></i>
+                      <i className="fas fa-users fa-sm fa-fw mr-2"></i>
                       100
                     </p>
                     <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-clock fa-sm fa-fw mr-2"></i>
+                      <i className="fas fa-clock fa-md fa-fw mr-2"></i>
                       {blogs[link]?.readTime}
                     </p>
                     <p className="font-raleway font-normal text-sm">
-                      <i className="fas fa-calendar-days fa-sm fa-fw mr-2"></i>
+                      <i className="fas fa-calendar-days fa-lg fa-fw mr-2"></i>
                       {blogs[link]?.date}
                     </p>
                   </div>
