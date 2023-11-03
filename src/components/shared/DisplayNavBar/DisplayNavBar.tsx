@@ -58,7 +58,7 @@ const DisplayNavBar = ({ Nav }: Props) => {
         </div>
 
         <div className="w-full flex justify-end">
-          <div className="flex space-x-4">
+          <div className="flex space-x-0">
             <Icons
               icon={square}
               color={arrangement === "single" ? "#000" : "#a3a3a3"}
