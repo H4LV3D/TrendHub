@@ -149,11 +149,11 @@ function Footer({}: Props) {
                 <a
                   href={item.link}
                   key={index}
-                  className="border dark:border-neutral-700 p-1 rounded-md hover:border-black dark:hover:border-white"
+                  className=" rounded-md hover:border-black dark:hover:border-white"
                 >
-                  <div className="group relative font-raleway font-normal cursor-pointer dark:text-white text-black pr-8 hover:text-xl py-3.5">
-                    <i className={`${item.icon} fa-lg fa-fw`}></i>
-                    <div className="opacity-0 bg-black text-white text-center text-xs font-raleway rounded-lg py-2 absolute z-40 group-hover:opacity-100 bottom-full -left-1/2 px-4 pointer-events-none">
+                  <div className="group relative font-raleway font-normal cursor-pointer dark:text-white text-black p-2">
+                    <i className={`${item.icon} fa-xl fa-fw`}></i>
+                    <div className="opacity-0 bg-black text-white text-center text-xs font-raleway rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-1/2 px-4 pointer-events-none">
                       {item.title}
                     </div>
                   </div>
