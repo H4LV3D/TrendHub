@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head key="app-head">
+      <head>
         <link
           rel="stylesheet"
           href="/assets/fontawesome-free-6.2.1-web/css/solid.css"
@@ -51,7 +51,7 @@ export default function RootLayout({
           href="/assets/fontawesome-free-6.2.1-web/css/fontawesome.css"
         />
         <meta name="theme-color" content="#000000" />
-      </Head>
+      </head>
       <body className={`${raleway.className}`}>
         <Provider store={store}>
           <ThemeProvider>{children}</ThemeProvider>
