@@ -19,6 +19,17 @@ const Banner = ({ heading, text, data }: Props) => {
         id="search"
       >
         <div className="flex flex-col justify-center items-center mt-20 lg:w-[900px]">
+          {heading.line1 === "Articles, Blogs," && (
+            <motion.p
+              initial={{ y: -100, opacity: 0.3 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100, opacity: 0.5 }}
+              transition={{ duration: 1 }}
+              className="font-raleway text-base sm:text-base my-4 bg-black text-white rounded-full px-6 py-2 "
+            >
+              Informative
+            </motion.p>
+          )}
           <motion.h1
             initial={{ x: -100, opacity: 0.3 }}
             animate={{ x: 0, opacity: 1 }}
