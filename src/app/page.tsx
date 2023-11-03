@@ -24,25 +24,6 @@ export default function Home({}: {}) {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      {notify && (
-        <div className="fixed top-8 left-1/2 transform -translate-x-1/2 w-[300px] md:w-[450px] z-50 font-raleway">
-          <div className="w-full bg-black dark:bg-gray-100 flex items-center space-x-3 p-3 rounded-lg">
-            <div className="w-[60px] flex justify-center text-gray-100 dark:text-black">
-              <i className="fas fa-gift fa-xl fa-fw"></i>
-            </div>
-            <div className="font-raleway">
-              <h3 className="font-semibold text-lg font-raleway text-white dark:text-black">
-                {message}
-              </h3>
-              <p className="text-sm font-raleway text-gray-100 dark:text-black">
-                You have successfully been able to subscribe to my blog,
-                newsletter and updates feed for more interesting episodes.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
       <PageLayout>
         <div className=" md:container mx-auto px-5 xs:px-0 font-raleway">
           <Banner
