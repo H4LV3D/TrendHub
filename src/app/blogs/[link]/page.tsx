@@ -167,12 +167,12 @@ const Blog = ({ params }: Props) => {
                     </p>
                   </div>
                 </div>
-                <div className="right flex items-center sm:justify-end space-x-5">
+                <div className="right flex items-center sm:justify-end space-x-3">
                   <button className="py-2 px-4 text-sm md:text-base rounded-full bg-[#d6d6d6] hover:bg-neutral-600 hover:text-neutral-300 dark:bg-neutral-700">
                     Follow
                   </button>
-                  <button className="left flex items-center justify-center h-12 w-12 rounded-[50%] text-black dark:text-neutral-600 hover:bg-neutral-600 hover:text-neutral-300 border dark:border-neutral-800 cursor-pointer dark:hover:bg-neutral-800  dark:hover:text-black">
-                    <i className="fas fa-chevron-left fa-xl fa-fw"></i>
+                  <button className="left flex items-center justify-center h-10 w-10 rounded-[50%] text-black dark:text-neutral-600 hover:bg-neutral-600 hover:text-neutral-300 border dark:border-neutral-800 cursor-pointer bg-[#d6d6d6] dark:hover:bg-neutral-800  dark:hover:text-black">
+                    <i className="fas fa-envelope fa-lg fa-fw"></i>
                   </button>
                 </div>
               </div>
