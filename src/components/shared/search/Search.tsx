@@ -55,7 +55,7 @@ function SearchBox({ blogs }: Props) {
             onChange={handleInputChange}
           />
           <button className="p-4 bg-black rounded-r-lg text-white dark:text-neutral-400 dark:bg-neutral-800">
-            <i className="fas fa-search fa-lg fa-fw"></i>
+            {/* <i className="fas fa-search fa-lg fa-fw"></i> */}
             Search
           </button>
         </div>
