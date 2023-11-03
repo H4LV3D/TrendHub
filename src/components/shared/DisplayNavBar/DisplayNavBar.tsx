@@ -48,9 +48,9 @@ const DisplayNavBar = ({ Nav }: Props) => {
         <div className="md:hidden">
           <div className="pr-[1rem] border rounded-[0.5rem] bg-[#f7f7f7] dark:bg-neutral-700 dark:border-neutral-600 cursor-pointer">
             <select className="py-[0.75rem] px-[1rem] text-[#000] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-600 outline-none">
-              {filter.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
+              {Nav.map((item, index) => (
+                <option value={item.text} key={index}>
+                  {item.text}
                 </option>
               ))}
             </select>
