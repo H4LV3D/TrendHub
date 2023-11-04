@@ -54,6 +54,7 @@ const EditorPageWrapper = () => {
               <Editor
                 apiKey="i9v9y510jkigwy236v92swqv0j5q8l5gfqgjeqstb73hp8kd"
                 onInit={showTiny}
+                onEditorChange={handleEditorChange}
                 init={{
                   plugins:
                     "ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss",
