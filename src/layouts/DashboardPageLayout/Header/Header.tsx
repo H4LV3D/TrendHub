@@ -29,7 +29,7 @@ function Header({}: Props) {
   return (
     <div className="w-full bg-white dark:bg-[#191919] hidden lg:block ">
       <MaxWidthProvider>
-        <div className="flex justify-between items-center w-full py-3 border-y">
+        <div className="flex justify-between items-center w-full py-3 border-y dark:border-neutral-800">
           {navItems.map((item, index) => (
             <TetiaryButton
               key={index}
