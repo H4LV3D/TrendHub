@@ -12,15 +12,24 @@ type EditorRef = {
 
 const EditorPageWrapper = () => {
   const [loading, setLoading] = useState(false);
-  function showTiny() {
-    setLoading(false);
-  }
-
   const editorRef = useRef<EditorRef>(null);
+  function showTiny() {
+    setTimeout(() => {
+      setLoading(false); // Set loading to false after a certain delay
+    }, 1000); // Adjust the delay as needed
+  }
 
   const handleEditorChange = (content: any, editor: any) => {
     console.log("Content was updated:", content);
   };
+
+  //   const handleGetContent = () => {
+  //     if (editorRef.current) {
+  //       const content = editorRef.current.getContent();
+  //       console.log("Editor content:", content);
+  //     }
+  //   };
+
   return (
     <>
       <MaxWidthProvider>
