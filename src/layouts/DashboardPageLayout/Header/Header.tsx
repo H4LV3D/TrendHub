@@ -20,16 +20,16 @@ function Header({}: Props) {
 
   const navItems = [
     { text: "Dashoard", link: "/dashboard" },
-    { text: "Bookmarks", link: "/podcast" },
-    { text: "Bookmarks", link: "/podcast" },
-    { text: "Saved tems", link: "/newsletter" },
+    { text: "My Blogs", link: "/myblogs" },
+    { text: "Editor", link: "/editor" },
+    { text: "Manage", link: "/manage" },
     { text: "Settings", link: "/settings" },
   ];
 
   return (
     <div className="w-full bg-white dark:bg-[#191919] hidden lg:block ">
       <MaxWidthProvider>
-        <div className="flex justify-between items-center w-full py-3 border-b">
+        <div className="flex justify-between items-center w-full py-3 border-y">
           {navItems.map((item, index) => (
             <TetiaryButton
               key={index}
