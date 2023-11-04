@@ -27,7 +27,7 @@ const Generations = (props: Props) => {
               {[...Array(100)].map((_, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-[275px] h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-xl"
+                  className="flex-shrink-0 w-[275px] bg-white dark:bg-transparent  h-[330px] border dark:border-neutral-700 rounded-lg hover:shadow-xl cursor-pointer"
                 >
                   <img
                     src={`/assets/Bust/peep-${index + 1}.svg`}
