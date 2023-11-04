@@ -17,8 +17,7 @@ const ManagePageWrapper = ({}: Props) => {
                 Manage
               </h1>
               <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 mt-2">
-                Get staitistical information into how your
-                <br /> blog is being percived by your users.
+                Get staitistical information about your content.
               </p>
               {/* <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
                 Stats | SEO improvement | Keywords | User Engagement | Starred |
@@ -27,8 +26,8 @@ const ManagePageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full p-4 border rounded-lg md:mb-[20vh] ">
-            <h2 className="font-medium text-2xl">Statistics </h2>
+          <div className="bg-white dark:bg-[#191919] w-full p-4 rounded-lg md:mb-[20vh] ">
+            {/* <h2 className="font-medium text-2xl">Statistics </h2> */}
 
             <div className="flex ">
               <div className="grid grid-cols-2 p-4 w-1/2 border-r ">
