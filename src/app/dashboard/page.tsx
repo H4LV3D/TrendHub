@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import ProtectedPageLayout from "@/layouts/ProtectedPageLayout/ProtectedPageLayout";
 import DashboardPageLayout from "@/layouts/DashboardPageLayout/DashboardPageLayout";
 import DashboardPageWrapper from "@/components/page-wrappers/DashboardPageWrapper/DashboardPageWrapper";
@@ -10,7 +10,7 @@ type Props = {};
 const Dashboard = ({}: Props) => {
   return (
     <>
-      <ProtectedPageLayout>
+      <>
         <Head>
           <title>Trending | Dashboard</title>
           <meta name="description" content="Klanera dashboard" />
@@ -20,7 +20,7 @@ const Dashboard = ({}: Props) => {
         <DashboardPageLayout>
           <DashboardPageWrapper />
         </DashboardPageLayout>
-      </ProtectedPageLayout>
+      </>
     </>
   );
 };
