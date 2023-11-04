@@ -15,7 +15,7 @@ const ProtectedPageLayout: React.FC<Props> = ({ children }) => {
     <>
       <ModalProvider>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
-          <Navbar nav={true} />
+          <Navbar nav={false} />
           <div className="mt-20 mb-12">
             <Header />
             {children}
