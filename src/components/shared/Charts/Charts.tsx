@@ -103,8 +103,8 @@ export default function DoughnutChart({}: Props) {
       {
         label: "Tractors",
         data: Utils.numbers(NUMBER_CFG),
-        backgroundColor: ["#15994B", "#EABE12", "#1477F8", "#292D32"],
-        borderColor: ["#15994B", "#EABE12", "#1477F8", "#292D32"],
+        backgroundColor: ["#666", "#d6d6d6", "#f7f7f7", "#262626"],
+        borderColor: ["#666", "#d6d6d6", "#f7f7f7", "#262626"],
       },
     ],
   };

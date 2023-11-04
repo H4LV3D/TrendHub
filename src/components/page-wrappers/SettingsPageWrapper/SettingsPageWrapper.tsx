@@ -3,38 +3,67 @@ import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 
 type Props = {};
-const settings = [
-  "Personal Details",
-  "Personalize",
-  "Customize Theme",
-  "Change Password",
-  "Notifications",
-  "Collaboration",
-  "Request Access",
-  "Delete Account",
+
+const Settings = [
+  {
+    id: 1,
+    title: "Personal Details",
+    description:
+      "Update your personal details, such as name and email address to be used across the platform.",
+  },
+  {
+    id: 2,
+    title: "Personalize",
+    description:
+      "customise your profile with a memoji and a custom qr code linked to your profile",
+  },
+  {
+    id: 3,
+    title: "Customize Theme",
+    description:
+      "Adjust the theme to your liking by changing the mode to your preferred choice.",
+  },
+  {
+    id: 4,
+    title: "Change Password",
+    description: " Update your password to keep your account secure.",
+  },
+  {
+    id: 5,
+    title: "Notifications",
+    description:
+      "Toggle notifications on or off for your account, and adjust the frequency of emails you receive.",
+  },
+  {
+    id: 6,
+    title: "Collaboration",
+    description:
+      "Manage access for collaborators to your account, and what they can do.",
+  },
+  {
+    id: 7,
+    title: "Request Access",
+    description:
+      "Request access to another account, or to a team you are not a member of, to collaborate.",
+  },
+  {
+    id: 8,
+    title: "Delete Account",
+    description:
+      "Delete your account and all associated data. This action cannot be undone.",
+  },
 ];
 
 // personalize is about setting a preffered color, memoji and setting a custom qr code linked to your profile
 // connect to apple books so i can sync reading time
 
 const SettingsPageWrapper = ({}: Props) => {
-  const [active, setActive] = useState("Personalize");
+  const [active, setActive] = useState(1);
+  const currentSetting = Settings.find((setting) => setting.id === active);
   return (
     <>
       <MaxWidthProvider>
         <div className="">
-          {/* <div className="bg-white dark:bg-[#191919] h-[55vh] w-full flex flex-col items-center justify-center">
-            <div className="flex flex-col justify-center items-center mt-20 lg:w-[900px]">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-7xl text-black dark:text-neutral-200 font-oleo font-normal  text-center">
-                Settings
-              </h1>
-            </div>
-            <div className="w-full flex flex-col justify-center items-center mt-7 lg:w-[900px]">
-              <p className="text-sm sm:text-base md:text-lg text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3 mb-8">
-                Adjust your settings to your liking.
-              </p>
-            </div>
-          </div> */}
           <div className="bg-white dark:bg-[#191919] h-[20vh] w-full flex items-center">
             <div>
               <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
@@ -46,24 +75,32 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full p-5 flex border rounded-lg md:mb-[20vh] ">
-            <div className="grid grid-cols-1 w-1/3 pr-6 py-6 border-r ">
-              {settings.map((setting) => (
+          <div className="bg-white dark:bg-[#191919] w-full min-h-[75vh] p-5 flex border rounded-xl md:mb-[20vh] ">
+            <div className="grid grid-cols-1 w-1/3 pr-6 py-12 border-r ">
+              {Settings.map((setting) => (
                 <button
                   className={`font-raleway font-normal text-lg text-start text-black dark:text-neutral-400 p-3 ${
-                    active === setting
+                    active === setting.id
                       ? "border border-black rounded-lg"
                       : "border-b"
                   }`}
-                  onClick={() => setActive(setting)}
-                  key={setting}
+                  onClick={() => setActive(setting.id)}
+                  key={setting.title}
                 >
-                  {setting}
+                  {setting.title}
                 </button>
               ))}
             </div>
             <div className="w-2/3 p-6 h-full ">
-              <h2 className="font-medium text-2xl">{active}</h2>
+              <div className="">
+                <h2 className="font-medium text-2xl mb-1">
+                  {currentSetting?.title}
+                </h2>
+                <p className="font-normal text-gray-800 dark:text-neutral-400 text-base">
+                  {currentSetting?.description}
+                </p>
+                <hr className="my-2" />
+              </div>
             </div>
           </div>
         </div>
