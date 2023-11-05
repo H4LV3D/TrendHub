@@ -89,7 +89,7 @@ const EditorPageWrapper = () => {
               initialValue="Welcome to TinyMCE!"
             />
           </div>
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-end mt-5">
             <div className="w-full sm:w-1/2 md:w-[280px]  ">
               <PrimaryButton
                 text="Publish Blog"
