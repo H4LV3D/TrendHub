@@ -4,7 +4,6 @@ import PageLayout from "@/layouts/PageLayout/PageLayout";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import PrimaryButton from "@/components/shared/buttons/Primary";
 import { useRouter } from "next/navigation";
-import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
 
 type Props = {};
 
@@ -37,7 +36,6 @@ const Blogs = ({}: Props) => {
                 }}
               />
             </div>
-            {/* <SuggestedInfo /> */}
           </div>
         </MaxWidthProvider>
       </PageLayout>
