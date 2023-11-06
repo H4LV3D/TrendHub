@@ -35,7 +35,7 @@ const About = ({}: Props) => {
                   {[1, 2, 3].map((item, index) => (
                     <div
                       key={index}
-                      className="-rotate-45"
+                      className="-rotate-45 flex-grow"
                       style={{
                         transform: `rotate(${angles[index]}deg)`,
                       }}
@@ -54,9 +54,7 @@ const About = ({}: Props) => {
               </div>
               <div className="w-full flex items-center justify-center">
                 <div className="w-2/3 mx-auto">
-                  <h2 className="text-5xl font-oleo text-[1.25rem] mb-[1rem] ">
-                    Hey there,
-                  </h2>
+                  <h2 className="text-5xl font-oleo mb-[1rem] ">Hey there,</h2>
                   <p className="!leading-7 text-justify ">
                     We are the intersection of culture, creativity, and
                     technology, we are a global collective of cultural engineers
@@ -73,21 +71,87 @@ const About = ({}: Props) => {
                 </div>
               </div>
             </section>
-          </MaxWidthProvider>
-        </div>
-        <div className="py-20 w-full bg-[#f7f7f7] ">
-          <MaxWidthProvider className="md:container mx-auto px-6 xs:px-0">
-            <div className="grid grid-cols-2 grid-row-auto auto-rows-auto ">
-              <div className="w-full border"></div>
-              <div className="w-full border">
-                <h2 className="text-2xl text-[1.25rem] ">Hello</h2>
+            <hr />
+            <section className="min-h-[80vh] w-full ">
+              <div className="grid grid-cols-2 grid-row-auto auto-rows-auto min-h-[80vh]">
+                <div className="w-full flex justify-center items-center">
+                  <div className="w-2/3 mx-auto">
+                    <h2 className="text-5xl font-oleo mb-[1rem] ">
+                      All Collections.
+                    </h2>
+                    <p className="!leading-7 text-justify ">
+                      We are the intersection of culture, creativity, and
+                      technology, we are a global collective of cultural
+                      engineers building the future of brand marketing and
+                      communications. We leverage diverse mediums, and harness
+                      the power of media to forge authentic connections and
+                      catalyze cultural conversations.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full flex justify-center items-center">
+                  <div className="p-6 h-[350px] w-[350px] rounded-[50%] bg-[#f6f6f6] drop-shadow-xl flex justify-center items-center ">
+                    <Image
+                      src={`/assets/images/peep-8.svg`}
+                      alt="hero"
+                      width={300}
+                      height={300}
+                      className="scale-75 "
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          </MaxWidthProvider>
-        </div>
-        <div className="min-h-[100vh] w-full md:container mx-auto px-6 xs:px-0">
-          <MaxWidthProvider>
-            <div className="grid grid-cols-2 grid-row-auto auto-rows-auto "></div>
+            </section>
+            <hr />
+            <section className="min-h-[100vh] w-full md:container mx-auto px-6 xs:px-0">
+              <div className="grid grid-cols-2 grid-row-auto auto-rows-auto min-h-[80vh]">
+                <div className="w-full flex justify-center items-center">
+                  <div className="p-6 h-[500px] w-[500px] rounded-3xl bg-[#f9f9f9] drop-shadow-xl grid grid-cols-4 -rotate-6 ">
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7].map(
+                      (item, index) => (
+                        <Image
+                          src={`/assets/Memoji/male/Memoji-${index}.png`}
+                          alt="hero"
+                          width={400}
+                          height={400}
+                          className={` ${
+                            index === 0 ||
+                            index === 1 ||
+                            index === 2 ||
+                            index === 3
+                              ? ""
+                              : "border-t"
+                          }  ${
+                            index === 0 ||
+                            index === 4 ||
+                            index === 8 ||
+                            index === 12 ||
+                            index === 16
+                              ? ""
+                              : "border-l"
+                          }`}
+                        />
+                      )
+                    )}
+                  </div>
+                </div>
+                <div className="w-full flex justify-center items-center">
+                  <div className="w-2/3 mx-auto">
+                    <h2 className="text-5xl font-oleo mb-[1rem] ">
+                      Peak Creativity!
+                    </h2>
+                    <p className="!leading-7 text-justify ">
+                      We are the intersection of culture, creativity, and
+                      technology, we are a global collective of cultural
+                      engineers building the future of brand marketing and
+                      communications. We leverage diverse mediums, and harness
+                      the power of media to forge authentic connections and
+                      catalyze cultural conversations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
           </MaxWidthProvider>
         </div>
       </PageLayout>
