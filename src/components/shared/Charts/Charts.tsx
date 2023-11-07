@@ -240,13 +240,14 @@ export function GraphChart({}: Props) {
         ticks: {
           beginAtZero: true,
           min: 0, // Set the minimum value to 0
-          max: 600000, // Set the maximum value to 600000
-          stepSize: 200000, // Set the step size to 200000
+          max: 10000, // Set the maximum value to 10000
+          stepSize: 2000, // Set the step size to 2000
           callback: function (value: any) {
             if (value === 0) return "0";
-            if (value === 200000) return "200,000";
-            if (value === 400000) return "400,000";
-            if (value === 600000) return "600,000";
+            if (value === 2000) return "200";
+            if (value === 4000) return "400";
+            if (value === 6000) return "600";
+            if (value === 8000) return "800";
             return "";
           },
           font: {
@@ -260,14 +261,23 @@ export function GraphChart({}: Props) {
   };
 
   const data = {
-    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+    ],
     datasets: [
       {
         fill: true,
         label: "Dataset 1",
-        data: [
-          400000, 200000, 500000, 0, 400000, 200000, 400000, 200000, 550000,
-        ],
+        data: [8000, 4000, 8000, 4000, 6000, 0, 6000, 4000, 8000, 6000],
         borderColor: "#757373",
         backgroundColor: (ctx: any) => {
           const gradient = ctx.chart.ctx.createLinearGradient(
@@ -284,10 +294,10 @@ export function GraphChart({}: Props) {
     ],
   };
   return (
-    <div className="">
-      <div className="h-[18rem] mt-[0.5rem] bg-neutr ">
+    <>
+      <div className="h-[18rem] mt-[0.6rem] ">
         <Line options={options} data={data} />
       </div>
-    </div>
+    </>
   );
 }

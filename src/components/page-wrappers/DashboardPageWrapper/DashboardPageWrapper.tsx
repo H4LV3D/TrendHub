@@ -2,6 +2,10 @@
 import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import { GraphChart } from "@/components/shared/Charts/Charts";
+import Image from "next/image";
+import SecondaryButton from "@/components/shared/buttons/Secondary";
+import TetiaryButton from "@/components/shared/buttons/Tetiary";
+import PrimaryButton from "@/components/shared/buttons/Primary";
 
 type Props = {};
 
@@ -38,6 +42,44 @@ const stats = [
   },
 ];
 
+const authors = [
+  {
+    id: 1,
+    name: "John Doe",
+    description: "100",
+    icon: "fas fa-file-word",
+    peep: 45,
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    description: "30",
+    icon: "fas fa-book",
+    peep: 56,
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    description: "400",
+    icon: "fas fa-clock",
+    peep: 78,
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    description: "50",
+    icon: "fas fa-bookmark",
+    peep: 90,
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    description: "10",
+    icon: "fas fa-pencil-alt",
+    peep: 34,
+  },
+];
+
 const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
@@ -53,7 +95,8 @@ const DashboardPageWrapper = ({}: Props) => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-4 mb-8">
+
+          <div className="grid grid-cols-5 gap-4">
             {stats.map((stat) => (
               <div
                 className=" border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] "
@@ -78,32 +121,153 @@ const DashboardPageWrapper = ({}: Props) => {
             ))}
           </div>
 
-          <div className="flex items-center w-full space-x-4 mt-2">
-            <div className="bg-[#f7f7f7] w-2/3 rounded-2xl p-10">
-              <GraphChart />
+          <div className="flex w-full space-x-4 mt-14">
+            <div className=" border-r w-2/3">
+              <div className="py-3">
+                <h3 className="text-lg font-[500] ">
+                  Average Monthly Word Count.
+                </h3>
+                <p className="text-sm lg:w-2/3 mt-2 ">
+                  This graph shows the average number of words you read per
+                  month over the last 12 months. You can see that you read the
+                  most in March and the least in December.
+                </p>
+              </div>
+              <div className="p-5 mt-5">
+                <GraphChart />
+              </div>
             </div>
-            <div className="bg-[#f7f7f7] w-1/3 rounded-2xl flex-grow p-6">
-              <p className="Hello">Hello</p>
+            <div className=" w-1/3 rounded-2xl flex-grow p-3">
+              <p className="text-lg font-[500] mb-2">Authors you read.</p>
+              <div className="grid grid-cols-1 gap-y-2 ">
+                {authors.map((author) => (
+                  <div className="border dark:border-neutral-800 p-3 rounded-md cursor-pointer hover:border-black">
+                    <div className="flex space-x-4 items-center">
+                      <div className="h-12 w-12 rounded-full">
+                        <Image
+                          src={`/assets/Bust/peep-${author.peep}.svg`}
+                          height={40}
+                          width={40}
+                          alt="profile"
+                        />
+                      </div>
+                      <div className="">
+                        <h3 className="font-raleway font-[500] text-base dark:text-neutral-400">
+                          {author.name}
+                        </h3>
+                        <p className="text-sm ">
+                          {author.description} articles written.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-8 mt-2">
-            <div className="bg-[#f7f7f7] h-[30vh] rounded-2xl"></div>
-            <div className="bg-[#f7f7f7] h-[30vh] rounded-2xl"></div>
+          <div className="grid grid-cols-2 gap-x-8 mt-14">
+            <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
+              <div className="flex">
+                <div className="w-2/3">
+                  <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
+                    Collaborate
+                  </span>
+                  <h3 className="text-xl font-[500] mt-8">
+                    Explore the world of <br /> writing with others.
+                  </h3>
+                  <p className="text-sm mt-2 ">
+                    Collaboration is a great way to learn and grow as a writer,
+                    and it's a lot of fun too! You can collaborate with other
+                    writers on projects, or just chat about writing in general.
+                  </p>
+                  <div className="mt-4 w-1/3">
+                    <button
+                      type="button"
+                      className="bg-black py-2.5 w-full rounded-md text-white font-raleway font-[500] text-sm"
+                    >
+                      Explore Now
+                    </button>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <Image
+                    src={`/assets/Bust/peep-8.svg`}
+                    height={240}
+                    width={240}
+                    alt="profile"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
+              <div className="flex">
+                <div className="w-2/3">
+                  <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
+                    Artificial Intelligence
+                  </span>
+                  <h3 className="text-xl font-[500] mt-8">
+                    Experience the power <br />
+                    of AI in writing.
+                  </h3>
+                  <p className="text-sm mt-2 ">
+                    AI is a powerful tool that can help you write better and
+                    faster. It's not just for writers, either - it can be used
+                    by anyone who wants to communicate with others online.
+                  </p>
+                  <div className="mt-4 w-1/3">
+                    <button
+                      type="button"
+                      className="bg-black py-2.5 w-full rounded-md text-white font-raleway font-[500] text-sm"
+                    >
+                      Explore Now
+                    </button>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <Image
+                    src={`/assets/Bust/peep-46.svg`}
+                    height={240}
+                    width={240}
+                    alt="profile"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="w-full mt-10">
+          <div className="w-full mt-14">
             <h3 className="font-medium text-xl mb-3">Continue Reading</h3>
             <div className="grid grid-cols-3 gap-4 mb-8">
               {Array(3).fill(
-                <div className="flex flex-col border dark:border-neutral-800 p-5 rounded-md ">
-                  <h3 className="font-raleway font-[500] text-lg text-black dark:text-neutral-400 mb-1">
-                    Resource
+                <div className="flex flex-col border dark:border-neutral-800 p-5 rounded-md cursor-pointer hover:border-black ">
+                  <h3 className="font-raleway font-[500] text-lg text-neutral-700 dark:text-neutral-400 mb-1">
+                    Technology is changing the way we write and read articles.
                   </h3>
-                  <p className="text-base">
-                    Lorem ipsum dolor sit amet conse tetur adipi sicing elit.
-                    Quibusdam, voluptate.
+                  <p className="text-sm text-neutral-600 ">
+                    We are living in a world where technology is changing the
+                    way we write and read articles. Technology has made it
+                    easier for people to share their thoughts with others, but
+                    it has also made it harder for them to get published...
                   </p>
+                  <div className="flex space-x-5 mt-3">
+                    <div className="h-10 w-10 rounded-full flex justify-center items-center">
+                      <Image
+                        src={`/assets/Bust/peep-8.svg`}
+                        height={40}
+                        width={40}
+                        alt="profile"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-sm font-raleway font-[500] text-black dark:text-neutral-400">
+                        John Doe
+                      </p>
+                      <p className="text-sm font-raleway font-[400] text-black dark:text-neutral-400">
+                        2 min read
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
