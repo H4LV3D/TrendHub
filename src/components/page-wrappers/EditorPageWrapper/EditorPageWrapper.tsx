@@ -9,12 +9,13 @@ type Props = {};
 
 const EditorPageWrapper = () => {
   const authStep = useAppSelector((state) => state.authStep.step);
+  const [activeTab, setActiveTab] = React.useState("Transactions");
   const Nav = [
     { text: "New", link: "#editor" },
     { text: "Drafts", link: "#outline" },
     { text: "Edit", link: "#schedule" },
     { text: "Schedule", link: "#schedule" },
-    { text: "Publish", link: "#publish" },
+    { text: "Published", link: "#published" },
   ];
 
   return (
@@ -38,37 +39,61 @@ const EditorPageWrapper = () => {
 
           <div className="mt-5 flex space-x-6">
             <div className="w-4/5">
-              <h1 className="text-2xl font-[500]">
-                Content Creation and Editing.
-              </h1>
-              <div className="">
-                <MultiStepCreatePostForm />
+              {(() => {
+                switch (activeTab) {
+                  case "Transactions":
+                    return (
+                      <div className="border shadow-lg rounded-lg p-4">
+                        <h1 className="text-2xl font-[500]">
+                          Content Creation and Editing.
+                        </h1>
+                        <div className="">
+                          <MultiStepCreatePostForm />
+                        </div>
+                        <div className="mt-10">
+                          <h5 className="text-lg font-[500] ">
+                            Step {authStep + 1} of 5
+                          </h5>
+                        </div>
+                      </div>
+                    );
+                  // case "Drafts":
+                  //   return <Security />;
+                  // case "Edit":
+                  //   return <Payment addresses={addresses} cards={cards} />;
+                  // case "Schedule":
+                  //   return <Farms fetchingFarms={false} />;
+                  // case "Published":
+                  //   return <TractorList />;
+                  default:
+                    return (
+                      <div className="border shadow-lg rounded-lg p-4">
+                        <h1>Not Found</h1>
+                      </div>
+                    );
+                }
+              })()}
+
+              <div className="w-1/5 border-l p-3">
+                <h4 className="text-xl font-[500]">Steps</h4>
+                <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
+                  <li className="hover:text-black hover:underline cursor-pointer ">
+                    Outline
+                  </li>
+                  <li className="hover:text-black hover:underline cursor-pointer ">
+                    Draft
+                  </li>
+                  <li className="hover:text-black hover:underline cursor-pointer ">
+                    Edit
+                  </li>
+                  <li className="hover:text-black hover:underline cursor-pointer ">
+                    Schedule
+                  </li>
+                  <li className="hover:text-black hover:underline cursor-pointer ">
+                    Publish
+                  </li>
+                </ul>
               </div>
-              <div className="mt-10">
-                <h5 className="text-lg font-[500] ">
-                  Step {authStep + 1} of 5
-                </h5>
-              </div>
-            </div>
-            <div className="w-1/5 border-l p-3">
-              <h4 className="text-xl font-[500]">Steps</h4>
-              <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Outline
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Draft
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Edit
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Schedule
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Publish
-                </li>
-              </ul>
             </div>
           </div>
         </div>
