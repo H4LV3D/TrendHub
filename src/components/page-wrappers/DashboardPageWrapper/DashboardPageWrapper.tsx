@@ -99,7 +99,7 @@ const DashboardPageWrapper = ({}: Props) => {
           <div className="grid grid-cols-5 gap-4">
             {stats.map((stat) => (
               <div
-                className=" border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] "
+                className="border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] border-[#f7f7f7] "
                 key={stat.id}
               >
                 <div className="flex justify-between space-x-4">
@@ -253,7 +253,7 @@ const DashboardPageWrapper = ({}: Props) => {
                   <div className="flex space-x-5 mt-3">
                     <div className="h-10 w-10 rounded-full flex justify-center items-center">
                       <Image
-                        src={`/assets/Bust/peep-8.svg`}
+                        src={`/assets/Bust/peep-32.svg`}
                         height={40}
                         width={40}
                         alt="profile"
