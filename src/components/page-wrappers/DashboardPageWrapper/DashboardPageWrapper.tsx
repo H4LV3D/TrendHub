@@ -63,7 +63,7 @@ const DashboardPageWrapper = ({}: Props) => {
                     <p className="font-raleway font-[400] text-base text-black dark:text-neutral-400 mb-1">
                       {stat.title}
                     </p>
-                    <h3 className="text-3xl font-sans font-[600] ">
+                    <h3 className="text-3xl font-sans text-neutral-700 font-[600] ">
                       {stat.description}
                     </h3>
                   </div>
