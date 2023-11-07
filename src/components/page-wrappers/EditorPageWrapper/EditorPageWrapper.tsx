@@ -1,36 +1,21 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Editor } from "@tinymce/tinymce-react";
+import React from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
-import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
-import PrimaryButton from "@/components/shared/buttons/Primary";
+import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
+import MultiStepCreatePostForm from "../../forms/MultiStepCreatePostForm/MultiStepCreatePostForm";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
 type Props = {};
 
 const EditorPageWrapper = () => {
-  const [loading, setLoading] = useState(true);
-
-  function showTiny() {
-    setTimeout(() => {
-      setLoading(false); // Set loading to false after a certain delay
-    }, 1000); // Adjust the delay as needed
-  }
-
-  const handleEditorChange = (content: any, editor: any) => {
-    console.log("Content was updated:", content);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const editor = document.querySelector(".tox-tinymce");
-      if (editor) {
-        setLoading(false);
-        clearInterval(interval);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
+  const authStep = useAppSelector((state) => state.authStep.step);
+  const Nav = [
+    { text: "New", link: "#editor" },
+    { text: "Drafts", link: "#outline" },
+    { text: "Edit", link: "#schedule" },
+    { text: "Schedule", link: "#schedule" },
+    { text: "Publish", link: "#publish" },
+  ];
 
   return (
     <>
@@ -42,61 +27,48 @@ const EditorPageWrapper = () => {
                 Editor
               </h1>
               <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
-                Read, Schedule and Outline your blog article here.
+                Read, schedule and outline your blog article here.
               </p>
             </div>
           </div>
 
-          {loading && (
-            <div className="rounded-lg md:mb-[20vh] ">
-              <div className="w-full h-[50vh] flex justify-center items-center">
-                <ButtonLoader color="#000" />
+          <div className="">
+            <DisplayNavBar Nav={Nav} showArrangement={true} />
+          </div>
+
+          <div className="mt-5 flex space-x-6">
+            <div className="w-4/5">
+              <h1 className="text-2xl font-[500]">
+                Content Creation and Editing.
+              </h1>
+              <div className="">
+                <MultiStepCreatePostForm />
+              </div>
+              <div className="mt-10">
+                <h5 className="text-lg font-[500] ">
+                  Step {authStep + 1} of 5
+                </h5>
               </div>
             </div>
-          )}
-          <div className={``}>
-            <Editor
-              apiKey="i9v9y510jkigwy236v92swqv0j5q8l5gfqgjeqstb73hp8kd"
-              onInit={showTiny}
-              onEditorChange={handleEditorChange}
-              init={{
-                plugins:
-                  "ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss",
-                toolbar:
-                  "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
-                menubar: "file edit view insert tools",
-                tinycomments_mode: "embedded",
-                tinycomments_author: "Author name",
-
-                height: 600,
-                branding: false,
-                mergetags_list: [
-                  { value: "First.Name", title: "First Name" },
-                  { value: "Email", title: "Email" },
-                ],
-                ai_request: (request: any, respondWith: any) =>
-                  respondWith.string(() =>
-                    Promise.reject("See docs to implement AI Assistant")
-                  ),
-                resize: "both",
-                font_formats:
-                  "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino;  Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Raleway=raleway; Tahoma=tahoma,arial,helvetica,sans-serif; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva;",
-
-                content_css: "./mycontent.css",
-                content_style:
-                  "@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); body { font-family: 'Raleway'; }",
-              }}
-              initialValue="Welcome to TinyMCE!"
-            />
-          </div>
-          <div className="w-full flex justify-end mt-5">
-            <div className="w-full sm:w-1/2 md:w-[280px]  ">
-              <PrimaryButton
-                text="Publish Blog"
-                loading={false}
-                type="button"
-                action={() => {}}
-              />
+            <div className="w-1/5 border-l p-3">
+              <h4 className="text-xl font-[500]">Steps</h4>
+              <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Outline
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Draft
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Edit
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Schedule
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Publish
+                </li>
+              </ul>
             </div>
           </div>
         </div>
