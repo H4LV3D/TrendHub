@@ -16,7 +16,7 @@ interface FormInputs {
 }
 
 const Step2: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const dispatch = useAppDispatch();
   // const {
   //   handleSubmit,
