@@ -4,6 +4,39 @@ import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvi
 
 type Props = {};
 
+const stats = [
+  {
+    id: 1,
+    title: "Word Count",
+    description: "10000",
+    icon: "fas fa-file-word",
+  },
+  {
+    id: 2,
+    title: "Articles Read",
+    description: "500",
+    icon: "fas fa-book",
+  },
+  {
+    id: 3,
+    title: "Reading Time (mins)",
+    description: "400",
+    icon: "fas fa-clock",
+  },
+  {
+    id: 4,
+    title: "Bookmarks",
+    description: "50",
+    icon: "fas fa-bookmark",
+  },
+  {
+    id: 4,
+    title: "Written Content",
+    description: "10",
+    icon: "fas fa-pencil-alt",
+  },
+];
+
 const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
@@ -12,12 +45,36 @@ const DashboardPageWrapper = ({}: Props) => {
           <div className="bg-white dark:bg-[#191919] h-[18vh] w-full flex items-center">
             <div>
               <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
-                Dashboard
+                Welcome John,
               </h1>
               <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
-                Read, Schedule and Outline your blog article here.
+                Here's what you've been up to.
               </p>
             </div>
+          </div>
+          <div className="grid grid-cols-5 gap-4 mb-8">
+            {stats.map((stat) => (
+              <div
+                className=" border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] "
+                key={stat.id}
+              >
+                <div className="flex justify-between space-x-4">
+                  <div className="">
+                    <p className="font-raleway font-[400] text-base text-black dark:text-neutral-400 mb-1">
+                      {stat.title}
+                    </p>
+                    <h3 className="text-3xl font-sans font-[600] ">
+                      {stat.description}
+                    </h3>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <i
+                      className={`${stat.icon} fa-fw text-2xl text-neutral-400 mb-1`}
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="grid grid-cols-2 gap-x-8 mt-2">
             <div className="bg-[#f7f7f7] h-[30vh] rounded-2xl"></div>
