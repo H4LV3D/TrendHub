@@ -12,16 +12,14 @@ type Nav = {
 
 type Props = {
   Nav: Nav[];
-  color?: string;
-  arrangement?: string;
+  showArrangement?: boolean;
 };
 
-const DisplayNavBar = ({ Nav }: Props) => {
+const DisplayNavBar = ({ Nav, showArrangement }: Props) => {
   const { plus, grid2, grid3, square } = icons.icons;
-  const [navTab, setNavTab] = useState("For You");
+  const [navTab, setNavTab] = useState(Nav[0].text);
   const arrangement = useAppSelector((state) => state.arrangement.value);
   const dispatch = useAppDispatch();
-  const filter = ["For You", "Following", "Followers", "Feed"];
 
   return (
     <div>
@@ -32,12 +30,12 @@ const DisplayNavBar = ({ Nav }: Props) => {
             <div key={index}>
               <button
                 onClick={() => setNavTab(nav.text)}
-                className={`"w-full
-                        : "text-lg p-2 text-neutral-400 dark:text-neutral-400 hover:text-black"
+                className={`w-full
+                        : "text-lg p-2 "
                      ${
                        navTab === nav.text
-                         ? "text-black dark:text-neutral-200"
-                         : ""
+                         ? "text-black dark:text-neutral-200 font-[500]"
+                         : "text-neutral-400 dark:text-neutral-400 hover:text-black hover:font-[500]"
                      } `}
               >
                 {nav.text}
@@ -57,25 +55,29 @@ const DisplayNavBar = ({ Nav }: Props) => {
           </div>
         </div>
 
-        <div className="w-full flex justify-end">
-          <div className="flex space-x-0">
-            <Icons
-              icon={square}
-              color={arrangement === "single" ? "#000" : "#a3a3a3"}
-              action={() => dispatch(setArrangement("single"))}
-            />
-            {/* <Icons
+        {showArrangement ? (
+          ""
+        ) : (
+          <div className="w-full flex justify-end">
+            <div className="flex space-x-0">
+              <Icons
+                icon={square}
+                color={arrangement === "single" ? "#000" : "#a3a3a3"}
+                action={() => dispatch(setArrangement("single"))}
+              />
+              {/* <Icons
               icon={grid2}
               color={arrangement === "double" ? "#000" : "#a3a3a3"}
               action={() => dispatch(setArrangement("double"))}
             /> */}
-            <Icons
-              icon={grid3}
-              color={arrangement === "cards" ? "#000" : "#a3a3a3"}
-              action={() => dispatch(setArrangement("cards"))}
-            />
+              <Icons
+                icon={grid3}
+                color={arrangement === "cards" ? "#000" : "#a3a3a3"}
+                action={() => dispatch(setArrangement("cards"))}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
