@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
+import { GraphChart } from "@/components/shared/Charts/Charts";
 
 type Props = {};
 
@@ -76,10 +77,21 @@ const DashboardPageWrapper = ({}: Props) => {
               </div>
             ))}
           </div>
+
+          <div className="flex items-center w-full space-x-4 mt-2">
+            <div className="bg-[#f7f7f7] w-2/3 rounded-2xl p-10">
+              <GraphChart />
+            </div>
+            <div className="bg-[#f7f7f7] w-1/3 rounded-2xl flex-grow p-6">
+              <p className="Hello">Hello</p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-2 gap-x-8 mt-2">
             <div className="bg-[#f7f7f7] h-[30vh] rounded-2xl"></div>
             <div className="bg-[#f7f7f7] h-[30vh] rounded-2xl"></div>
           </div>
+
           <div className="w-full mt-10">
             <h3 className="font-medium text-xl mb-3">Continue Reading</h3>
             <div className="grid grid-cols-3 gap-4 mb-8">

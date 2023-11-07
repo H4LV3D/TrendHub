@@ -60,41 +60,35 @@ const actions = [
 const DATA_COUNT = 5;
 const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
 
-const data: ChartData = {
-  labels: ["Red", "Orange", "Yellow", "Green", "Blue"],
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: Utils.numbers(NUMBER_CFG),
-      backgroundColor: Object.values(Utils.CHART_COLORS),
-    },
-  ],
-};
-
-const config = {
-  type: "pie",
-  data: data,
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-      },
-      title: {
-        display: true,
-        text: "Chart.js Pie Chart",
-      },
-    },
-  },
-};
-
 import React from "react";
+import { Line } from "react-chartjs-2";
 import { Doughnut, Pie } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend,
+} from "chart.js";
 
 type Props = {};
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend
+);
 
 export default function DoughnutChart({}: Props) {
   const data = {
@@ -200,6 +194,99 @@ export function PieChart({}: Props) {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+export function GraphChart({}: Props) {
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    elements: {
+      line: {
+        tension: 0.4,
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: false,
+        text: "Chart.js Line Chart",
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
+        ticks: {
+          display: true,
+          font: {
+            family: "Poppins", // Specify the desired font family
+            size: 14, // Specify the desired font size
+            weight: "400", // Specify the font weight
+          },
+        },
+      },
+      y: {
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
+        ticks: {
+          beginAtZero: true,
+          min: 0, // Set the minimum value to 0
+          max: 600000, // Set the maximum value to 600000
+          stepSize: 200000, // Set the step size to 200000
+          callback: function (value: any) {
+            if (value === 0) return "0";
+            if (value === 200000) return "200,000";
+            if (value === 400000) return "400,000";
+            if (value === 600000) return "600,000";
+            return "";
+          },
+          font: {
+            family: "Poppins", // Specify the desired font family
+            size: 14, // Specify the desired font size
+            weight: "400", // Specify the font weight
+          },
+        },
+      },
+    },
+  };
+
+  const data = {
+    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [
+      {
+        fill: true,
+        label: "Dataset 1",
+        data: [
+          400000, 200000, 500000, 0, 400000, 200000, 400000, 200000, 550000,
+        ],
+        borderColor: "#757373",
+        backgroundColor: (ctx: any) => {
+          const gradient = ctx.chart.ctx.createLinearGradient(
+            0,
+            0,
+            0,
+            ctx.chart.height
+          );
+          gradient.addColorStop(0, "rgba(187,187,187,1)"); // Top color
+          gradient.addColorStop(1, "rgba(247, 247, 247,0)"); // Bottom color (transparent)
+          return gradient;
+        },
+      },
+    ],
+  };
+  return (
+    <div className="">
+      <div className="h-[18rem] mt-[0.5rem] bg-neutr ">
+        <Line options={options} data={data} />
       </div>
     </div>
   );
