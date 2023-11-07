@@ -286,7 +286,7 @@ export function GraphChart({}: Props) {
             0,
             ctx.chart.height
           );
-          gradient.addColorStop(0, "rgba(187,187,187,1)"); // Top color
+          gradient.addColorStop(0, "rgba(227,227,227,1)"); // Top color
           gradient.addColorStop(1, "rgba(247, 247, 247,0)"); // Bottom color (transparent)
           return gradient;
         },
