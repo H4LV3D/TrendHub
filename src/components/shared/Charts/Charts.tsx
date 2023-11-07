@@ -226,7 +226,7 @@ export function GraphChart({}: Props) {
         ticks: {
           display: true,
           font: {
-            family: "Poppins", // Specify the desired font family
+            family: "Raleway", // Specify the desired font family
             size: 14, // Specify the desired font size
             weight: "400", // Specify the font weight
           },
