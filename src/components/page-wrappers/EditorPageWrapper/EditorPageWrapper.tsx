@@ -43,7 +43,7 @@ const EditorPageWrapper = () => {
                 switch (activeTab) {
                   case "Transactions":
                     return (
-                      <div className="border shadow-lg rounded-lg p-4">
+                      <div className="border shadow-sm rounded-lg p-4">
                         <h1 className="text-2xl font-[500]">
                           Content Creation and Editing.
                         </h1>
@@ -74,7 +74,7 @@ const EditorPageWrapper = () => {
                 }
               })()}
             </div>
-            <div className="w-1/5 border-l p-3">
+            <div className="w-1/5 p-3">
               <h4 className="text-xl font-[500]">Steps</h4>
               <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
                 <li className="hover:text-black hover:underline cursor-pointer ">
