@@ -73,27 +73,26 @@ const EditorPageWrapper = () => {
                     );
                 }
               })()}
-
-              <div className="w-1/5 border-l p-3">
-                <h4 className="text-xl font-[500]">Steps</h4>
-                <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
-                  <li className="hover:text-black hover:underline cursor-pointer ">
-                    Outline
-                  </li>
-                  <li className="hover:text-black hover:underline cursor-pointer ">
-                    Draft
-                  </li>
-                  <li className="hover:text-black hover:underline cursor-pointer ">
-                    Edit
-                  </li>
-                  <li className="hover:text-black hover:underline cursor-pointer ">
-                    Schedule
-                  </li>
-                  <li className="hover:text-black hover:underline cursor-pointer ">
-                    Publish
-                  </li>
-                </ul>
-              </div>
+            </div>
+            <div className="w-1/5 border-l p-3">
+              <h4 className="text-xl font-[500]">Steps</h4>
+              <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Outline
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Draft
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Edit
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Schedule
+                </li>
+                <li className="hover:text-black hover:underline cursor-pointer ">
+                  Publish
+                </li>
+              </ul>
             </div>
           </div>
         </div>
