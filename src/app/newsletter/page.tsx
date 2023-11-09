@@ -23,6 +23,7 @@ const Newsletter = ({}: Props) => {
 
   return (
     <>
+      <h1>Hello World</h1>
       <PageLayout>
         <div className="md:container mx-auto px-6 xs:px-0 font-raleway mb-12">
           <Banner
