@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import { GraphChart } from "@/components/shared/Charts/Charts";
 import Image from "next/image";
-import SecondaryButton from "@/components/shared/buttons/Secondary";
-import TetiaryButton from "@/components/shared/buttons/Tetiary";
-import PrimaryButton from "@/components/shared/buttons/Primary";
 
 type Props = {};
 
