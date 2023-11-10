@@ -81,7 +81,7 @@ const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="bg-white dark:bg-[#191919] md:container mx-auto px-6 lg:px-0 font-raleway my-8">
+        <div className="bg-white dark:bg-[#191919] px-4 lg:px-0 font-raleway my-8">
           <div className="bg-white dark:bg-[#191919] h-[18vh] w-full flex items-center">
             <div>
               <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
@@ -251,7 +251,7 @@ const DashboardPageWrapper = ({}: Props) => {
 
           <div className="w-full mt-14">
             <h3 className="font-medium text-xl mb-3">Continue Reading</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-x-4 gap-y-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 gap-y-4 mb-8">
               {Array(3).fill(
                 <div className="flex flex-col border dark:border-neutral-800 p-5 rounded-md cursor-pointer hover:border-black ">
                   <h3 className="font-raleway font-[500] text-lg text-neutral-700 dark:text-neutral-400 mb-1">
