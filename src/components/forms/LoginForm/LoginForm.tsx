@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import SignUpFormInput from "@/components/forms/MultiStepSignUpForm/Step1/SignUpFormInput.Interface";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { updateAvatarId } from "@/store/slices/user/UserSlice";
+import { useRouter } from "next/router";
 
 type Props = {
   setNotify: (notify: boolean) => void;
@@ -21,6 +22,7 @@ interface LoginForm {
 function LoginForm({ setNotify, setMessage }: Props) {
   const [loading, setLoading] = useState(false);
   const dispatch = useAppDispatch();
+  const router = useRouter();
 
   const {
     register,
@@ -43,6 +45,9 @@ function LoginForm({ setNotify, setMessage }: Props) {
   const onSubmit = async (data: LoginForm) => {
     setLoading(true);
     console.log(data);
+    setTimeout(() => {
+      router.push("/dashboard");
+    }, 2000);
   };
   return (
     <>
