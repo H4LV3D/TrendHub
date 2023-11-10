@@ -12,8 +12,8 @@ const Dashboard = ({}: Props) => {
     <>
       <>
         <Head>
-          <title>Trending | Dashboard</title>
-          <meta name="description" content="Klanera dashboard" />
+          <title>Gen-Z | Dashboard</title>
+          <meta name="description" content="Gen-Z dashboard" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.png" />
         </Head>
