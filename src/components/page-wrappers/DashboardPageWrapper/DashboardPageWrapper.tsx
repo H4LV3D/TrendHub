@@ -119,7 +119,7 @@ const DashboardPageWrapper = ({}: Props) => {
           </div>
 
           <div className="lg:flex w-full space-x-4 mt-14">
-            <div className="border-r w-full lg:w-2/3">
+            <div className="lg:border-r w-full lg:w-2/3">
               <div className="py-3">
                 <h3 className="text-lg font-[500] ">
                   Average Monthly Word Count.
@@ -165,11 +165,19 @@ const DashboardPageWrapper = ({}: Props) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-14">
             <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
-              <div className="flex">
-                <div className="w-2/3">
+              <div className="lg:flex">
+                <div className="w-full lg:w-2/3">
                   <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
                     Collaborate
                   </span>
+                  <div className="block lg:hidden">
+                    <Image
+                      src={`/assets/Bust/peep-8.svg`}
+                      height={240}
+                      width={240}
+                      alt="profile"
+                    />
+                  </div>
                   <h3 className="text-xl font-[500] mt-8">
                     Explore the world of <br /> writing with others.
                   </h3>
@@ -187,7 +195,7 @@ const DashboardPageWrapper = ({}: Props) => {
                     </button>
                   </div>
                 </div>
-                <div className="w-1/3">
+                <div className="hidden lg:w-1/3">
                   <Image
                     src={`/assets/Bust/peep-8.svg`}
                     height={240}
@@ -198,11 +206,19 @@ const DashboardPageWrapper = ({}: Props) => {
               </div>
             </div>
             <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
-              <div className="flex">
-                <div className="w-2/3">
+              <div className="lg:flex">
+                <div className="w-full lg:w-2/3">
                   <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
                     Artificial Intelligence
                   </span>
+                  <div className="block lg:hidden">
+                    <Image
+                      src={`/assets/Bust/peep-8.svg`}
+                      height={240}
+                      width={240}
+                      alt="profile"
+                    />
+                  </div>
                   <h3 className="text-xl font-[500] mt-8">
                     Experience the power <br />
                     of AI in writing.
@@ -221,7 +237,7 @@ const DashboardPageWrapper = ({}: Props) => {
                     </button>
                   </div>
                 </div>
-                <div className="w-1/3">
+                <div className="hidden lg:w-1/3">
                   <Image
                     src={`/assets/Bust/peep-46.svg`}
                     height={240}
