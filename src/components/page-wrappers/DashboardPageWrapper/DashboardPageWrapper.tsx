@@ -81,7 +81,7 @@ const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="bg-white dark:bg-[#191919] px-4 lg:px-0 font-raleway my-8">
+        <div className="bg-white dark:bg-[#191919] px-6 lg:px-0 font-raleway my-8">
           <div className="bg-white dark:bg-[#191919] h-[18vh] w-full flex items-center">
             <div>
               <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
