@@ -93,7 +93,7 @@ const DashboardPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4 gap-y-4">
             {stats.map((stat) => (
               <div
                 className="border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] border-[#f7f7f7] "
@@ -118,7 +118,7 @@ const DashboardPageWrapper = ({}: Props) => {
             ))}
           </div>
 
-          <div className="flex w-full space-x-4 mt-14">
+          <div className="lg:flex w-full space-x-4 mt-14">
             <div className="border-r w-full lg:w-2/3">
               <div className="py-3">
                 <h3 className="text-lg font-[500] ">
@@ -163,7 +163,7 @@ const DashboardPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 mt-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-14">
             <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
               <div className="flex">
                 <div className="w-2/3">
@@ -212,7 +212,7 @@ const DashboardPageWrapper = ({}: Props) => {
                     faster. It's not just for writers, either - it can be used
                     by anyone who wants to communicate with others online.
                   </p>
-                  <div className="mt-4 w-1/3">
+                  <div className="mt-4 w-2/3 sm:w-1/2 lg:w-1/3">
                     <button
                       type="button"
                       className="bg-black py-2.5 w-full rounded-md text-white font-raleway font-[500] text-sm"
@@ -235,7 +235,7 @@ const DashboardPageWrapper = ({}: Props) => {
 
           <div className="w-full mt-14">
             <h3 className="font-medium text-xl mb-3">Continue Reading</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-x-4 gap-y-4 mb-8">
               {Array(3).fill(
                 <div className="flex flex-col border dark:border-neutral-800 p-5 rounded-md cursor-pointer hover:border-black ">
                   <h3 className="font-raleway font-[500] text-lg text-neutral-700 dark:text-neutral-400 mb-1">
