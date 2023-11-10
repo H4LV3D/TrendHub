@@ -25,7 +25,7 @@ function ReviewComponent({ reviews }: Props) {
           const imagePath = `/assets/Memoji/${user}/Memoji-${randomImageIndex}.png`;
           return (
             <div
-              className={`w-full md:max-w-[360px] p-5 sm:p-6 rounded-lg border dark:border-neutral-700 flex-shrink-0 dark:text-white text-black hover:border-black`}
+              className={`w-full md:max-w-[360px] p-5 sm:p-6 rounded-lg border dark:border-neutral-700 flex-shrink-0 dark:text-white text-black hover:border-black group`}
               key={index}
             >
               <div className="flex md:flex-row lg:flex-col xl:flex-row items-center lg:items-start space-x-3 lg:space-x-0">
@@ -43,7 +43,7 @@ function ReviewComponent({ reviews }: Props) {
                   </span>
                 </div>
               </div>
-              <p className="font-raleway text-sm sm:text-sm lg:text-base mt-2 line-clamp-3 hover:line-clamp-4 leading-5 dark:text-neutral-500">
+              <p className="font-raleway text-sm sm:text-sm lg:text-base mt-2 line-clamp-3 group-hover:line-clamp-4 leading-5 dark:text-neutral-500">
                 {review.relation}
               </p>
             </div>
