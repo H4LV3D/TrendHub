@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import SignUpFormInput from "@/components/forms/MultiStepSignUpForm/Step1/SignUpFormInput.Interface";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { updateAvatarId } from "@/store/slices/user/UserSlice";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 type Props = {
   setNotify: (notify: boolean) => void;
