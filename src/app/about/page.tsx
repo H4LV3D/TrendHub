@@ -90,7 +90,7 @@ const About = ({}: Props) => {
                   </div>
                 </div>
                 <div className="w-full flex justify-center items-center">
-                  <div className="p-6 h-[350px] w-[350px] rounded-[50%] bg-[#f6f6f6] drop-shadow-xl flex justify-center items-center ">
+                  <div className="p-6 h-[350px] w-[350px] rounded-2xl bg-[#fff] drop-shadow-xl flex justify-center items-center ">
                     <Image
                       src={`/assets/images/peep-8.svg`}
                       alt="hero"
