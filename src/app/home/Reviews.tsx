@@ -27,7 +27,7 @@ function ReviewComponent({ reviews }: Props) {
               className={`w-full md:max-w-[360px] p-5 sm:p-6 rounded-lg border dark:border-neutral-700 flex-shrink-0 dark:text-white text-black hover:border-black`}
               key={index}
             >
-              <div className="flex md:flex-row lg:flex-col items-center lg:items-start space-x-3 lg:space-x-0">
+              <div className="flex md:flex-row lg:flex-col xl:flex-row items-center lg:items-start space-x-3 lg:space-x-0">
                 <img
                   src={imagePath}
                   className="w-[60px] rounded-rull"
@@ -42,7 +42,7 @@ function ReviewComponent({ reviews }: Props) {
                   </span>
                 </div>
               </div>
-              <p className="font-raleway text-sm sm:text-sm lg:text-base mt-2 line-clamp-3 leading-5 dark:text-neutral-500">
+              <p className="font-raleway text-sm sm:text-sm lg:text-base mt-2 line-clamp-3 hover:line-clamp-4 leading-5 dark:text-neutral-500">
                 {review.relation}
               </p>
             </div>
