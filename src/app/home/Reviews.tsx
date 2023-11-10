@@ -21,7 +21,8 @@ function ReviewComponent({ reviews }: Props) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mx-auto xl:w-[950px] gap-6 my-4 sm:my-8">
         {reviews.map((review, index) => {
           const randomImageIndex = index + 1;
-          const imagePath = `/assets/Memoji/male/Memoji-${randomImageIndex}.png`;
+          const user = index % 2 ? "male" : "female";
+          const imagePath = `/assets/Memoji/${user}/Memoji-${randomImageIndex}.png`;
           return (
             <div
               className={`w-full md:max-w-[360px] p-5 sm:p-6 rounded-lg border dark:border-neutral-700 flex-shrink-0 dark:text-white text-black hover:border-black`}
