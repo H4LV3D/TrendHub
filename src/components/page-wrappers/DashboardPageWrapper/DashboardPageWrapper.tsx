@@ -82,15 +82,13 @@ const DashboardPageWrapper = ({}: Props) => {
     <>
       <MaxWidthProvider>
         <div className="bg-white dark:bg-[#191919] px-6 lg:px-0 font-raleway my-8">
-          <div className="bg-white dark:bg-[#191919] h-[18vh] w-full flex items-center">
-            <div>
-              <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
-                Welcome John,
-              </h1>
-              <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
-                Here's what you've been up to.
-              </p>
-            </div>
+          <div className="bg-white dark:bg-[#191919] py-10 md:py-0 md:h-[18vh] w-full flex flex-col items-start md:items-center">
+            <h1 className="text-xl md:text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
+              Welcome John,
+            </h1>
+            <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
+              Here's what you've been up to.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4 gap-y-4">
@@ -101,10 +99,10 @@ const DashboardPageWrapper = ({}: Props) => {
               >
                 <div className="flex justify-between space-x-4">
                   <div className="">
-                    <p className="font-raleway font-[400] text-base text-black dark:text-neutral-400 mb-1">
+                    <p className="font-raleway font-[400] text-sm md:text-base text-black dark:text-neutral-400 mb-1">
                       {stat.title}
                     </p>
-                    <h3 className="text-3xl font-sans text-neutral-700 font-[600] ">
+                    <h3 className="text-2xl md:text-3xl font-sans text-neutral-700 font-[600] ">
                       {stat.description}
                     </h3>
                   </div>
@@ -118,7 +116,7 @@ const DashboardPageWrapper = ({}: Props) => {
             ))}
           </div>
 
-          <div className="lg:flex w-full space-x-4 mt-14">
+          <div className="lg:flex w-full lg:space-x-4 mt-14">
             <div className="lg:border-r w-full lg:w-2/3">
               <div className="py-3">
                 <h3 className="text-lg font-[500] ">
@@ -130,11 +128,11 @@ const DashboardPageWrapper = ({}: Props) => {
                   most in March and the least in December.
                 </p>
               </div>
-              <div className="p-5 mt-5">
+              <div className="hidden sm:block p-5 mt-5">
                 <GraphChart />
               </div>
             </div>
-            <div className="w-full md:w-1/2 lg:w-1/3 rounded-2xl flex-grow p-3">
+            <div className="w-full md:w-1/2 lg:w-1/3 rounded-2xl flex-grow md:p-3">
               <p className="text-lg font-[500] mb-2">Authors you read.</p>
               <div className="grid grid-cols-1 gap-y-2 ">
                 {authors.map((author) => (
@@ -178,7 +176,7 @@ const DashboardPageWrapper = ({}: Props) => {
                       alt="profile"
                     />
                   </div>
-                  <h3 className="text-xl font-[500] mt-8">
+                  <h3 className="text-xl font-[500] lg:mt-8">
                     Explore the world of <br /> writing with others.
                   </h3>
                   <p className="text-sm mt-2 ">
@@ -186,7 +184,7 @@ const DashboardPageWrapper = ({}: Props) => {
                     and it's a lot of fun too! You can collaborate with other
                     writers on projects, or just chat about writing in general.
                   </p>
-                  <div className="mt-4 w-1/3">
+                  <div className="mt-4 w-2/3 sm:w-1/2 lg:w-1/3">
                     <button
                       type="button"
                       className="bg-black py-2.5 w-full rounded-md text-white font-raleway font-[500] text-sm"
