@@ -12,26 +12,11 @@ const MobileSidebar: React.FC = () => {
   const path = usePathname();
   const user = useAppSelector((state) => state.user.isNull);
   const ProtectedLinks = [
-    {
-      page: "Dashboard",
-      link: "/dashboard",
-    },
-    {
-      page: "Bookmarks",
-      link: "/dashboard",
-    },
-    {
-      page: "Read",
-      link: "/dashboard",
-    },
-    {
-      page: "Listen",
-      link: "/dashboard",
-    },
-    {
-      page: "Settings",
-      link: "/settings",
-    },
+    { page: "Dashoard", link: "/dashboard" },
+    { page: "My Blogs", link: "/myblogs" },
+    { page: "Editor", link: "/editor" },
+    { page: "Manage", link: "/manage" },
+    { page: "Settings", link: "/settings" },
   ];
   const NavigationLinks = [
     {
