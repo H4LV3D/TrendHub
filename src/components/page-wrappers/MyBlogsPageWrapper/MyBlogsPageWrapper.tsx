@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 
 type Props = {};
@@ -9,12 +9,12 @@ const MyBlogsPageWrapper = ({}: Props) => {
     <>
       <MaxWidthProvider>
         <div className="px-6 lg:px-0">
-          <div className="bg-white dark:bg-[#191919] py-10 md:h-[20vh] w-full flex flex-col items-start md:items-center">
+          <div className="bg-white dark:bg-[#191919] py-10 md:h-[20vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
-              My Blogs
+              Blogs
             </h1>
             <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
-              Read, Schedule and Outline your blog article here.
+              Read, Schedule and Outline.
             </p>
           </div>
 
