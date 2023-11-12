@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
 import MultiStepCreatePostForm from "../../forms/MultiStepCreatePostForm/MultiStepCreatePostForm";
@@ -9,7 +9,7 @@ type Props = {};
 
 const EditorPageWrapper = () => {
   const authStep = useAppSelector((state) => state.authStep.step);
-  const [activeTab, setActiveTab] = React.useState("Transactions");
+  const [activeTab, setActiveTab] = useState("Transactions");
   const Nav = [
     { text: "New", link: "#editor" },
     { text: "Drafts", link: "#outline" },
