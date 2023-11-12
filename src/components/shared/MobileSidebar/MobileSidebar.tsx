@@ -13,7 +13,7 @@ const MobileSidebar: React.FC = () => {
   const user = useAppSelector((state) => state.user.isNull);
   const ProtectedLinks = [
     { page: "Dashoard", link: "/dashboard" },
-    { page: "My Blogs", link: "/myblogs" },
+    { page: "Blogs", link: "/myblogs" },
     { page: "Editor", link: "/editor" },
     { page: "Manage", link: "/manage" },
     { page: "Settings", link: "/settings" },
