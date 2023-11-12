@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import { GraphChart } from "@/components/shared/Charts/Charts";
 import Image from "next/image";
@@ -81,12 +81,12 @@ const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="bg-white dark:bg-[#191919] px-6 lg:px-0 font-raleway my-8">
-          <div className="bg-white dark:bg-[#191919] py-10 md:py-0 md:h-[18vh] w-full flex flex-col items-start md:items-center">
-            <h1 className="text-xl md:text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
+        <div className="bg-white dark:bg-[#191919] px-6 lg:px-0 font-raleway">
+          <div className="bg-white dark:bg-[#191919] py-10 md:py-0 md:h-[14vh] w-full flex flex-col items-start justify-center">
+            <h1 className="text-xl md:text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Welcome John,
             </h1>
-            <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
+            <p className="text-sm  font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
               Here's what you've been up to.
             </p>
           </div>
@@ -116,7 +116,7 @@ const DashboardPageWrapper = ({}: Props) => {
             ))}
           </div>
 
-          <div className="lg:flex w-full lg:space-x-4 mt-14">
+          <div className="lg:flex w-full lg:space-x-4 mt-8">
             <div className="lg:border-r w-full lg:w-2/3">
               <div className="py-3">
                 <h3 className="text-lg font-[500] ">
@@ -161,7 +161,7 @@ const DashboardPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-8">
             <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
               <div className="lg:flex">
                 <div className="w-full lg:w-2/3">
@@ -247,7 +247,7 @@ const DashboardPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="w-full mt-14">
+          <div className="w-full mt-8">
             <h3 className="font-medium text-xl mb-3">Continue Reading</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 gap-y-4 mb-8">
               {Array(3).fill(
