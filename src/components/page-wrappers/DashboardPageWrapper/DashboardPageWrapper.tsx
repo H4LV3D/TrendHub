@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import { GraphChart } from "@/components/shared/Charts/Charts";
 import Image from "next/image";
@@ -86,7 +86,7 @@ const DashboardPageWrapper = ({}: Props) => {
             <h1 className="text-xl md:text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Welcome John,
             </h1>
-            <p className="text-sm  font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
+            <p className="text-sm font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
               Here's what you've been up to.
             </p>
           </div>
