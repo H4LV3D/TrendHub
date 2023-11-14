@@ -57,8 +57,12 @@ const EditorPageWrapper = () => {
                         </div>
                       </div>
                     );
-                  // case "Drafts":
-                  //   return <Security />;
+                  case "Drafts":
+                    return (
+                      <div className="">
+                        <h2 className="">Drafts</h2>
+                      </div>
+                    );
                   // case "Edit":
                   //   return <Payment addresses={addresses} cards={cards} />;
                   // case "Schedule":
