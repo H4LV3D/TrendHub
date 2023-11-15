@@ -33,6 +33,10 @@ const EditorPageWrapper = () => {
             </div>
           </div>
 
+          <section>
+            <h3 className="">Hello World</h3>
+          </section>
+
           <div className="">
             <DisplayNavBar Nav={Nav} showArrangement={true} />
           </div>
