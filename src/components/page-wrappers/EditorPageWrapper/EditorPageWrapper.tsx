@@ -9,7 +9,7 @@ type Props = {};
 
 const EditorPageWrapper = () => {
   const authStep = useAppSelector((state) => state.authStep.step);
-  const [activeTab, setActiveTab] = useState("Transactions");
+  const [activeTab, setActiveTab] = useState("New");
   const Nav = [
     { text: "New", link: "#editor" },
     { text: "Drafts", link: "#outline" },
@@ -34,16 +34,20 @@ const EditorPageWrapper = () => {
           </div>
 
           <div className="">
-            <DisplayNavBar Nav={Nav} showArrangement={true} />
+            <DisplayNavBar
+              Nav={Nav}
+              showArrangement={true}
+              setTab={setActiveTab}
+            />
           </div>
 
           <div className="mt-5 flex space-x-6">
             <div className="w-4/5">
               {(() => {
                 switch (activeTab) {
-                  case "Transactions":
+                  case "New":
                     return (
-                      <div className="border shadow-sm rounded-lg p-4">
+                      <div className="border-r shadow-sm rounded-lg px-4">
                         <h1 className="text-2xl font-[500]">
                           Content Creation and Editing.
                         </h1>

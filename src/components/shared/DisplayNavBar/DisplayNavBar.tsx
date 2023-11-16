@@ -13,9 +13,10 @@ type Nav = {
 type Props = {
   Nav: Nav[];
   showArrangement?: boolean;
+  setTab?: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const DisplayNavBar = ({ Nav, showArrangement }: Props) => {
+const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
   const { plus, grid2, grid3, square } = icons.icons;
   const [navTab, setNavTab] = useState(Nav[0].text);
   const arrangement = useAppSelector((state) => state.arrangement.value);
@@ -29,7 +30,10 @@ const DisplayNavBar = ({ Nav, showArrangement }: Props) => {
           {Nav.map((nav, index: number) => (
             <div key={index}>
               <button
-                onClick={() => setNavTab(nav.text)}
+                onClick={() => {
+                  setNavTab(nav.text);
+                  setTab && setTab(nav.text);
+                }}
                 className={`w-full
                         : "text-lg p-2 "
                      ${
