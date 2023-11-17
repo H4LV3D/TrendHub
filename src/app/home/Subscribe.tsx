@@ -2,12 +2,9 @@
 import React from "react";
 import SubscribeForm from "@/components/forms/SubscribeForm/SubscribeForm";
 
-type Props = {
-  setNotify: (notify: boolean) => void;
-  setMessage: (message: string) => void;
-};
+type Props = {};
 
-function Subscribe({ setNotify, setMessage }: Props) {
+function Subscribe({}: Props) {
   return (
     <>
       <div className="h-[88vh] w-full flex flex-col sm:items-center justify-center">
@@ -20,7 +17,7 @@ function Subscribe({ setNotify, setMessage }: Props) {
         </p>
 
         <div className="">
-          <SubscribeForm setNotify={setNotify} setMessage={setMessage} />
+          <SubscribeForm />
         </div>
       </div>
     </>
