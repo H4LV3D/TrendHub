@@ -4,6 +4,7 @@ import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvi
 import DisplayNavBar from "@/components/shared/DisplayNavBar/DisplayNavBar";
 import MultiStepCreatePostForm from "../../forms/MultiStepCreatePostForm/MultiStepCreatePostForm";
 import { useAppSelector } from "@/hooks/useAppSelector";
+import Drafts from "./Drafts/Drafts";
 
 type Props = {};
 
@@ -13,9 +14,16 @@ const EditorPageWrapper = () => {
   const Nav = [
     { text: "New", link: "#editor" },
     { text: "Drafts", link: "#outline" },
-    { text: "Edit", link: "#schedule" },
     { text: "Schedule", link: "#schedule" },
     { text: "Published", link: "#published" },
+  ];
+
+  const sideNav = [
+    { text: "Outline", link: "#outline" },
+    { text: "Draft", link: "#draft" },
+    { text: "Edit", link: "#edit" },
+    { text: "Schedule", link: "#schedule" },
+    { text: "Publish", link: "#publish" },
   ];
 
   return (
@@ -42,12 +50,12 @@ const EditorPageWrapper = () => {
           </div>
 
           <div className="mt-5 flex space-x-6">
-            <div className="w-4/5">
+            <div className="w-4/5 border-r shadow-sm rounded-lg px-4">
               {(() => {
                 switch (activeTab) {
                   case "New":
                     return (
-                      <div className="border-r shadow-sm rounded-lg px-4">
+                      <section>
                         <h1 className="text-2xl font-[500]">
                           Content Creation and Editing.
                         </h1>
@@ -59,20 +67,35 @@ const EditorPageWrapper = () => {
                             Step {authStep + 1} of 5
                           </h5>
                         </div>
-                      </div>
+                      </section>
                     );
                   case "Drafts":
                     return (
-                      <div className="">
-                        <h2 className="">Drafts</h2>
-                      </div>
+                      <section>
+                        <h1 className="text-2xl font-[500]">Drafts</h1>
+                        <div>
+                          <Drafts />
+                        </div>
+                      </section>
                     );
-                  // case "Edit":
-                  //   return <Payment addresses={addresses} cards={cards} />;
-                  // case "Schedule":
-                  //   return <Farms fetchingFarms={false} />;
-                  // case "Published":
-                  //   return <TractorList />;
+                  case "Schedule":
+                    return (
+                      <section>
+                        <h1 className="text-2xl font-[500]">Schedule</h1>
+                        <div>
+                          <Drafts />
+                        </div>
+                      </section>
+                    );
+                  case "Published":
+                    return (
+                      <section>
+                        <h1 className="text-2xl font-[500]">Published</h1>
+                        <div>
+                          <Drafts />
+                        </div>
+                      </section>
+                    );
                   default:
                     return (
                       <div className="border shadow-lg rounded-lg p-4">
@@ -84,22 +107,16 @@ const EditorPageWrapper = () => {
             </div>
             <div className="w-1/5 p-3">
               <h4 className="text-xl font-[500]">Steps</h4>
-              <ul className="text-base text-neutral-500 mt-4 px-2 space-y-2 ">
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Outline
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Draft
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Edit
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Schedule
-                </li>
-                <li className="hover:text-black hover:underline cursor-pointer ">
-                  Publish
-                </li>
+              <ul className=" mt-4 px-2 space-y-2 ">
+                {sideNav.map((item, index) => (
+                  <li
+                    className={`"hover:text-black text-base text-neutral-500 hover:underline cursor-pointer ${
+                      authStep + 1 === index + 1 && "!text-black font-[600]  "
+                    } `}
+                  >
+                    {item.text}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
