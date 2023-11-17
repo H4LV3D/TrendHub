@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import pageData from "@/data/index.json";
 import Genres from "./home/Genres";
 import Collaborative from "./home/Collaborative";
@@ -11,8 +11,6 @@ import Head from "next/head";
 import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 export default function Home({}: {}) {
-  const [notify, setNotify] = useState(false);
-  const [message, setMessage] = useState("");
   const { blogs, reviews } = pageData;
 
   return (
@@ -45,7 +43,7 @@ export default function Home({}: {}) {
         <div className="md:container mx-auto px-5 xs:px-0 font-raleway ">
           <Review reviews={reviews} />
 
-          <Subscribe setNotify={setNotify} setMessage={setMessage} />
+          <Subscribe />
         </div>
       </PageLayout>
     </>
