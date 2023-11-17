@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import Input from "@/components/shared/Input/Input";
 import PrimaryButton from "@/components/shared/buttons/Primary";
 
-type Props = {
-  setNotify: (notify: boolean) => void;
-  setMessage: (message: string) => void;
-};
+type Props = {};
 
-function ForgotPasswordForm({ setNotify, setMessage }: Props) {
+function ForgotPasswordForm({}: Props) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const form = { email };
@@ -27,13 +24,8 @@ function ForgotPasswordForm({ setNotify, setMessage }: Props) {
       .then((response) => response.json())
       .then((json) => {
         console.log(json.msg);
-        setNotify(true);
         if (json.msg) {
-          setMessage(json.msg);
           setLoading(false);
-          setTimeout(() => {
-            setNotify(false);
-          }, 8000);
           setEmail("");
         }
       })
