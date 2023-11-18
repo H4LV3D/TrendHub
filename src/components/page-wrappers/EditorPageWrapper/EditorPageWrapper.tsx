@@ -30,9 +30,9 @@ const EditorPageWrapper = () => {
     <>
       <MaxWidthProvider>
         <div className="mb-32">
-          <div className="bg-white dark:bg-[#191919] h-[20vh] w-full flex items-center">
+          <div className="bg-white dark:bg-[#191919] h-[14vh] w-full flex items-center">
             <div>
-              <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
+              <h1 className="text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
                 Editor
               </h1>
               <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
