@@ -108,17 +108,18 @@ const ManagePageWrapper = ({}: Props) => {
               <label htmlFor="" className="text-sm text-[#696969] ">
                 Select Publication
               </label>
-              <div className=" pr-2 border rounded-lg hover:border-black focus-within:border-black cursor-pointer w-2/3">
+              <div className=" flex items-center justify-between pr-2 border rounded-lg hover:border-black focus-within:border-black cursor-pointer w-2/3">
                 <select
                   name=""
                   id=""
-                  className="w-full p-2.5 rounded-lg outline-none text-[#696969] focus:text-black app "
+                  className="w-full p-2.5 rounded-lg outline-none text-[#696969] focus:text-black"
                 >
                   <option value="">All Publications</option>
                   <option value="">Podcast</option>
                   <option value="">Blogs</option>
                   <option value="">Articles</option>
                 </select>
+                <i className="fas fa-chevron-down fa-sm fa-fw text-[#696969] focus:text-black"></i>
               </div>
             </div>
           </div>
