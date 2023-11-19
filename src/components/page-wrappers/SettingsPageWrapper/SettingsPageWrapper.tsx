@@ -75,42 +75,28 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full md:min-h-[75vh] sm:p-5 flex md:border rounded-xl md:mb-[20vh] ">
-            <div className="grid grid-cols-1 w-full md:w-1/3 md:pr-6 md:py-12 md:border-r ">
+          <div className="bg-white dark:bg-[#191919] w-full md:min-h-[75vh] sm:p-6 flex md:border rounded-xl md:mb-[20vh] ">
+            <div className="grid grid-cols-1 w-full md:w-1/3 md:pr-6 md:border-r ">
               {Settings.map((setting) => (
-                <div
-                  className={`font-raleway font-normal text-lg flex flex-col md:items-center md:justify-between ${
+                <button
+                  className={`text-start text-black dark:text-neutral-400 w-full p-3 flex items-center justify-between ${
                     active === setting.id
-                      ? "border border-black rounded-lg"
-                      : ""
-                  } `}
+                      ? "border-b md:border-0 border-black border rounded-lg"
+                      : "border-b "
+                  }`}
+                  onClick={() => setActive(setting.id)}
+                  key={setting.title}
                 >
-                  <button
-                    className={`text-start text-black dark:text-neutral-400 w-full p-3 flex items-center justify-between ${
-                      active === setting.id
-                        ? "border-b md:border-0 border-black"
-                        : "border-b "
-                    }`}
-                    onClick={() => setActive(setting.id)}
-                    key={setting.title}
-                  >
-                    {setting.title}
-                    {active === setting.id && (
-                      <div className="md:hidden">
-                        <i
-                          className="fas fa-chevron-down fa-sm fa-fw"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    )}
-                  </button>
-
+                  {setting.title}
                   {active === setting.id && (
-                    <div className="md:hidden p-3 flex items-start">
-                      <h3 className="text-lg">{setting.title}</h3>
+                    <div className="md:hidden">
+                      <i
+                        className="fas fa-chevron-down fa-sm fa-fw"
+                        aria-hidden="true"
+                      ></i>
                     </div>
                   )}
-                </div>
+                </button>
               ))}
             </div>
             <div className="hidden md:w-2/3 p-6 h-full ">
