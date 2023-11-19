@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
+import Image from "next/image";
+import Personal from "./personal/Personal";
 
 type Props = {};
 
@@ -60,29 +62,78 @@ const Settings = [
 const SettingsPageWrapper = ({}: Props) => {
   const [active, setActive] = useState(1);
   const currentSetting = Settings.find((setting) => setting.id === active);
+
+  const [name, setName] = useState("John Doe");
   return (
     <>
       <MaxWidthProvider>
         <div className="px-6 sm:px-0">
-          <div className="bg-white dark:bg-[#191919] h-[20vh] w-full flex items-center">
+          <div className="bg-white dark:bg-[#191919] h-[14vh] w-full flex items-center">
             <div>
-              <h1 className="text-3xl text-black dark:text-neutral-200 font-raleway font-medium">
+              <h1 className="text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
                 Settings
               </h1>
-              <p className="text-sm sm:text-base font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
+              <p className="text-sm font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
                 Adjust your settings to your liking.
               </p>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full md:min-h-[75vh] sm:p-6 flex md:border rounded-xl md:mb-[20vh] ">
-            <div className="grid grid-cols-1 w-full md:w-1/3 md:pr-6 md:border-r ">
+          <div className="flex">
+            <div className="w-1/4 flex justify-center items-center">
+              <Image
+                src={`/assets/Bust/peep-${Math.floor(
+                  Math.random() * 104
+                ).toString()}.svg`}
+                alt="avatar"
+                width={160}
+                height={160}
+              />
+            </div>
+            <div className="w-3/4 flex items-center">
+              <div className="w-1/2 border-r">
+                <h1 className="text-xl font-[500] capitalize">{name}</h1>
+                {/* <p className="text-sm text-[#696969] ">johndoe@gmail.com</p> */}
+                <p className="about mt-0 text-[0.875rem] text-[#696969] ">
+                  Technical Writer, Content Creator, and Software Developer.
+                </p>
+                <p className="about mt-2 text-[0.875rem] text-[#696969] ">
+                  I write about technology, software development, and personal
+                  development. I also write about my journey as a software
+                  developer.
+                </p>
+
+                <button className="text-sm text-white bg-black px-4 py-2 rounded-lg my-3">
+                  <span>Edit Profile</span>
+                </button>
+              </div>
+              <div className="w-1/2">
+                <div className="py-4 grid grid-cols-3">
+                  <div className="flex flex-col items-center">
+                    <div className="text-2xl font-sans font-[500]">23</div>
+                    <div className="text-base text-[#696969]">Publications</div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="text-2xl font-sans font-[500]">1200</div>
+                    <div className="text-base text-[#696969]">Followers</div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="text-2xl font-sans font-[500]">1028</div>
+                    <div className="text-base text-[#696969]">Following</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white dark:bg-[#191919] w-full md:h-[100vh] flex md:border-t md:mb-[20vh] ">
+            <div className="flex flex-col w-full md:w-1/4 md:pr-6 md:border-r sm:pt-6 ">
               {Settings.map((setting) => (
                 <button
-                  className={`text-start text-black dark:text-neutral-400 w-full p-3 flex items-center justify-between ${
+                  className={`text-start text-black dark:text-neutral-400 w-full p-4 flex items-center justify-between ${
                     active === setting.id
-                      ? "border-b md:border-0 border-black border rounded-lg"
-                      : "border-b "
+                      ? " text-black font-[500] rounded-lg bg-[#f7f7f7] "
+                      : ""
                   }`}
                   onClick={() => setActive(setting.id)}
                   key={setting.title}
@@ -99,16 +150,34 @@ const SettingsPageWrapper = ({}: Props) => {
                 </button>
               ))}
             </div>
-            <div className="hidden md:w-2/3 p-6 h-full ">
+            <div className="hidden md:block md:w-3/4 p-6 h-full overflow-y-auto ">
               <div className="">
-                <h2 className="font-medium text-2xl mb-1">
-                  {currentSetting?.title}
-                </h2>
-                <p className="font-normal text-gray-800 dark:text-neutral-400 text-base">
+                <h2 className="text-xl mb-1">{currentSetting?.title}</h2>
+                <p className=" text-gray-800 dark:text-neutral-400 text-sm">
                   {currentSetting?.description}
                 </p>
                 <hr className="my-2" />
               </div>
+              <div className="coponent w-2/3 mt-6">
+                <label htmlFor="" className="text-[#696969] ">
+                  Name
+                </label>
+                <div className="flex items-center space-x-4">
+                  <input
+                    type="text"
+                    className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
+                    placeholder="John Doe"
+                    defaultValue={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  {name !== "John Doe" && (
+                    <button className="text-sm text-white bg-black px-8 h-[3rem] rounded-lg">
+                      <span>Save</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+              <Personal />
             </div>
           </div>
         </div>
