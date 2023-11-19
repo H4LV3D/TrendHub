@@ -113,6 +113,7 @@ const EditorPageWrapper = () => {
                     className={`"hover:text-black text-base text-neutral-500 hover:underline cursor-pointer ${
                       authStep + 1 === index + 1 && "!text-black font-[600]  "
                     } `}
+                    key={item.text}
                   >
                     {item.text}
                   </li>
