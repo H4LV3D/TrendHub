@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import BrandLogo from "@/components/shared/BrandLogo/BrandLogo";
-import { useRouter } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -13,11 +12,9 @@ type Props = {
 };
 
 function AuthLayout({ children, form }: Props) {
-  const [loading, setLoading] = useState(false);
   const [selectedImage, setSelectedImage] = useState(8);
   const step = useAppSelector((state) => state.passwordRecoveryStep.step);
   const avatarId = useAppSelector((state) => state.user.avatarId);
-  const router = useRouter();
 
   return (
     <div
@@ -64,7 +61,7 @@ function AuthLayout({ children, form }: Props) {
               <div className="px-10 xl:px-4">
                 <p className="w-full  xl:w-1/2 mx-auto mt-8 text-center text-sm sm:text-base md:text-xl font-normal text-gray-700 dark:text-neutral-400 font-raleway">
                   {form === "signup"
-                    ? "Pick a custom illustration for your profile by selecting one of the options below."
+                    ? "Pick a custom illustration for your profile."
                     : "Reset your custom illustration by selecting a different illustration."}
                 </p>
               </div>
