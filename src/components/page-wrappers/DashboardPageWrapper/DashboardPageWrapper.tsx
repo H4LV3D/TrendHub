@@ -162,7 +162,7 @@ const DashboardPageWrapper = ({}: Props) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-8">
-            <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
+            <div className="bg-[#f7f7f7] xl:min-h-[30vh] rounded-2xl p-6">
               <div className="lg:flex">
                 <div className="w-full lg:w-2/3">
                   <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
@@ -203,7 +203,7 @@ const DashboardPageWrapper = ({}: Props) => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#f7f7f7] min-h-[30vh] rounded-2xl p-6">
+            <div className="bg-[#f7f7f7] xl:min-h-[30vh] rounded-2xl p-6">
               <div className="lg:flex">
                 <div className="w-full lg:w-2/3">
                   <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
