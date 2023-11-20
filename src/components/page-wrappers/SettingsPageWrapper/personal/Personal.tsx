@@ -10,6 +10,25 @@ const Personal = () => {
     <>
       <div className="coponent w-2/3 mt-6">
         <label htmlFor="" className="text-[#696969] ">
+          Name
+        </label>
+        <div className="flex items-center space-x-4">
+          <input
+            type="text"
+            className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
+            placeholder="John Doe"
+            defaultValue={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {name !== "John Doe" && (
+            <button className="text-sm text-white bg-black px-8 h-[3rem] rounded-lg">
+              <span>Save</span>
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="coponent w-2/3 mt-6">
+        <label htmlFor="" className="text-[#696969] ">
           Email
         </label>
         <div className="flex items-center space-x-4">
