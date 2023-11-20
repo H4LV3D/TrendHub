@@ -126,7 +126,7 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full md:h-[100vh] flex md:border-t md:mb-[20vh] ">
+          <div className="bg-white dark:bg-[#191919] w-full md:h-[70vh] flex md:border-t md:mb-[10vh] ">
             <div className="flex flex-col w-full md:w-1/4 md:pr-6 md:border-r sm:pt-6 ">
               {Settings.map((setting) => (
                 <button
@@ -150,32 +150,13 @@ const SettingsPageWrapper = ({}: Props) => {
                 </button>
               ))}
             </div>
-            <div className="hidden md:block md:w-3/4 p-6 h-full overflow-y-auto ">
+            <div className="hidden md:block md:w-3/4 p-6 md:p-8 lg:p-10 h-full overflow-y-auto ">
               <div className="">
                 <h2 className="text-xl mb-1">{currentSetting?.title}</h2>
                 <p className=" text-gray-800 dark:text-neutral-400 text-sm">
                   {currentSetting?.description}
                 </p>
                 <hr className="my-2" />
-              </div>
-              <div className="coponent w-2/3 mt-6">
-                <label htmlFor="" className="text-[#696969] ">
-                  Name
-                </label>
-                <div className="flex items-center space-x-4">
-                  <input
-                    type="text"
-                    className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
-                    placeholder="John Doe"
-                    defaultValue={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                  {name !== "John Doe" && (
-                    <button className="text-sm text-white bg-black px-8 h-[3rem] rounded-lg">
-                      <span>Save</span>
-                    </button>
-                  )}
-                </div>
               </div>
               <Personal />
             </div>
