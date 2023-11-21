@@ -33,26 +33,26 @@ const Podcast = ({}: Props) => {
             data={blogs}
             text="Amplify your voice, wield your vote, and harness the power of video to shape narratives and drive impactful societal transformations."
           />
-        </div>
 
-        <MaxWidthProvider>
-          <DisplayNavBar Nav={Nav} />
-          <div
-            className={`"w-full grid ${
-              arrangement === "single"
-                ? "grid-cols-1"
-                : arrangement === "double"
-                ? "grid-cols-2 gap-8"
-                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6"
-            } `}
-          >
-            {blogs.map((blog, index) => (
-              <div key={index} className="mb-6">
-                <DisplayCard display={blog} arrangement={arrangement} />
-              </div>
-            ))}
-          </div>
-        </MaxWidthProvider>
+          <MaxWidthProvider>
+            <DisplayNavBar Nav={Nav} />
+            <div
+              className={`"w-full grid ${
+                arrangement === "single"
+                  ? "grid-cols-1"
+                  : arrangement === "double"
+                  ? "grid-cols-2 gap-8"
+                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6"
+              } `}
+            >
+              {blogs.map((blog, index) => (
+                <div key={index} className="mb-6">
+                  <DisplayCard display={blog} arrangement={arrangement} />
+                </div>
+              ))}
+            </div>
+          </MaxWidthProvider>
+        </div>
       </PageLayout>
     </>
   );
