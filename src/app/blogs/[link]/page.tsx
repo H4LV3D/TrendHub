@@ -43,7 +43,7 @@ const Blog = ({ params }: Props) => {
               <div className="mt-20">
                 <br />
               </div>
-              <div className="flex justify-center sm:border dark:border-neutral-800 rounded-xl mt-0 mb-4">
+              <div className="flex justify-center xxl:border dark:border-neutral-800 rounded-xl mt-0 mb-4">
                 <img
                   src={`/assets/Bust/peep-${Math.floor(
                     Math.random() * 104
