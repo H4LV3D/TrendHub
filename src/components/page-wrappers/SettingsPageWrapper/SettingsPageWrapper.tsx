@@ -38,7 +38,7 @@ const Settings = [
   },
   {
     id: 6,
-    title: "Collaboration",
+    title: "Collaborators",
     description:
       "Manage access for collaborators to your account, and what they can do.",
   },
