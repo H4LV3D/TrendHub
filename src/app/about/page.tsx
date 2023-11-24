@@ -52,8 +52,8 @@ const About = ({}: Props) => {
                   ))}
                 </div>
               </div>
-              <div className="w-full flex items-center justify-center">
-                <div className="w-2/3 mx-auto">
+              <div className="w-full lg:flex items-center justify-center">
+                <div className="xl:w-2/3 lg:ml-6">
                   <h2 className="text-5xl font-oleo mb-[1rem] ">Hey there,</h2>
                   <p className="!leading-7 text-justify ">
                     We are the intersection of culture, creativity, and
@@ -75,7 +75,7 @@ const About = ({}: Props) => {
             <section className="min-h-[80vh] w-full ">
               <div className="grid grid-cols-2 grid-row-auto auto-rows-auto min-h-[80vh]">
                 <div className="w-full flex justify-center items-center">
-                  <div className="w-2/3 mx-auto">
+                  <div className="xl:w-2/3 mr-6">
                     <h2 className="text-5xl font-oleo mb-[1rem] ">
                       All Collections.
                     </h2>
@@ -136,7 +136,7 @@ const About = ({}: Props) => {
                   </div>
                 </div>
                 <div className="w-full flex justify-center items-center">
-                  <div className="w-2/3 mx-auto">
+                  <div className="xl:w-2/3 ml-6 ">
                     <h2 className="text-5xl font-oleo mb-[1rem] ">
                       Peak Creativity!
                     </h2>
