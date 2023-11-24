@@ -56,7 +56,7 @@ const Settings = [
   },
 ];
 
-// personalize is about setting a preffered color, memoji and setting a custom qr code linked to your profile
+// personalize is about setting a prefered color, memoji and setting a custom qr code linked to your profile
 // connect to apple books so i can sync reading time
 
 const SettingsPageWrapper = ({}: Props) => {
