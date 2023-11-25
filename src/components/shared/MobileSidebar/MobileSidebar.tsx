@@ -20,6 +20,10 @@ const MobileSidebar: React.FC = () => {
   ];
   const NavigationLinks = [
     {
+      page: "About",
+      link: "/about",
+    },
+    {
       page: "Blogs",
       link: "/blogs",
     },
@@ -30,10 +34,6 @@ const MobileSidebar: React.FC = () => {
     {
       page: "Newsletters",
       link: "/newsletter",
-    },
-    {
-      page: "About",
-      link: "/about",
     },
   ];
   const variants = {
