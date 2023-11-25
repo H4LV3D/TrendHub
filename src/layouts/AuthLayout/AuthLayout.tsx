@@ -100,7 +100,7 @@ function AuthLayout({ children, form }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.5 }}
         transition={{ duration: 0.5 }}
-        className={`w-full h-screen sm:min-h-screen grid grid-cols-1 items-center md:flex justify-center bg-[#F7F7F7] dark:bg-[#191919] `}
+        className={`w-full h-screen overflow-hidden sm:min-h-screen grid grid-cols-1 items-center md:flex justify-center bg-[#F7F7F7] dark:bg-[#191919] `}
       >
         <motion.div
           initial={{ x: -100, opacity: 0.3 }}
