@@ -13,7 +13,7 @@ const Blogs = ({}: Props) => {
   return (
     <>
       <PageLayout>
-        <MaxWidthProvider className="px-6 sm:px-0">
+        <MaxWidthProvider className="px-8 sm:px-0">
           <div className="bg-white dark:bg-[#191919] h-[85vh] max-w-md mx-auto flex flex-col items-center justify-center">
             <div className="flex flex-col justify-center items-center mt-20 lg:w-[900px]">
               <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-[5rem] xl:text-8xl text-black dark:text-neutral-200 font-oleo font-normal sm:text-center">
