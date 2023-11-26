@@ -23,7 +23,7 @@ function SecondaryButton({ text, type, action, link }: Props) {
   return (
     <>
       <Link href={link}>
-        <div className="w-full text-neutral-400 dark:text-neutral-600 dark:hover:text-neutral-400 text-center hover:text-black border dark:border-neutral-800 dark:hover:border-neutral-500 border-neutral-400 hover:border-black rounded-lg text-base md:text-lg py-3 px-6">
+        <div className="w-full text-neutral-400 dark:text-neutral-600 dark:hover:text-neutral-400 text-center hover:text-black border dark:border-neutral-800 dark:hover:border-neutral-500 border-neutral-400 hover:border-black rounded-lg text-base md:text-lg py-3 px-8">
           {text}
         </div>
       </Link>
