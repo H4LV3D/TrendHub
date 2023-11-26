@@ -164,3 +164,7 @@ select {
   -moz-appearance: none;
   /* appearance: none; */
 }
+
+.no-scroll {
+  overflow: hidden;
+}
