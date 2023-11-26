@@ -24,7 +24,7 @@ const Newsletter = ({}: Props) => {
   return (
     <>
       <PageLayout>
-        <div className="md:container mx-auto px-6 xs:px-0 font-raleway mb-12">
+        <div className="md:container mx-auto px-8 xs:px-0 font-raleway mb-12">
           <Banner
             heading={{
               line1: "The news,",
