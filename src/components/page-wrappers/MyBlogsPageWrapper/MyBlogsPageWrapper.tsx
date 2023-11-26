@@ -13,7 +13,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="px-6 lg:px-0">
+        <div className="px-8 lg:px-0">
           <div className="bg-white dark:bg-[#191919] py-10 md:h-[14vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Blogs
