@@ -17,7 +17,7 @@ const About = ({}: Props) => {
   return (
     <>
       <PageLayout>
-        <div className="md:container mx-auto px-6 xs:px-0">
+        <div className="md:container mx-auto px-8 xs:px-0">
           <Banner
             heading={{
               line1: "We are the",
@@ -30,7 +30,7 @@ const About = ({}: Props) => {
                       is welcome."
           />
 
-          <MaxWidthProvider className=" px-6 xs:px-0">
+          <MaxWidthProvider className=" px-8 xs:px-0">
             <hr />
             <section className="min-h-[80vh] grid grid-cols- md:grid-cols-2 grid-row-auto auto-rows-auto ">
               <div className="w-full flex items-center justify-center">
@@ -102,7 +102,7 @@ const About = ({}: Props) => {
               </div>
             </section>
             <hr />
-            <section className="min-h-[100vh] w-full md:container mx-auto px-6 xs:px-0">
+            <section className="min-h-[100vh] w-full md:container mx-auto px-8 xs:px-0">
               <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
                 <div className="w-full flex justify-center items-center">
                   <div className="p-6 h-[360px] md:h-[500px] w-[360px] md:w-[500px] rounded-3xl bg-[#f9f9f9] drop-shadow-xl grid grid-cols-4 -rotate-6 ">
