@@ -5,7 +5,6 @@ import BrandLogo from "../BrandLogo/BrandLogo";
 
 type Props = {};
 
-// make a json that contains footer data by categories
 const footerData = {
   about: [
     {
@@ -80,7 +79,7 @@ function Footer({}: Props) {
   return (
     <>
       <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
-        <div className="px-6 xs:px-0 md:container mx-auto xl:w-[950px]">
+        <div className="px-8 xs:px-0 md:container mx-auto xl:w-[950px]">
           <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-full sm:w-1/3 lg:w-full mb-4">
               <BrandLogo />
