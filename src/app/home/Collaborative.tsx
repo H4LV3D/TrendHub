@@ -13,7 +13,7 @@ function Collaborative({}: Props) {
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl dark:text-neutral-200 font-oleo font-normal sm:text-center text-black">
             Collaborative Writing
           </h1>
-          <div className="w-full flex flex-col justify-center items-center mt-4 lg:w-[900px]">
+          <div className="w-full flex flex-col justify-center items-center mt-3 md:mt-4 lg:w-[900px]">
             <p className="text-sm md:text-lg sm:text-center font-raleway font-normal dark:text-neutral-400 text-gray-800 sm:w-3/4 lg:w-2/3">
               Join forces with like-minded individuals, unleash your
               imagination, and craft compelling stories that resonate with the
@@ -22,7 +22,7 @@ function Collaborative({}: Props) {
           </div>
         </div>
 
-        <div className="mx-auto md:container px-6 xs:px-0">
+        <div className="mx-auto md:container px-8 xs:px-0">
           <img
             src="/assets/images/collaborative.jpeg"
             className="md:h-[80vh] mx-auto"
