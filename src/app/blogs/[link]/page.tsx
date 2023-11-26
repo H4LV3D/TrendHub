@@ -38,7 +38,7 @@ const Blog = ({ params }: Props) => {
     <>
       <ViewLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
-          <div className="md:container mx-auto xs:px-0 px-6 ">
+          <div className="md:container mx-auto xs:px-0 px-8 ">
             <div className="font-raleway w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto mt-20">
               <div className="mt-20">
                 <br />
@@ -153,7 +153,7 @@ const Blog = ({ params }: Props) => {
             </div>
           </div>
           <div className="min-h-[70vh] bg-[#f7f7f7] dark:bg-neutral-800 w-full mt-10">
-            <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-6 xs:px-0">
+            <div className="py-10 md:container w-full sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto px-8 xs:px-0">
               <div className="sm:flex items-center justify-between dark:text-neutral-400">
                 <div className="left mb-3 sm:mb-0">
                   <div className="h-20 w-20 flex items-center justify-center rounded-[50%]">
@@ -188,7 +188,7 @@ const Blog = ({ params }: Props) => {
 
               <hr className="mt-6 mb-4 dark:border-neutral-700" />
 
-              <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-4">
+              <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-8 mt-4">
                 <h3 className="text-lg font-normal dark:text-neutral-400 ">
                   More from this <span className="font-medium">Author</span>.
                 </h3>
@@ -197,7 +197,7 @@ const Blog = ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-6 mt-10 pb-6">
+          <div className="md:container sm:w-[450px] md:w-[650px] lg:w-[700px] mx-auto xs:px-0 px-8 mt-10 pb-6">
             <h3 className="text-lg font-normal dark:text-neutral-400 ">
               Suggested <span className="font-medium">For you</span>.
             </h3>
