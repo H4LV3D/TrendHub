@@ -23,7 +23,7 @@ export default function Home({}: {}) {
       </Head>
 
       <PageLayout>
-        <div className=" md:container mx-auto px-5 xs:px-0 font-raleway">
+        <div className=" md:container mx-auto px-8 xs:px-0 font-raleway">
           <Banner
             heading={{
               line1: "Articles, Blogs,",
@@ -40,7 +40,7 @@ export default function Home({}: {}) {
 
         <Collaborative />
 
-        <div className="md:container mx-auto px-5 xs:px-0 font-raleway ">
+        <div className="md:container mx-auto px-8 xs:px-0 font-raleway ">
           <Review reviews={reviews} />
 
           <Subscribe />
