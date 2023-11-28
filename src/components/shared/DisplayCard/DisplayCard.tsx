@@ -1,7 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Icons from "@/components/icons/Icons";
-import icons from "@/data/icons.json";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { setArrangement } from "@/store/slices/arrangement/arrangementSlice";
@@ -30,11 +28,6 @@ type Props = {
 };
 
 const DisplayCard = ({ display, arrangement }: Props) => {
-  const { heartFilled, heartOutlined, thumbsDownFilled, thumbsDownOutlined } =
-    icons.icons;
-
-  const [filled, setFilled] = useState(false);
-  const [bad, setBad] = useState(false);
   const dispatch = useAppDispatch();
 
   const handleResize = () => {
@@ -43,11 +36,8 @@ const DisplayCard = ({ display, arrangement }: Props) => {
     }
   };
 
-  // Listen for window resize when sidebar is open
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-
-    // Cleanup - remove event listener when sidebar is closed
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -68,7 +58,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 : arrangement === "double"
                 ? "md:hidden xl:block xl:w-[35%] rounded-l-xl min-h-[16rem]"
                 : "w-full rounded-t-xl h-[16rem]"
-            } bg-white dark:bg-neutral-800/50 flex items-center justify-center `}
+            } bg-transparent dark:bg-neutral-800/50 flex items-center justify-center `}
           >
             <img
               src={`/assets/Bust/peep-8.svg`}
@@ -83,83 +73,32 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 : arrangement === "double"
                 ? "md:w-[100%] xl:w-[65%] rounded-r-xl min-h-[16rem]"
                 : "w-full rounded-b-xl min-h-[14rem]"
-            }   p-6 dark:text-neutral-400 `}
+            }   py-6 px-4 dark:text-neutral-400 `}
           >
             <div className="mb-2 flex justify-between ">
-              <p className="text-sm md:text-base">Toluwalope Akinkunmi</p>
-              <p className="text-sm">{display.readTime}</p>
+              <p className="text-sm ">Toluwalope Akinkunmi</p>
             </div>
             <h1
               className={` ${
                 arrangement !== "single"
-                  ? "text-xl md:text-2xl mb-2"
-                  : "text-xl md:text-3xl mb-2 md:mb-4"
+                  ? "text-xl md:text-[1.4rem] mb-2"
+                  : "text-xl md:text-[1.4rem] mb-2 md:mb-4"
               } font-[500] text-[#000] dark:text-neutral-200 line-clamp-2`}
             >
               {display.title}
             </h1>
-            <p className="mb-1 sm:mb-2 line-clamp-3 !text-justify text-sm md:text-base ">
+            <p className="mb-1 sm:mb-2 line-clamp-3 !text- text-sm text-neutral-600  ">
               {display.description}
             </p>
-            <div className="mt-3">
-              <p className="mb-0 sm:mb-2 line-clamp-3 text-sm md:text-base">
-                Author :{" "}
-                <span className="font-[500]">Toluwalope Akinkunmi</span>
+            <div className="mt-3 flex items-center space-x-2 text-neutral-500 font-[400] font-sans ">
+              <span className="text-sm ">{display.date}</span>
+              <span className="text-sm ">.</span>
+              <span className="text-sm">{display.readTime}</span>
+              <span className="text-sm ">.</span>
+              <p className="font-raleway font-normal text-sm text-neutral-600 flex items-center space-x-2">
+                <i className="fa-solid fa-hands-clapping fa-md fa-fw"></i>
+                <span>2</span>
               </p>
-            </div>
-            <div className="flex justify-between items-center">
-              {/* {display.reactions && "good" in display.reactions && (
-                <div className="reactions flex items-center space-x-1">
-                  <div className="flex items-center space-x-0">
-                    {filled ? (
-                      <Icons
-                        icon={heartFilled}
-                        action={() => setFilled(false)}
-                        small={true}
-                      />
-                    ) : (
-                      <Icons
-                        icon={heartOutlined}
-                        action={() => setFilled(true)}
-                        small={true}
-                      />
-                    )}
-
-                    <p className="number ">{display?.reactions?.good}</p>
-                  </div>
-                  <div className="flex items-center space-x-0">
-                    {bad ? (
-                      <Icons
-                        icon={thumbsDownFilled}
-                        action={() => setBad(false)}
-                        small={true}
-                      />
-                    ) : (
-                      <Icons
-                        icon={thumbsDownOutlined}
-                        action={() => setBad(true)}
-                        small={true}
-                      />
-                    )}
-                    <p className="number">{display?.reactions?.bad}</p>
-                  </div>
-                </div>
-              )} */}
-              {/* <div className="flex justify-end">
-                {display.article.length > 0 ? (
-                  <TetiaryButton
-                    text="Read more"
-                    link={display.link}
-                    small={true}
-                  />
-                ) : (
-                  <TetiaryButton
-                    text="Download"
-                    link={display.link}
-                    small={true}
-                  />
-                )}
-              </div> */}
             </div>
           </div>
         </div>
