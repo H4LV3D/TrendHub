@@ -3,6 +3,7 @@ import React from "react";
 import pageData from "@/data/index.json";
 import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
+import Link from "next/link";
 import Head from "next/head";
 
 type Blog = {
@@ -122,9 +123,12 @@ const Blog = ({ params }: Props) => {
                 <h1 className="font-raleway font-semibold text-2xl sm:text-3xl md:text-4xl mt-4">
                   {blogs[link].title}
                 </h1>
-                <p className="font-raleway text-sm sm:text-base mt-2">
+                <Link
+                  href={``}
+                  className="font-raleway text-sm sm:text-base mt-2"
+                >
                   Toluwalope Akinkunmi
-                </p>
+                </Link>
 
                 <div className="mt-4">
                   <hr className="mt-4 mb-4 dark:border-neutral-800" />
@@ -140,11 +144,9 @@ const Blog = ({ params }: Props) => {
                       </p>
                     </div>
                     <p className="font-raleway font-normal text-sm">
-                      {/* <i className="fas fa-clock fa-md fa-fw mr-2"></i> */}
                       {blogs[link]?.readTime}
                     </p>
                     <p className="font-raleway font-normal text-sm">
-                      {/* <i className="fas fa-calendar-days fa-lg fa-fw mr-2"></i> */}
                       {blogs[link]?.date}
                     </p>
                   </div>
@@ -189,19 +191,29 @@ const Blog = ({ params }: Props) => {
                 </div>
                 <div className="w-full mt-6">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6">
-                      <>
-                        <button
-                          onClick={() => setLiked(!liked)}
-                          className="left flex items-center justify-center h-12 w-12 rounded-md text-neutral-700 dark:text-neutral-400 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
-                        >
-                          <i
+                    <div className="flex items-center space-x-1">
+                      <button
+                        onClick={() => setLiked(!liked)}
+                        className="flex items-center justify-center h-12 w-12 rounded-md text-neutral-700 dark:text-neutral-400 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
+                      >
+                        {/* <i
                             className={`${
                               liked ? "fas" : "far"
                             } fa-heart fa-xl fa-fw`}
-                          ></i>
-                        </button>
-                      </>
+                          ></i> */}
+                        <i
+                          className={`${
+                            liked ? "text-black" : "text-neutral-400"
+                          } fas fa-hands-clapping fa-xl fa-fw`}
+                        ></i>
+                      </button>
+                      <p
+                        className={`${
+                          liked ? "text-black" : "text-neutral-400"
+                        } text-xl font-sans`}
+                      >
+                        {liked ? 31 : 30}
+                      </p>
                     </div>
                     <div className="flex items-center space-x-2">
                       <>
