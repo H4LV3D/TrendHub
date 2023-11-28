@@ -61,7 +61,7 @@ const footerData = {
     },
     {
       title: "Podcasts",
-      link: "/contact",
+      link: "/podcasts",
     },
     {
       title: "settings",
