@@ -5,24 +5,7 @@ import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
 import Link from "next/link";
 import Head from "next/head";
-
-type Blog = {
-  title: string;
-  episode?: string;
-  description?: string;
-  readTime: string;
-  date: string;
-  article: {
-    p: string;
-  }[];
-  link: number;
-  image: string;
-  tags?: string[];
-  reactions?: {
-    good: number;
-    bad: number;
-  };
-};
+import type { Blog } from "@/typings/blog";
 
 type Props = {
   params: {
@@ -99,7 +82,7 @@ const Blog = ({ params }: Props) => {
         {/* KEY WORDS */}
         <meta
           name="keywords"
-          content={`Gen-Z, Gen-Z Tales, Gen-Z Tech, Gen-Z Technology, Gen-Z Podcast, Gen-Z Newsletter, Gen-Z Blog, Gen-Z Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, ${selectedBlog.title}, ${selectedBlog.description}, ${selectedBlog.tags}, ${selectedBlog.date}, ${selectedBlog.readTime}, ${selectedBlog.episode}, ${selectedBlog.link}, ${selectedBlog.image} `}
+          content={`Gen-Z, Gen-Z Tales, Gen-Z Tech, Gen-Z Technology, Gen-Z Podcast, Gen-Z Newsletter, Gen-Z Blog, Gen-Z Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, ${selectedBlog.title}, ${selectedBlog.description}, ${selectedBlog.tags}, ${selectedBlog.date}, ${selectedBlog.duration}, ${selectedBlog.episode}, ${selectedBlog.link}, ${selectedBlog.image} `}
         />
       </Head>
       <ViewLayout>
@@ -144,7 +127,7 @@ const Blog = ({ params }: Props) => {
                       </p>
                     </div>
                     <p className="font-raleway font-normal text-sm">
-                      {blogs[link]?.readTime}
+                      {blogs[link]?.duration}
                     </p>
                     <p className="font-raleway font-normal text-sm">
                       {blogs[link]?.date}
