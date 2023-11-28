@@ -482,7 +482,69 @@
       ]
     }
   ],
-
+  "podcasts": [
+    {
+      "title": "Episode 1: The Tech World: A Beginner's Guide",
+      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "link": "/podcasts/1",
+      "image": "./assets/images/podcast1.png",
+      "date": "May 02, 2023",
+      "duration": "10 minutes",
+      "tags": []
+    },
+    {
+      "title": "Episode 2: The Tech World: A Beginner's Guide",
+      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "link": "/podcasts/2",
+      "image": "./assets/images/podcast2.png",
+      "date": "May 09, 2023",
+      "duration": "10 minutes",
+      "tags": [],
+      "reactions": {
+        "good": 450,
+        "bad": 5
+      }
+    },
+    {
+      "title": "Episode 3: The Tech World: A Beginner's Guide",
+      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "link": "/podcasts/3",
+      "image": "./assets/images/podcast3.png",
+      "date": "May 16, 2023",
+      "duration": "10 minutes",
+      "tags": [],
+      "reactions": {
+        "good": 450,
+        "bad": 5
+      }
+    },
+    {
+      "title": "Episode 4: The Tech World: A Beginner's Guide",
+      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "link": "/podcasts/4",
+      "image": "./assets/images/podcast4.png",
+      "date": "May 23, 2023",
+      "duration": "10 minutes",
+      "tags": [],
+      "reactions": {
+        "good": 450,
+        "bad": 5
+      }
+    },
+    {
+      "title": "Episode 5: The Tech World: A Beginner's Guide",
+      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "link": "/podcasts/5",
+      "image": "./assets/images/podcast5.png",
+      "date": "May 30, 2023",
+      "duration": "10 minutes",
+      "tags": [],
+      "reactions": {
+        "good": 450,
+        "bad": 5
+      }
+    }
+  ],
   "socials": [
     {
       "title": "LinkedIn",
