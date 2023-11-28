@@ -44,7 +44,7 @@
       ],
       "link": "/blogs/0",
       "image": "./assets/images/blog1.png",
-      "readTime": "5 minutes",
+      "duration": "5 minutes",
       "date": "May 09, 2023",
       "reactions": {
         "good": 450,
@@ -97,7 +97,7 @@
           "p": "Now, if you'll excuse me, I'm off to debug some code. **Happy coding, my friends!**"
         }
       ],
-      "readTime": "6 minutes",
+      "duration": "6 minutes",
       "date": "May 16, 2023",
       "reactions": {
         "good": 450,
@@ -155,7 +155,7 @@
           "p": "Happy coding!"
         }
       ],
-      "readTime": "8 minutes",
+      "duration": "8 minutes",
       "date": "May 23, 2023",
       "link": "/blogs/2",
       "image": "./assets/images/blog3.png",
@@ -205,7 +205,7 @@
       ],
       "link": "/blogs/3",
       "image": "./assets/images/blog3.png",
-      "readTime": "7 minutes",
+      "duration": "7 minutes",
       "date": "May 30, 2023",
       "reactions": {
         "good": 420,
@@ -258,7 +258,7 @@
       ],
       "link": "/blogs/4",
       "image": "./assets/images/blog2.png",
-      "readTime": "6 minutes",
+      "duration": "6 minutes",
       "date": "June 07, 2023",
       "reactions": {
         "good": 350,
@@ -309,7 +309,7 @@
       "link": "/blogs/5",
       "image": "./assets/images/blog4.png",
       "date": "June 14, 2023",
-      "readTime": "9 minutes",
+      "duration": "9 minutes",
       "reactions": {
         "good": 300,
         "bad": 12
@@ -358,7 +358,7 @@
       "link": "/blogs/6",
       "image": "./assets/images/blog6.png",
       "date": "June 21, 2023",
-      "readTime": "8 minutes",
+      "duration": "8 minutes",
       "tags": [
         "Data Structures",
         "Algorithms",
@@ -403,7 +403,7 @@
           "p": "Now it's time to put these techniques into practice. Happy coding, and may your problem-solving skills continue to evolve and flourish!"
         }
       ],
-      "readTime": "7 minutes",
+      "duration": "7 minutes",
       "date": "June 28, 2023",
       "link": "/blogs/7",
       "image": "./assets/images/blog8.png",
@@ -469,7 +469,7 @@
           "p": "**Enjoy a bug free week!**"
         }
       ],
-      "readTime": "10 minutes",
+      "duration": "10 minutes",
       "date": "Nov 28, 2023",
       "link": "/blogs/8",
       "image": "./assets/images/blog8.png",
@@ -484,17 +484,19 @@
   ],
   "podcasts": [
     {
-      "title": "Episode 1: The Tech World: A Beginner's Guide",
-      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "id": "3g57dhf7hjs8s",
+      "title": "Hello World: Every Programmer's Playground",
+      "description": "Join us as we explore the exciting world of coding and explore the starting point of every programmer's journey: the \"Hello World!\" program. From its humble beginnings to its modern-day applications, this episode will take you on a journey through time and space to uncover the secrets behind this iconic phrase.",
       "link": "/podcasts/1",
       "image": "./assets/images/podcast1.png",
       "date": "May 02, 2023",
       "duration": "10 minutes",
-      "tags": []
+      "tags": ["Hello World", "Programming", "Software Development", "Coding"]
     },
     {
-      "title": "Episode 2: The Tech World: A Beginner's Guide",
-      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "id": "46r8th4370",
+      "title": "Cracking the Code: Let's Play with Programming!",
+      "description": "Unleash your inner coder! Join us for a hands-on coding adventure where we'll break down the basics, solve puzzles together, and discover how to create your first lines of code. No tech jargon, just playful programming fun!",
       "link": "/podcasts/2",
       "image": "./assets/images/podcast2.png",
       "date": "May 09, 2023",
@@ -506,8 +508,9 @@
       }
     },
     {
-      "title": "Episode 3: The Tech World: A Beginner's Guide",
-      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "id": "k56h7jb543m9",
+      "title": "Tech Tales: Behind the Scenes of Tech Innovations",
+      "description": "Join us for a journey through the stories behind your favorite tech inventions. From the origin of smartphones to the mysteries of AI, we'll uncover the fascinating tales that make tech history. It's a storytelling session with a tech twist!",
       "link": "/podcasts/3",
       "image": "./assets/images/podcast3.png",
       "date": "May 16, 2023",
@@ -519,8 +522,9 @@
       }
     },
     {
-      "title": "Episode 4: The Tech World: A Beginner's Guide",
-      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "id": "k56h7jb543m9",
+      "title": "Tech Talk Showdown: Debunking Myths and Exploring Trends",
+      "description": "It's a tech talk showdown! We'll debunk common tech myths, discuss the latest trends, and answer your burning tech questions. This interactive session is your chance to join the conversation, share your thoughts, and become a tech-savvy trendsetter!",
       "link": "/podcasts/4",
       "image": "./assets/images/podcast4.png",
       "date": "May 23, 2023",
@@ -532,12 +536,27 @@
       }
     },
     {
-      "title": "Episode 5: The Tech World: A Beginner's Guide",
-      "description": "Are you a beginner developer stepping into the vast world of programming? Join us as we lay the groundwork for success by exploring essential concepts that form the building blocks of your coding journey. From understanding variables and control flow to grasping object-oriented programming, this episode equips you with the knowledge needed to build a strong foundation in the exciting realm of development.",
+      "id": "hgfrdsh456",
+      "title": "Design Disco: Grooving with Web Development",
+      "description": "Join us for a Design Disco where we'll dance through the colorful world of web development! From creating eye-catching layouts to selecting the perfect color palette, this interactive session will have you grooving to the rhythm of design. Grab your virtual dance shoes, and let's make web development a party!",
       "link": "/podcasts/5",
       "image": "./assets/images/podcast5.png",
       "date": "May 30, 2023",
       "duration": "10 minutes",
+      "tags": [],
+      "reactions": {
+        "good": 450,
+        "bad": 5
+      }
+    },
+    {
+      "id": "hgfrdsh456",
+      "title": "Debugging Duels: Battle of the Bugs",
+      "description": "Get ready for a coding showdown in the Debugging Duels! We'll tackle real-life coding bugs together, share debugging strategies, and turn the challenge of fixing code into an epic duel. Join the battle, and let's conquer bugs in style!",
+      "link": "/podcasts/6",
+      "image": "./assets/images/podcast6.png",
+      "date": "June 07, 2023",
+      "duration": "12 minutes",
       "tags": [],
       "reactions": {
         "good": 450,
