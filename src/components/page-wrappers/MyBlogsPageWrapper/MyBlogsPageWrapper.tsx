@@ -29,7 +29,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
                 <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
                   Coming Soon
                 </span>
-                <div className="block lg:hidden">
+                <div className=" lg:hidden">
                   <Image
                     src={`/assets/Bust/peep-8.svg`}
                     height={240}
