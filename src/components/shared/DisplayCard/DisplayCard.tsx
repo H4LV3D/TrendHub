@@ -3,27 +3,11 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { setArrangement } from "@/store/slices/arrangement/arrangementSlice";
-
-type Blog = {
-  title: string;
-  episode?: string;
-  description?: string;
-  readTime: string;
-  date: string;
-  article: {
-    p: string;
-  }[];
-  link: string;
-  image: string;
-  tags?: string[];
-  reactions?: {
-    good: number;
-    bad: number;
-  };
-};
+import { Blog } from "@/typings/blog";
+import { Podcast } from "@/typings/podcast";
 
 type Props = {
-  display: Blog;
+  display: Blog | Podcast;
   arrangement: string;
 };
 
@@ -93,7 +77,7 @@ const DisplayCard = ({ display, arrangement }: Props) => {
             <div className="mt-3 flex items-center space-x-2 text-neutral-500 font-[400] font-sans ">
               <span className="text-sm ">{display.date}</span>
               <span className="text-sm ">.</span>
-              <span className="text-sm">{display.readTime}</span>
+              <span className="text-sm">{display?.duration}</span>
               <span className="text-sm ">.</span>
               <p className="font-raleway font-normal text-sm text-neutral-600 flex items-center space-x-2">
                 <i className="fa-solid fa-hands-clapping fa-md fa-fw"></i>
