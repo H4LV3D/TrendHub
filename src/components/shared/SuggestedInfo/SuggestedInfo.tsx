@@ -1,9 +1,10 @@
 import React, { use } from "react";
 import DisplayCard from "../DisplayCard/DisplayCard";
 import { Blog } from "@/typings/blog";
+import { Podcast } from "@/typings/podcast";
 
 type Props = {
-  data: Blog[];
+  data: Blog[] | Podcast[];
   split?: number;
 };
 
