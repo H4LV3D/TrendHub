@@ -68,8 +68,14 @@ const DisplayCard = ({ display, arrangement }: Props) => {
                 : arrangement === "double"
                 ? "md:hidden xl:block xl:w-[35%] rounded-l-xl min-h-[16rem]"
                 : "w-full rounded-t-xl h-[16rem]"
-            } bg-neutral-100 dark:bg-neutral-800/50 `}
-          ></div>
+            } bg-white dark:bg-neutral-800/50 flex items-center justify-center `}
+          >
+            <img
+              src={`/assets/Bust/peep-8.svg`}
+              className="w-[200px]"
+              alt="An SVG illustration of a person dressed in different clothings"
+            />
+          </div>
           <div
             className={` ${
               arrangement === "single"
