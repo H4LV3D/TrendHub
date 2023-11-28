@@ -12,7 +12,6 @@ import SearchBox from "@/components/shared/search/Search";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { showMobileSidebar } from "@/store/slices/mobileSidebar/mobileSidebarSlice";
 import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
-import { showSearchBox } from "@/store/slices/searchbox/searchBoxSlice";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
 type Props = {
