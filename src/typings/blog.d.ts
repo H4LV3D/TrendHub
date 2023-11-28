@@ -1,13 +1,13 @@
-type Blog = {
+export type Blog = {
   title: string;
   episode?: string;
   description?: string;
-  readTime: string;
+  duration: string;
   date: string;
   article: {
     p: string;
   }[];
-  link: string | number;
+  link: string;
   image: string;
   tags?: string[];
   reactions?: {
