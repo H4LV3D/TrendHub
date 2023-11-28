@@ -1,23 +1,6 @@
 import React, { use } from "react";
 import DisplayCard from "../DisplayCard/DisplayCard";
-
-type Blog = {
-  title: string;
-  episode?: string;
-  description?: string;
-  readTime: string;
-  date: string;
-  article: {
-    p: string;
-  }[];
-  link: string | number;
-  image: string;
-  tags?: string[];
-  reactions?: {
-    good: number;
-    bad: number;
-  };
-};
+import { Blog } from "@/typings/blog";
 
 type Props = {
   data: Blog[];
