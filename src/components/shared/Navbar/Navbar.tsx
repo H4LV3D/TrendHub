@@ -26,8 +26,8 @@ function Header({ nav }: Props) {
   const navItems = [
     { text: "About", link: "/about" },
     { text: "Blogs", link: "/blogs" },
-    { text: "Podcast", link: "/podcast" },
-    { text: "Newsletter", link: "/newsletter" },
+    { text: "Podcasts", link: "/podcasts" },
+    { text: "Newsletters", link: "/newsletters" },
   ];
 
   const [hasShadow, setHasShadow] = useState(false);
