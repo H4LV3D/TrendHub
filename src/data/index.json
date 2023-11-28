@@ -414,8 +414,75 @@
         "Entrepreneurship",
         "E-commerce"
       ]
+    },
+    {
+      "title": "Web 5.0 : A Personal Identity Web",
+      "episode": "Episode 9",
+      "description": "Web 5.0 is the next generation of the internet. It will be a personal identity web that allows users to control their own data and privacy. We would explore Decentralized Identifiers (DIDs), Verifiable Credentials (VCs), and other technologies that will enable this new era of the internet.",
+      "article": [
+        {
+          "p": "Hey, How is your week going? **Mine is Amazing!**"
+        },
+        {
+          "p": "I was excited to be at **Google devfest Lagos 2023**, and I was even more excited to attend a session on Web 5.0 and I was enlightened. I started making research and I was eager to share my findings with the world."
+        },
+        {
+          "p": "Web 5.0 is an emerging technology that will enable the next generation of the internet. It is a personal identity web that **allows users to control their own data and privacy**. Web 5.0 will be built on top of the existing web, but it will have a different architecture and design."
+        },
+        {
+          "p": "Let's take a look at some of the technologies that will enable this new era of the internet."
+        },
+        {
+          "p": "**Web 1.0** was the first generation of the internet. It was a read-only web that allowed users to consume content but not create it. It also had limited interactivity and was mostly used for research purposes."
+        },
+        {
+          "p": "**Web 2.0** makes it possible for user-generated content to be viewed by millions of people around the world, virtually in an instant. These developments enabled the dominance of apps that greatly expanded online interactivity and utility—Airbnb, Facebook, Instagram, TikTok, Twitter (now X), Uber, WhatsApp, and YouTube, to name a few."
+        },
+        {
+          "p": "**Web 3.0** is meant to be decentralized, open to everyone (with a bottom-up design), and built on top of blockchain technologies and developments in the Semantic Web, which describes the web as a network of meaningfully linked data.Web 3.0 represents its next phase, which will be decentralized, open, and of greater utility. "
+        },
+        {
+          "p": "**So** Web 2.0 + Web 3.0 = Web 5.0 **Right?**"
+        },
+        {
+          "p": "Maybe, but not quite. Let's take a look at the **Pillars of Web 5.0**"
+        },
+        {
+          "p": "**Decentralized Identifiers (DIDs)** are a new type of identifier that enables self-sovereign identity. They are a way to create a unique identifier for a person or thing that is not controlled by any central authority. DIDs can be used to create a digital identity, which can then be used to authenticate and authorize access to resources."
+        },
+        {
+          "p": "**Decentralized Web Notes (DWNs)** is a personal data store containing personalinformation, documents, media, and other sensitive data, located on a decentralized network. They are not hosted by any single server, but rather distributed across many different computers, it is decentralized. "
+        },
+        {
+          "p": "**Verifiable Credentials (VCs)** are a new type of digital credential that can be used to prove identity, age, or other attributes. They are issued by an issuer and can be verified by a verifier. VCs are a way to prove your identity without revealing any personal information."
+        },
+        {
+          "p": "**What are the advantages of Web 5.0?**"
+        },
+        {
+          "p": "Web 5.0 allows users to control their own data and privacy. It also enables the creation of **decentralized applications** that are not controlled by any central authority. It also helps to reduce the risk of data breaches and identity theft. It makes for easier control of personal data by customized access of whom, where and how your data is being used."
+        },
+        {
+          "p": "In the next episode, We would be looking at a **pratical example** of Web 5.0 and how it can be used to solve real life problems."
+        },
+        {
+          "p": "**Enjoy a bug free week!**"
+        }
+      ],
+      "readTime": "10 minutes",
+      "date": "Nov 28, 2023",
+      "link": "/blogs/8",
+      "image": "./assets/images/blog8.png",
+      "tags": [
+        "Decentralization",
+        "Web 5.0",
+        "Blockchain",
+        "Internet",
+        "Identity"
+      ]
     }
   ],
+
   "socials": [
     {
       "title": "LinkedIn",
