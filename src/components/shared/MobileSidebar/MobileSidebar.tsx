@@ -29,11 +29,11 @@ const MobileSidebar: React.FC = () => {
     },
     {
       page: "Podcasts",
-      link: "/podcast",
+      link: "/podcasts",
     },
     {
       page: "Newsletters",
-      link: "/newsletter",
+      link: "/newsletters",
     },
   ];
   const variants = {
