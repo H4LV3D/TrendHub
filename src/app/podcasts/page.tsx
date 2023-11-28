@@ -11,7 +11,7 @@ import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvi
 type Props = {};
 
 const Podcast = ({}: Props) => {
-  const { blogs } = pageData;
+  const { podcasts } = pageData;
   const arrangement = useAppSelector((state) => state.arrangement.value);
 
   const Nav = [
@@ -30,7 +30,7 @@ const Podcast = ({}: Props) => {
               line1: "The Voice,",
               line2: "Vote & Video.",
             }}
-            data={blogs}
+            data={podcasts}
             text="Amplify your voice, wield your vote, and harness the power of video to shape narratives and drive impactful societal transformations."
           />
 
@@ -45,9 +45,9 @@ const Podcast = ({}: Props) => {
                   : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6"
               } `}
             >
-              {blogs.map((blog, index) => (
+              {podcasts.map((podcast, index) => (
                 <div key={index} className="mb-6">
-                  <DisplayCard display={blog} arrangement={arrangement} />
+                  <DisplayCard display={podcast} arrangement={arrangement} />
                 </div>
               ))}
             </div>
