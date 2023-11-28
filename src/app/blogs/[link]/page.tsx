@@ -3,6 +3,7 @@ import React from "react";
 import pageData from "@/data/index.json";
 import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
+import Head from "next/head";
 
 type Blog = {
   title: string;
@@ -34,8 +35,72 @@ const Blog = ({ params }: Props) => {
   const { blogs } = pageData;
   const selectedBlog = blogs[link];
 
+  const [liked, setLiked] = React.useState(false);
+  const [bookmarked, setBookmarked] = React.useState(false);
+
   return (
     <>
+      <Head>
+        <title>{selectedBlog.title} | Gen-Z Tales</title>
+        <meta name="description" content="Gen-Z Tales" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
+        {/* SEO TAGS */}
+        <meta property="og:title" content={selectedBlog.title} />
+        <meta property="og:type" content="article" />
+
+        <meta property="og:url" content="https://genztech.xyz" />
+        <meta property="og:image" content={selectedBlog.image} />
+        <meta property="og:description" content={selectedBlog.description} />
+        <meta property="og:site_name" content="Gen-Z Tales" />
+        <meta property="article:published_time" content={selectedBlog.date} />
+        <meta property="article:author" content="Toluwalope Akinkunmi" />
+        <meta property="article:section" content="Technology" />
+        <meta property="article:tag" content="Technology" />
+        <meta property="article:tag" content="Gen-Z Tales" />
+        <meta property="article:tag" content="Gen-Z" />
+        <meta property="article:tag" content="Gen-Z Tech" />
+
+        {/* TWITTER TAGS */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@genz_tech" />
+        <meta name="twitter:creator" content="@toluwalope19" />
+        <meta name="twitter:title" content={selectedBlog.title} />
+        <meta name="twitter:description" content={selectedBlog.description} />
+        <meta name="twitter:image" content={selectedBlog.image} />
+        <meta name="twitter:image:alt" content={selectedBlog.title} />
+
+        {/* GOOGLE SEARCH CONSOLE */}
+        <meta
+          name="google-site-verification"
+          content="6l2jGxL2QK9ZvqZj2rQ9KgQa2G4R1Xb6YJ3kzWZfz9k"
+        />
+
+        {/* PINTEREST TAG */}
+        <meta
+          name="p:domain_verify"
+          content="f8c2a6b4c3a6e1c4b0d6d7b0b3f7e6b6"
+        />
+
+        {/* FACEBOOK TAG */}
+        <meta property="fb:app_id" content="10101010101010101" />
+
+        {/* LINKEDIN TAG */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={selectedBlog.title} />
+        <meta property="og:description" content={selectedBlog.description} />
+        <meta property="og:image" content={selectedBlog.image} />
+        <meta property="og:url" content="https://genztech.xyz" />
+        <meta property="og:site_name" content="Gen-Z Tales" />
+        <meta property="article:published_time" content={selectedBlog.date} />
+        <meta property="article:author" content="Toluwalope Akinkunmi" />
+
+        {/* KEY WORDS */}
+        <meta
+          name="keywords"
+          content={`Gen-Z, Gen-Z Tales, Gen-Z Tech, Gen-Z Technology, Gen-Z Podcast, Gen-Z Newsletter, Gen-Z Blog, Gen-Z Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, ${selectedBlog.title}, ${selectedBlog.description}, ${selectedBlog.tags}, ${selectedBlog.date}, ${selectedBlog.readTime}, ${selectedBlog.episode}, ${selectedBlog.link}, ${selectedBlog.image} `}
+        />
+      </Head>
       <ViewLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
           <div className="md:container mx-auto xs:px-0 px-8 ">
@@ -60,9 +125,6 @@ const Blog = ({ params }: Props) => {
                 <p className="font-raleway text-sm sm:text-base mt-2">
                   Toluwalope Akinkunmi
                 </p>
-                {/* <p className="font-raleway text-sm sm:text-base mt-2">
-                  {blogs[link]?.date} | {blogs[link]?.readTime}
-                </p> */}
 
                 <div className="mt-4">
                   <hr className="mt-4 mb-4 dark:border-neutral-800" />
@@ -70,11 +132,11 @@ const Blog = ({ params }: Props) => {
                     <div className="flex items-center space-x-4 pb-2">
                       <p className="font-raleway font-normal text-sm text-neutral-600 flex items-center space-x-2">
                         <i className="fa-solid fa-hands-clapping fa-xl fa-fw"></i>
-                        <span>100</span>
+                        <span>2</span>
                       </p>
                       <p className="font-raleway font-normal flex items-center space-x-2 text-sm text-neutral-600">
                         <i className="fas fa-users fa-lg fa-fw"></i>
-                        <span>32</span>
+                        <span>5</span>
                       </p>
                     </div>
                     <p className="font-raleway font-normal text-sm">
@@ -129,8 +191,15 @@ const Blog = ({ params }: Props) => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-6">
                       <>
-                        <button className="left flex items-center justify-center h-12 w-12 rounded-lg text-neutral-700 dark:text-neutral-600 border dark:border-neutral-800 cursor-pointer hover:bg-black dark:hover:bg-neutral-800 hover:text-white dark:hover:text-black">
-                          <i className="fas fa-heart fa-xl fa-fw"></i>
+                        <button
+                          onClick={() => setLiked(!liked)}
+                          className="left flex items-center justify-center h-12 w-12 rounded-md text-neutral-700 dark:text-neutral-400 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
+                        >
+                          <i
+                            className={`${
+                              liked ? "fas" : "far"
+                            } fa-heart fa-xl fa-fw`}
+                          ></i>
                         </button>
                       </>
                     </div>
@@ -140,8 +209,15 @@ const Blog = ({ params }: Props) => {
                           <i className="fas fa-paper-plane fa-xl fa-fw"></i>
                         </button>
                       </>
-                      <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
-                        <i className="far fa-bookmark fa-xl fa-fw"></i>
+                      <button
+                        onClick={() => setBookmarked(!bookmarked)}
+                        className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
+                      >
+                        <i
+                          className={`${
+                            bookmarked ? "fas" : "far"
+                          } fa-bookmark fa-xl fa-fw`}
+                        ></i>
                       </button>
                       <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
                         <i className="fa-solid fa-ellipsis fa-xl fa-fw"></i>
