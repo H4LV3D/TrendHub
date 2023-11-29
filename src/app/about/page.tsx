@@ -110,6 +110,7 @@ const About = ({}: Props) => {
                       (item, index) => (
                         <Image
                           src={`/assets/Memoji/male/Memoji-${index}.png`}
+                          key={index}
                           alt="hero"
                           width={400}
                           height={400}
