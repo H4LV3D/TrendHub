@@ -32,8 +32,8 @@ const About = ({}: Props) => {
 
           <MaxWidthProvider className=" px-8 xs:px-0">
             <hr />
-            <section className="min-h-[80vh] grid grid-cols- md:grid-cols-2 grid-row-auto auto-rows-auto ">
-              <div className="w-full flex items-center justify-center">
+            <section className=" py-16">
+              <div className="w-2/3 mx-auto ">
                 <div className="flex -space-x-[5rem] ">
                   {[1, 2, 3].map((item, index) => (
                     <div
@@ -47,16 +47,16 @@ const About = ({}: Props) => {
                         key={index}
                         src={`/assets/images/peep-${images[index]}.svg`}
                         alt="hero"
-                        width={320}
-                        height={320}
+                        width={275}
+                        height={275}
                         className="scale-90 md:hover:border border-black hover:scale-95 duration-300 ease-in-out transform cursor-pointer rounded-2xl md:bg-white md:drop-shadow-xl hover:z-[99999] "
                       />
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="w-full lg:flex items-center justify-center">
-                <div className="xl:w-2/3 lg:ml-6">
+              <div className="w-1/2 mt-8">
+                <div className="">
                   <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
                     Hey there,
                   </h2>
@@ -73,8 +73,19 @@ const About = ({}: Props) => {
             </section>
             <hr />
             <section className="">
-              <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:mt-0 md:min-h-[80vh]">
+              <div className=" py-16">
                 <div className="w-full flex justify-center items-center">
+                  <div className="md:p-6 h-[350px] w-[350px] rounded-2xl flex justify-center items-center ">
+                    <Image
+                      src={`/assets/images/peep-8.svg`}
+                      alt="hero"
+                      width={300}
+                      height={300}
+                      className="scale-75 "
+                    />
+                  </div>
+                </div>
+                <div className="w-1/2 ml-auto ">
                   <div className="xl:w-2/3 mr-6">
                     <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
                       All Collections.
@@ -86,17 +97,6 @@ const About = ({}: Props) => {
                       company in the world and we're committed to building an
                       inclusive culture where everyone can thrive.
                     </p>
-                  </div>
-                </div>
-                <div className="w-full flex justify-center items-center">
-                  <div className="md:p-6 h-[350px] w-[350px] rounded-2xl md:bg-[#fff] md:drop-shadow-xl flex justify-center items-center ">
-                    <Image
-                      src={`/assets/images/peep-8.svg`}
-                      alt="hero"
-                      width={300}
-                      height={300}
-                      className="scale-75 "
-                    />
                   </div>
                 </div>
               </div>
