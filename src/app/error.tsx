@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 type Props = {};
 
-const Blogs = ({}: Props) => {
+const PageNotFound = ({}: Props) => {
   const router = useRouter();
 
   return (
@@ -43,4 +43,4 @@ const Blogs = ({}: Props) => {
   );
 };
 
-export default Blogs;
+export default PageNotFound;
