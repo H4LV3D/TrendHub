@@ -5,12 +5,10 @@ import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
 import Link from "next/link";
 import Head from "next/head";
-import type { Blog } from "@/typings/blog";
 
 type Props = {
   params: {
     link: number;
-    blog: Blog[];
   };
 };
 
