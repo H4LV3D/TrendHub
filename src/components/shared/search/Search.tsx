@@ -1,27 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-
-type BlogItem = {
-  title: string;
-  episode: string;
-  description: string;
-  article: { p: string }[];
-  link: string;
-  image: string;
-  readTime: string;
-  date: string;
-  reactions?: { good: number; bad: number };
-  [key: string]: any;
-};
+import { Blog } from "@/typings/blog";
 
 type Props = {
-  blogs: BlogItem[];
+  blogs: Blog[];
 };
 
 function SearchBox({ blogs }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredResults, setFilteredResults] = useState<BlogItem[]>([]);
+  const [filteredResults, setFilteredResults] = useState<Blog[]>([]);
 
   const handleInputChange = (event: any) => {
     const { value } = event.target;
@@ -30,7 +18,7 @@ function SearchBox({ blogs }: Props) {
   };
 
   const filterResults = (query: any) => {
-    const filtered = blogs.filter((item: BlogItem) => {
+    const filtered = blogs.filter((item: any) => {
       for (const key in item) {
         if (typeof item[key] === "string") {
           if (item[key].toLowerCase().includes(query.toLowerCase())) {
