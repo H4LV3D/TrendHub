@@ -59,7 +59,7 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
   const handleRewind = () => {
     if (waveformRef.current) {
       const currentTime = waveformRef.current.getCurrentTime();
-      const newTime = Math.max(0, currentTime - 15); // Ensure the new time is non-negative
+      const newTime = Math.max(0, currentTime - 15);
       waveformRef.current.seekTo(newTime);
     }
   };
