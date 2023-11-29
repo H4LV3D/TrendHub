@@ -5,19 +5,18 @@ import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
 import Link from "next/link";
 import Head from "next/head";
-import type { Blog } from "@/typings/blog";
+import Waveform from "./audio";
 
 type Props = {
   params: {
     link: number;
-    blog: Blog[];
   };
 };
 
-const Blog = ({ params }: Props) => {
+const Podcast = ({ params }: Props) => {
   const link = params.link;
   const { podcasts } = pageData;
-  const selectedPodcast = podcasts[link];
+  const selectedPodcast = podcasts[link - 1];
 
   const [liked, setLiked] = React.useState(false);
   const [bookmarked, setBookmarked] = React.useState(false);
@@ -112,8 +111,15 @@ const Blog = ({ params }: Props) => {
               </div>
 
               <div className="min-h-[40vh] border border-black rounded-xl w-full mt-4 p-6">
-                {/* hello */}
-                <div className="w-full text-black dark:text-neutral-400">
+                {/* Start */}
+                <div className="my-8">
+                  <Waveform
+                    url="https://www.mfiles.co.uk/mp3-downloads/gs-cd-track2.mp3"
+                    link={link}
+                  />
+                </div>
+
+                <div className="w-full text-black dark:text-neutral-400 mt-8">
                   <h1 className="font-raleway font-medium text-2xl mt-4">
                     {selectedPodcast.title}
                   </h1>
@@ -130,9 +136,15 @@ const Blog = ({ params }: Props) => {
                     <p className="font-raleway font-normal text-sm">
                       {selectedPodcast?.duration}
                     </p>
-                  </div>{" "}
+                  </div>
+                  <div className="description">
+                    <p className="font-raleway font-normal text-sm mt-4">
+                      {selectedPodcast?.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="w-full mt-3 border">
+
+                <div className="w-full mt-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-1">
                       <button
@@ -177,7 +189,7 @@ const Blog = ({ params }: Props) => {
                 </div>
               </div>
 
-              {/* end */}
+              {/* End */}
             </div>
           </div>
 
@@ -231,7 +243,7 @@ const Blog = ({ params }: Props) => {
               Suggested <span className="font-medium">For you</span>.
             </h3>
             <hr className="mt-4 mb-4 dark:border-neutral-800" />
-            <SuggestedInfo data={podcasts} />
+            <SuggestedInfo split={2} data={podcasts} />
           </div>
         </div>
       </ViewLayout>
@@ -239,4 +251,4 @@ const Blog = ({ params }: Props) => {
   );
 };
 
-export default Blog;
+export default Podcast;
