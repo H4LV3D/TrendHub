@@ -102,39 +102,39 @@ const About = ({}: Props) => {
               </div>
             </section>
             <hr />
-            <section className="min-h-[100vh] w-full md:container mx-auto px-8 xs:px-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
-                <div className="w-full flex justify-center items-center">
-                  <div className="p-6 h-[360px] md:h-[500px] w-[360px] md:w-[500px] rounded-3xl bg-[#f9f9f9] drop-shadow-xl grid grid-cols-4 -rotate-6 ">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7].map(
-                      (item, index) => (
-                        <Image
-                          src={`/assets/Memoji/male/Memoji-${index}.png`}
-                          key={index}
-                          alt="hero"
-                          width={400}
-                          height={400}
-                          className={` ${
-                            index === 0 ||
-                            index === 1 ||
-                            index === 2 ||
-                            index === 3
-                              ? ""
-                              : "border-t"
-                          }  ${
-                            index === 0 ||
-                            index === 4 ||
-                            index === 8 ||
-                            index === 12 ||
-                            index === 16
-                              ? ""
-                              : "border-l"
-                          }`}
-                        />
-                      )
-                    )}
-                  </div>
+            <section className="min-h-[70vh] w-full md:container mx-auto px-8 xs:px-0">
+              <div className="w-full flex justify-center items-center pt-12">
+                <div className="p-6 h-[360px] md:h-[500px] w-[360px] md:w-[500px] rounded-3xl bg-[#f9f9f9] drop-shadow-xl grid grid-cols-4 -rotate-6 ">
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7].map(
+                    (item, index) => (
+                      <Image
+                        src={`/assets/Memoji/male/Memoji-${index}.png`}
+                        key={index}
+                        alt="hero"
+                        width={400}
+                        height={400}
+                        className={` ${
+                          index === 0 ||
+                          index === 1 ||
+                          index === 2 ||
+                          index === 3
+                            ? ""
+                            : "border-t"
+                        }  ${
+                          index === 0 ||
+                          index === 4 ||
+                          index === 8 ||
+                          index === 12 ||
+                          index === 16
+                            ? ""
+                            : "border-l"
+                        }`}
+                      />
+                    )
+                  )}
                 </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
                 <div className="w-full flex justify-center items-center">
                   <div className="xl:w-2/3 ml-6 ">
                     <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
