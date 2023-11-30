@@ -7,7 +7,7 @@ type Props = {};
 function Subscribe({}: Props) {
   return (
     <>
-      <div className="h-[88vh] w-full flex flex-col sm:items-center justify-center">
+      <div className="h-[50vh] w-full flex flex-col sm:items-center justify-center">
         <h4 className="text-4xl md:text-6xl font-oleo font-light dark:text-neutral-400 text-black mb-2">
           Do you want more?
         </h4>
