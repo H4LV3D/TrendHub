@@ -24,7 +24,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
 
   return (
     <div>
-      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-600 mb-8 pb-2">
+      <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-800 mb-8 pb-2">
         <div className="w-full hidden md:flex items-center space-x-2">
           <Icons icon={plus} small={true} />
           {Nav.map((nav, index: number) => (
@@ -49,7 +49,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
         </div>
         <div className="md:hidden">
           <div className="pr-[1rem] border rounded-[0.5rem] bg-[#f7f7f7] dark:bg-neutral-700 dark:border-neutral-600 cursor-pointer">
-            <select className="py-[0.75rem] px-[1rem] text-[#000] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-600 outline-none">
+            <select className="py-[0.75rem] px-[1rem] text-[#000] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-700 outline-none">
               {Nav.map((item, index) => (
                 <option value={item.text} key={index}>
                   {item.text}
