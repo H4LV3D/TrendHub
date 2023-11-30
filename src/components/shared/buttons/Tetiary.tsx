@@ -20,8 +20,8 @@ function TetiaryButton({ text, link, small, active, action }: Props) {
               ? "text-sm text-neutral-400 hover:text-black"
               : `p-2 ${
                   active
-                    ? "text-lg text-black font-medium dark:text-neutral-300"
-                    : "text-lg text-neutral-400 dark:text-neutral-400 hover:text-black"
+                    ? "text-lg text-black font-medium dark:text-neutral-200"
+                    : "text-lg text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-neutral-300 "
                 } `
           }  `}
         >
