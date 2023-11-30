@@ -79,60 +79,71 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="flex">
+          <div className="flex items-center">
             <div className="w-1/4 flex justify-center items-center">
               <Image
                 src={`/assets/Bust/peep-${Math.floor(
                   Math.random() * 104
                 ).toString()}.svg`}
                 alt="avatar"
-                width={160}
-                height={160}
+                width={180}
+                height={180}
               />
             </div>
-            <div className="w-3/4 flex items-center">
-              <div className="w-1/2 border-r">
-                <h1 className="text-xl font-[500] capitalize">{name}</h1>
+            <div className="w-3/4 flex flex-col-reverse gap-y-4 xl:gap-y-0 xl:flex-row xl:items-center">
+              <div className="w-1/2 xl:border-r dark:border-neutral-800">
+                <h1 className="text-xl font-[500] dark:text-neutral-300 capitalize">
+                  {name}
+                </h1>
                 {/* <p className="text-sm text-[#696969] ">johndoe@gmail.com</p> */}
-                <p className="about mt-0 text-[0.875rem] text-[#696969] ">
+                <p className="about mt-0 text-[0.875rem] text-[#696969] dark:text-neutral-400 ">
                   Technical Writer, Content Creator, and Software Developer.
                 </p>
-                <p className="about mt-2 text-[0.875rem] text-[#696969] ">
+                <p className="about mt-1 text-[0.875rem] text-[#696969] dark:text-neutral-500 ">
                   I write about technology, software development, and personal
                   development. I also write about my journey as a software
                   developer.
                 </p>
-
-                <button className="text-sm text-white bg-black px-4 py-2 rounded-lg my-3">
-                  <span>Edit Profile</span>
-                </button>
               </div>
+
               <div className="w-1/2">
-                <div className="py-4 grid grid-cols-3">
+                <div className="py-6 grid grid-cols-3 pr-16 xl:pr-0">
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans font-[500]">23</div>
-                    <div className="text-base text-[#696969]">Publications</div>
+                    <div className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
+                      23
+                    </div>
+                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                      Publications
+                    </div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans font-[500]">1200</div>
-                    <div className="text-base text-[#696969]">Followers</div>
+                    <div className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                      1200
+                    </div>
+                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                      Followers
+                    </div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans font-[500]">1028</div>
-                    <div className="text-base text-[#696969]">Following</div>
+                    <div className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                      1028
+                    </div>
+                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                      Following
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full md:h-[70vh] flex md:border-t md:mb-[10vh] ">
-            <div className="flex flex-col w-full md:w-1/4 md:pr-6 md:border-r sm:pt-6 ">
+          <div className="bg-white dark:bg-[#191919] w-full md:h-[70vh] flex md:border-t dark:border-neutral-800 md:mb-[10vh] ">
+            <div className="flex flex-col w-full md:w-1/4 md:pr-6 md:border-r dark:border-neutral-800 sm:pt-6 ">
               {Settings.map((setting) => (
                 <button
                   className={`text-start text-black dark:text-neutral-400 w-full p-4 flex items-center justify-between ${
                     active === setting.id
-                      ? " text-black font-[500] rounded-lg bg-[#f7f7f7] "
+                      ? " text-black font-[500] rounded-lg bg-[#f7f7f7] dark:bg-neutral-800 dark:text-neutral-200 "
                       : ""
                   }`}
                   onClick={() => setActive(setting.id)}
@@ -152,11 +163,13 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
             <div className="hidden md:block md:w-3/4 p-6 md:p-8 lg:p-10 h-full overflow-y-auto ">
               <div className="">
-                <h2 className="text-xl mb-1">{currentSetting?.title}</h2>
+                <h2 className="text-xl mb-1 dark:text-neutral-300 ">
+                  {currentSetting?.title}
+                </h2>
                 <p className=" text-gray-800 dark:text-neutral-400 text-sm">
                   {currentSetting?.description}
                 </p>
-                <hr className="my-2" />
+                <hr className="my-2 dark:border-neutral-800" />
               </div>
               <Personal />
             </div>
