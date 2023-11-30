@@ -12,7 +12,7 @@ type Review = {
 
 function ReviewComponent({ reviews }: Props) {
   return (
-    <div className="min-h-screen flex flex-col justify-center sm:items-center py-8 mt-8">
+    <div className=" flex flex-col justify-center sm:items-center py-8 md:py-16 mt-8">
       <div className="mb-4">
         <h4 className="text-3xl xs:text-4xl sm:text-5xl sm:text-center font-oleo font-medium dark:text-neutral-400 text-black">
           Our Community.
