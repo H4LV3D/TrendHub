@@ -120,7 +120,9 @@ export default function DoughnutChart({}: Props) {
         />
       </div>
       <div className="px-4 mt-4">
-        <h6 className="font-medium text-base mb-2">Labels</h6>
+        <h6 className="font-medium text-base mb-2 dark:text-neutral-300">
+          Labels
+        </h6>
         {data.labels.map((label, index) => (
           <div className="flex justify-between" key={label}>
             <div className="flex items-center">
@@ -175,7 +177,9 @@ export function PieChart({}: Props) {
         />
       </div>
       <div className="px-4 mt-4">
-        <h6 className="font-medium text-base mb-2">Labels</h6>
+        <h6 className="font-medium text-base mb-2 dark:text-neutral-300">
+          Labels
+        </h6>
         {data.labels.map((label, index) => (
           <div className="flex justify-between" key={label}>
             <div className="flex items-center">
