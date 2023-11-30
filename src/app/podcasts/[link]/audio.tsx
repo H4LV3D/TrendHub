@@ -1,8 +1,9 @@
-import React, { use, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 import "./audio.css";
 import { useRouter } from "next/navigation";
 import pageData from "@/data/index.json";
+import { ThemeContext } from "@/contexts/themeContext";
 
 interface WaveformProps {
   url: string;
@@ -14,6 +15,7 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
   const waveformRef = useRef<WaveSurfer | null>(null);
   const router = useRouter();
   const { podcasts } = pageData;
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     waveformRef.current = WaveSurfer.create({
@@ -22,8 +24,8 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
       container: "#waveform",
       backend: "WebAudio",
       height: 80,
-      progressColor: "#000",
-      waveColor: "#EFEFEF",
+      progressColor: theme === "light" ? "#000" : "#d0d0d0",
+      waveColor: theme === "light" ? "#EFEFEF" : "#333",
       cursorColor: "transparent",
     });
 
@@ -76,8 +78,8 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
 
   return (
     <div className="waveformContainer">
-      <div id="waveform" className="waveform"></div>
-      <div className="flex items-center space-x-6 justify-between md:w-3/4 mx-auto">
+      <div id="waveform" className="waveform dark:text-neutral-600"></div>
+      <div className="flex items-center space-x-6 justify-between md:w-3/4 mx-auto dark:text-neutral-400">
         <button
           className="flex justify-center items-center h-10 w-10 rounded-[50%] outline-none "
           onClick={handlePreviousTrack}
@@ -91,13 +93,13 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
           <i className={`fas fa-rotate-left fa-xl fa-fw`}></i>
         </button>
         <button
-          className="flex justify-center items-center h-14 w-14 rounded-[50%] outline-none border-none bg-[#efefef] hover:bg-[#e0e0e0] "
+          className="flex justify-center items-center h-16 w-16 rounded-[50%] outline-none border-none bg-[#efefef] dark:bg-neutral-800 dark:text-neutral-400 hover:bg-[#e0e0e0] "
           onClick={handlePlay}
         >
           <i
             className={`fas ${
               !playing ? "fa-play" : "fa-pause"
-            } fa-2xl fa-fw text-black dark:text-white`}
+            } fa-2xl fa-fw text-black dark:text-white `}
           ></i>
         </button>
         <button
