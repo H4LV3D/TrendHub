@@ -64,12 +64,16 @@ function Drafts({}: Props) {
     <div className="grid grid-cols-1 gap-4 my-5">
       {drafts.map((draft) => (
         <div
-          className="p-4 border hover:border-black cursor-pointer rounded-lg "
+          className="p-4 border dark:border-neutral-700 hover:border-black cursor-pointer rounded-lg "
           key={draft.id}
         >
-          <h1 className="font-[500] text-xl ">{draft.title}</h1>
-          <p className="text-sm mt-2 text-neutral-500 ">{draft.description}</p>
-          <div className="flex justify-between my-2">
+          <h1 className="font-[500] text-xl dark:text-neutral-300 ">
+            {draft.title}
+          </h1>
+          <p className="text-sm mt-2 text-neutral-500 dark:text-neutral-400 ">
+            {draft.description}
+          </p>
+          <div className="flex justify-between my-2 dark:text-neutral-400">
             <p>{draft.date}</p>
             <p>{draft.time}</p>
           </div>
