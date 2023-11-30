@@ -107,7 +107,7 @@ const SettingsPageWrapper = ({}: Props) => {
               </div>
 
               <div className="w-1/2">
-                <div className="py-6 grid grid-cols-3 pr-16 xl:pr-0">
+                <div className="xl:py-6 grid grid-cols-3 sm:pr-10 md:pr-28 xl:pr-0">
                   <div className="flex flex-col items-center">
                     <div className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
                       23
