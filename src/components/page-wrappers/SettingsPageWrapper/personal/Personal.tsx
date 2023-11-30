@@ -15,7 +15,7 @@ const Personal = () => {
         <div className="flex items-center space-x-4">
           <input
             type="text"
-            className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
+            className="w-[380px] border dark:border-neutral-700 text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none bg-transparent"
             placeholder="John Doe"
             defaultValue={name}
             onChange={(e) => setName(e.target.value)}
@@ -34,7 +34,7 @@ const Personal = () => {
         <div className="flex items-center space-x-4">
           <input
             type="text"
-            className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
+            className="w-[380px] border dark:border-neutral-700 text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none bg-transparent"
             placeholder="John Doe"
             defaultValue={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -53,7 +53,7 @@ const Personal = () => {
         <div className="flex items-center space-x-4">
           <input
             type="text"
-            className="w-[380px] border text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none"
+            className="w-[380px] border dark:border-neutral-700 text-[#696969] focus:text-black focus:border-black rounded-lg px-3 h-[3rem] outline-none bg-transparent"
             placeholder="John Doe"
             defaultValue={name}
             onChange={(e) => setName(e.target.value)}
@@ -75,7 +75,7 @@ const Personal = () => {
             id=""
             cols={4}
             rows={6}
-            className="w-[380px] border text-sm text-[#696969] focus:text-black focus:border-black rounded-lg p-3  outline-none"
+            className="w-[380px] border dark:border-neutral-700 bg-transparent text-sm text-[#696969] focus:text-black focus:border-black rounded-lg p-3  outline-none"
             placeholder={about}
             defaultValue={about}
             onChange={(e) => setAbout(e.target.value)}
