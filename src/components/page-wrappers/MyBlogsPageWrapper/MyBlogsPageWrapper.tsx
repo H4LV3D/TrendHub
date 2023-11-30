@@ -13,7 +13,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="px-8 lg:px-0">
+        <div className="px-8 lg:px-0 dark:text-neutral-400 ">
           <div className="bg-white dark:bg-[#191919] py-10 md:h-[14vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Blogs
@@ -23,10 +23,10 @@ const MyBlogsPageWrapper = ({}: Props) => {
             </p>
           </div>
 
-          <div className="bg-[#fff] dark:bg-[#191919] w-full md:flex min-h-[30vh] rounded-2xl drop-shadow-xl border p-6 px-12">
+          <div className="w-full md:flex min-h-[30vh] rounded-2xl drop-shadow-xl border dark:border-neutral-700 p-6 px-12">
             <div className="lg:flex items-center">
               <div className="w-full lg:w-2/3">
-                <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
+                <span className="py-1.5 px-4 border border-black dark:border-neutral-700 text-sm rounded-full ">
                   Coming Soon
                 </span>
                 <div className=" lg:hidden">
@@ -37,10 +37,10 @@ const MyBlogsPageWrapper = ({}: Props) => {
                     alt="profile"
                   />
                 </div>
-                <h3 className="text-xl font-[500] lg:mt-8">
+                <h3 className="text-xl font-[500] lg:mt-8 dark:text-neutral-200 ">
                   Ai Writing Assistant.
                 </h3>
-                <p className="text-sm mt-2 xl:w-2/3 ">
+                <p className="text-sm mt-2 lg:w-2/3 ">
                   Artificial Intelligence is the future of writing. We are
                   building an AI writing assistant that will help you write,
                   format, edit and improve your writing skills, style and
@@ -50,13 +50,13 @@ const MyBlogsPageWrapper = ({}: Props) => {
                 <div className="mt-4 w-2/3 sm:w-1/2 lg:w-1/3">
                   <button
                     type="button"
-                    className="bg-black py-3 w-full rounded-md text-white font-raleway font-[500] text-sm"
+                    className="bg-black dark:bg-neutral-800 py-3 w-full rounded-md text-white font-raleway font-[500] text-sm"
                   >
                     Join Wait-list
                   </button>
                 </div>
               </div>
-              <div className="hidden lg:flex items-center justify-center lg:w-1/3 ">
+              <div className="hidden lg:flex items-center justify-center lg:w-1/3 dark:hidden ">
                 <Image
                   src={`/assets/images/ai-writing-assistant.jpg`}
                   height={240}
