@@ -81,8 +81,8 @@ const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="bg-white dark:bg-[#191919] px-8 lg:px-0 font-raleway">
-          <div className="bg-white dark:bg-[#191919] py-10 md:py-0 md:h-[14vh] w-full flex flex-col items-start justify-center">
+        <div className="bg-white dark:bg-[#191919] px-8 lg:px-0 font-raleway dark:text-neutral-400 ">
+          <div className="py-10 md:py-0 md:h-[14vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-xl md:text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Welcome John,
             </h1>
@@ -94,7 +94,7 @@ const DashboardPageWrapper = ({}: Props) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4 gap-y-4">
             {stats.map((stat) => (
               <div
-                className="border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] border-[#f7f7f7] "
+                className="border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] dark:bg-neutral-800 border-[#f7f7f7] "
                 key={stat.id}
               >
                 <div className="flex justify-between space-x-4">
@@ -102,13 +102,13 @@ const DashboardPageWrapper = ({}: Props) => {
                     <p className="font-raleway font-[400] text-sm md:text-base text-black dark:text-neutral-400 mb-1">
                       {stat.title}
                     </p>
-                    <h3 className="text-2xl md:text-3xl font-sans text-neutral-700 font-[600] ">
+                    <h3 className="text-2xl md:text-3xl font-sans text-neutral-700 dark:text-neutral-200 font-[600] ">
                       {stat.description}
                     </h3>
                   </div>
                   <div className="flex items-center justify-center">
                     <i
-                      className={`${stat.icon} fa-fw text-2xl text-neutral-400 mb-1`}
+                      className={`${stat.icon} fa-fw text-2xl text-neutral-400 dark:text-neutral-300 mb-1`}
                     ></i>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const DashboardPageWrapper = ({}: Props) => {
           </div>
 
           <div className="lg:flex w-full lg:space-x-4 mt-8">
-            <div className="lg:border-r w-full lg:w-2/3">
+            <div className="lg:border-r dark:border-neutral-700 w-full lg:w-2/3">
               <div className="py-3">
                 <h3 className="text-lg font-[500] ">
                   Average Monthly Word Count.
@@ -162,10 +162,10 @@ const DashboardPageWrapper = ({}: Props) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-4 mt-8">
-            <div className="bg-[#f7f7f7] xl:min-h-[30vh] rounded-2xl p-6">
+            <div className="bg-[#f7f7f7] dark:bg-neutral-800 xl:min-h-[30vh] rounded-2xl p-6">
               <div className="lg:flex">
                 <div className="w-full lg:w-2/3">
-                  <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
+                  <span className="py-1.5 px-4 border border-black dark:border-neutral-500  text-sm rounded-full ">
                     Collaborate
                   </span>
                   <div className="block lg:hidden">
@@ -203,10 +203,10 @@ const DashboardPageWrapper = ({}: Props) => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#f7f7f7] xl:min-h-[30vh] rounded-2xl p-6">
+            <div className="bg-[#f7f7f7] dark:bg-neutral-800 xl:min-h-[30vh] rounded-2xl p-6">
               <div className="lg:flex">
                 <div className="w-full lg:w-2/3">
-                  <span className="py-1.5 px-4 border border-black  text-sm rounded-full ">
+                  <span className="py-1.5 px-4 border border-black dark:border-neutral-500  text-sm rounded-full ">
                     Artificial Intelligence
                   </span>
                   <div className="block lg:hidden">
@@ -255,7 +255,7 @@ const DashboardPageWrapper = ({}: Props) => {
                   <h3 className="font-raleway font-[500] text-lg text-neutral-700 dark:text-neutral-400 mb-1">
                     Technology is changing the way we write and read articles.
                   </h3>
-                  <p className="text-sm text-neutral-600 ">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-500 ">
                     We are living in a world where technology is changing the
                     way we write and read articles. Technology has made it
                     easier for people to share their thoughts with others, but
