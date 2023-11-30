@@ -105,14 +105,17 @@ const ManagePageWrapper = ({}: Props) => {
               </p>
             </div>
             <div className="w-1/2">
-              <label htmlFor="" className="text-sm text-[#696969] ">
+              <label
+                htmlFor=""
+                className="text-sm text-[#696969] dark:text-neutral-400 "
+              >
                 Select Publication
               </label>
-              <div className=" flex items-center justify-between pr-2 border rounded-lg hover:border-black focus-within:border-black cursor-pointer w-2/3">
+              <div className=" flex items-center justify-between pr-2 border dark:border-neutral-700 rounded-lg hover:border-black focus-within:border-black cursor-pointer w-2/3">
                 <select
                   name=""
                   id=""
-                  className="w-full p-2.5 rounded-lg outline-none text-[#696969] focus:text-black"
+                  className="w-full p-2.5 rounded-lg outline-none text-[#696969] focus:text-black dark:focus:text-neutral-400 bg-transparent"
                 >
                   <option value="">All Publications</option>
                   <option value="">Podcast</option>
@@ -127,23 +130,20 @@ const ManagePageWrapper = ({}: Props) => {
                 Stats | SEO improvement | Keywords | User Engagement | Starred |
                 Following
               </p> */}
-          <div className="">
-            <h1 className="">Hello world</h1>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {data.map((item) => (
               <div
-                className={` bg-[#f7f7f7] w-full h-[6.125rem] xxl:min-w-[12.5rem] rounded-[1rem] px-[1.2rem] pt-[1.09rem]`}
+                className={` bg-[#f7f7f7] dark:bg-neutral-800 w-full h-[6.125rem] xxl:min-w-[12.5rem] rounded-[1rem] px-[1.2rem] pt-[1.09rem]`}
                 key={item.title}
               >
                 <div className="flex items-center justify-between">
-                  <div className="text-[#696969] text-[1rem] font-[500] ">
+                  <div className="text-[#696969] dark:text-neutral-400 text-[1rem] font-[500] ">
                     {item.title}
                   </div>
                 </div>
                 <div className="mt-[0.2rem] ">
-                  <h1 className="text-[2rem] font-sans text-[#252424] font-[700] ">
+                  <h1 className="text-[2rem] font-sans text-[#252424] dark:text-neutral-300 font-[700] ">
                     {item.value}
                   </h1>
                 </div>
@@ -153,7 +153,7 @@ const ManagePageWrapper = ({}: Props) => {
 
           <div className="bg-white dark:bg-[#191919] w-full p-4 rounded-lg mt-8">
             <div className="flex ">
-              <div className="grid grid-cols-2 p-4 w-1/2 border-r ">
+              <div className="grid grid-cols-2 p-4 w-1/2 border-r dark:border-neutral-700 ">
                 <div className="">
                   <h3 className="text-xl font-[500]">Post Stats</h3>
                   <p className="text-sm mt-1 text-[#696969]">
@@ -161,7 +161,7 @@ const ManagePageWrapper = ({}: Props) => {
                   </p>
                   <div className="grid grid-cols-1 gap-3 mt-4 pr-6">
                     {stats.map((item) => (
-                      <div className="flex items-center justify-between border p-3 rounded-lg hover:border-black cursor-pointer group">
+                      <div className="flex items-center justify-between border dark:border-neutral-700 p-3 rounded-lg hover:border-black cursor-pointer group">
                         <div className="text-[#696969] group-hover:border-black text-[0.8rem] font-[500] flex items-center space-x-2 ">
                           <i className="fas fa-plus fa-fw fa-sm "></i>
                           <span>{item.title}</span>
@@ -187,7 +187,7 @@ const ManagePageWrapper = ({}: Props) => {
                   </p>
                   <div className="grid grid-cols-1 gap-3 mt-4 pr-6">
                     {engagements.map((item) => (
-                      <div className="flex items-center justify-between border p-3 rounded-lg hover:border-black cursor-pointer group">
+                      <div className="flex items-center justify-between border dark:border-neutral-700 p-3 rounded-lg hover:border-black cursor-pointer group">
                         <div className="text-[#696969] group-hover:border-black text-[0.8rem] font-[500] flex items-center space-x-2 ">
                           <i className="fas fa-plus fa-fw fa-sm "></i>
                           <span>{item.title}</span>
@@ -206,21 +206,23 @@ const ManagePageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="border-t py-4 mt-6">
-            <h1 className="text-xl font-[500]">SEO Improvements</h1>
+          <div className="border-t dark:border-neutral-700 py-4 mt-6">
+            <h1 className="text-xl font-[500] dark:text-neutral-300 ">
+              SEO Improvements
+            </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
               {seo?.map((item) => (
                 <div
-                  className={` bg-[#f7f7f7] w-full h-[6.125rem] xxl:min-w-[12.5rem] rounded-[1rem] px-[1.2rem] pt-[1.09rem]`}
+                  className={` bg-[#f7f7f7] dark:bg-neutral-800 w-full h-[6.125rem] xxl:min-w-[12.5rem] rounded-[1rem] px-[1.2rem] pt-[1.09rem]`}
                   key={item.title}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="text-[#696969] text-[1rem] font-[500] ">
+                    <div className="text-[#696969] dark:text-neutral-400 text-[1rem] font-[500] ">
                       {item.title}
                     </div>
                   </div>
                   <div className="mt-[0.2rem] ">
-                    <h1 className="text-[2rem] font-sans text-[#252424] font-[700] ">
+                    <h1 className="text-[2rem] font-sans text-[#252424] dark:text-neutral-300 font-[700] ">
                       {item.value}
                     </h1>
                   </div>
@@ -229,8 +231,10 @@ const ManagePageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="border-t py-4 mt-8">
-            <h1 className="text-xl font-[500]">Ai Suggestions</h1>
+          <div className="border-t dark:border-neutral-700 py-4 mt-8">
+            <h1 className="text-xl font-[500] dark:text-neutral-300 ">
+              Ai Suggestions
+            </h1>
           </div>
         </div>
       </MaxWidthProvider>
