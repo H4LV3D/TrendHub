@@ -60,7 +60,7 @@ const actions = [
 const DATA_COUNT = 5;
 const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
 
-import React from "react";
+import React, { useContext } from "react";
 import { Line } from "react-chartjs-2";
 import { Doughnut, Pie } from "react-chartjs-2";
 import {
@@ -75,7 +75,7 @@ import {
   Filler,
   Legend,
 } from "chart.js";
-
+import { ThemeContext } from "@/contexts/themeContext";
 type Props = {};
 
 ChartJS.register(
@@ -200,6 +200,7 @@ export function PieChart({}: Props) {
 }
 
 export function GraphChart({}: Props) {
+  const { theme, setTheme } = useContext(ThemeContext);
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -278,7 +279,7 @@ export function GraphChart({}: Props) {
         fill: true,
         label: "Dataset 1",
         data: [8000, 4000, 8000, 4000, 6000, 0, 6000, 4000, 8000, 6000],
-        borderColor: "#757373",
+        borderColor: theme === "light" ? "#757373" : "#222",
         backgroundColor: (ctx: any) => {
           const gradient = ctx.chart.ctx.createLinearGradient(
             0,
@@ -286,8 +287,14 @@ export function GraphChart({}: Props) {
             0,
             ctx.chart.height
           );
-          gradient.addColorStop(0, "rgba(227,227,227,1)"); // Top color
-          gradient.addColorStop(1, "rgba(247, 247, 247,0)"); // Bottom color (transparent)
+          gradient.addColorStop(
+            0,
+            theme === "light" ? "rgba(227,227,227,1)" : "rgba(63,63,63,.6)"
+          ); // Top color
+          gradient.addColorStop(
+            1,
+            theme === "light" ? "rgba(227,227,227,1)" : "rgba(64,64,64,.6)"
+          ); // Bottom color (transparent)
           return gradient;
         },
       },
