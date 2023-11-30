@@ -155,7 +155,9 @@ const ManagePageWrapper = ({}: Props) => {
             <div className="flex ">
               <div className="grid grid-cols-2 p-4 w-1/2 border-r dark:border-neutral-700 ">
                 <div className="">
-                  <h3 className="text-xl font-[500]">Post Stats</h3>
+                  <h3 className="text-xl font-[500] dark:text-neutral-300">
+                    Post Stats
+                  </h3>
                   <p className="text-sm mt-1 text-[#696969]">
                     Add or remove stats.
                   </p>
@@ -181,7 +183,9 @@ const ManagePageWrapper = ({}: Props) => {
               </div>
               <div className="grid grid-cols-2 p-4 w-1/2 h-full">
                 <div className="">
-                  <h3 className="text-xl font-[500] ">Engagements</h3>
+                  <h3 className="text-xl font-[500] dark:text-neutral-300 ">
+                    Engagements
+                  </h3>
                   <p className="text-sm mt-1 text-[#696969]">
                     Add stats to chart
                   </p>
