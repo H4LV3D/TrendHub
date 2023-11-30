@@ -110,7 +110,7 @@ const Podcast = ({ params }: Props) => {
                 />
               </div>
 
-              <div className="min-h-[40vh] border border-black rounded-xl w-full mt-4 p-6">
+              <div className="min-h-[40vh] border border-black dark:border-neutral-700 rounded-xl w-full mt-4 p-6">
                 {/* Start */}
                 <div className="my-8">
                   <Waveform
@@ -120,10 +120,10 @@ const Podcast = ({ params }: Props) => {
                 </div>
 
                 <div className="w-full text-black dark:text-neutral-400 mt-8">
-                  <h1 className="font-raleway font-medium text-2xl mt-4">
+                  <h1 className="font-raleway font-medium text-2xl mt-4 dark:text-neutral-300 ">
                     {selectedPodcast.title}
                   </h1>
-                  <div className="flex space-x-5 items-center mt-2">
+                  <div className="flex space-x-5 items-center mt-1">
                     <Link
                       href={``}
                       className="font-raleway text-sm sm:text-base"
@@ -138,7 +138,7 @@ const Podcast = ({ params }: Props) => {
                     </p>
                   </div>
                   <div className="description">
-                    <p className="font-raleway font-normal text-sm mt-4">
+                    <p className="font-raleway font-normal text-sm mt-3">
                       {selectedPodcast?.description}
                     </p>
                   </div>
@@ -153,13 +153,17 @@ const Podcast = ({ params }: Props) => {
                       >
                         <i
                           className={`${
-                            liked ? "text-black" : "text-neutral-400"
+                            liked
+                              ? "text-black dark:text-neutral-300"
+                              : "text-neutral-400"
                           } fas fa-hands-clapping fa-xl fa-fw`}
                         ></i>
                       </button>
                       <p
                         className={`${
-                          liked ? "text-black" : "text-neutral-400"
+                          liked
+                            ? "text-black dark:text-neutral-300 "
+                            : "text-neutral-400 dark:text-neutral-500"
                         } text-xl font-sans`}
                       >
                         {liked ? 31 : 30}
@@ -167,13 +171,13 @@ const Podcast = ({ params }: Props) => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-md text-black dark:text-neutral-600 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-black">
+                        <button className="flex items-center justify-center h-10 w-10 rounded-md text-black dark:text-neutral-500 cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-black">
                           <i className="fas fa-paper-plane fa-xl fa-fw"></i>
                         </button>
                       </>
                       <button
                         onClick={() => setBookmarked(!bookmarked)}
-                        className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
+                        className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-500  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300"
                       >
                         <i
                           className={`${
@@ -181,7 +185,7 @@ const Podcast = ({ params }: Props) => {
                           } fa-bookmark fa-xl fa-fw`}
                         ></i>
                       </button>
-                      <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-400  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
+                      <button className="flex items-center justify-center h-10 w-10 rounded-md text-neutral-700 dark:text-neutral-500  cursor-pointer hover:bg-[#e7e7e7] dark:hover:bg-neutral-800 hover:text-neutral-700 dark:hover:text-neutral-300">
                         <i className="fa-solid fa-ellipsis fa-xl fa-fw"></i>
                       </button>
                     </div>
@@ -221,7 +225,7 @@ const Podcast = ({ params }: Props) => {
                   <button className="py-2 px-4 text-sm md:text-base rounded-full bg-[#d6d6d6] hover:bg-neutral-600 hover:text-neutral-300 dark:bg-neutral-700">
                     Follow
                   </button>
-                  <button className="left flex items-center justify-center h-10 w-10 rounded-[50%] text-black dark:text-neutral-600 hover:bg-neutral-600 hover:text-neutral-300 border dark:border-neutral-800 cursor-pointer bg-[#d6d6d6] dark:hover:bg-neutral-800  dark:hover:text-black">
+                  <button className="left flex items-center justify-center h-10 w-10 rounded-[50%] text-black dark:text-neutral-400 hover:bg-neutral-600 hover:text-neutral-300 border dark:border-neutral-800 cursor-pointer bg-[#d6d6d6] dark:bg-neutral-700 dark:hover:bg-neutral-800  dark:hover:text-black">
                     <i className="fas fa-envelope fa-lg fa-fw"></i>
                   </button>
                 </div>
