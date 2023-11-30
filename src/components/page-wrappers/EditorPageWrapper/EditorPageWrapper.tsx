@@ -6,8 +6,6 @@ import MultiStepCreatePostForm from "../../forms/MultiStepCreatePostForm/MultiSt
 import { useAppSelector } from "@/hooks/useAppSelector";
 import Drafts from "./Drafts/Drafts";
 
-type Props = {};
-
 const EditorPageWrapper = () => {
   const authStep = useAppSelector((state) => state.authStep.step);
   const [activeTab, setActiveTab] = useState("New");
@@ -50,20 +48,20 @@ const EditorPageWrapper = () => {
           </div>
 
           <div className="mt-5 flex space-x-6">
-            <div className="w-4/5 border-r shadow-sm rounded-lg px-4">
+            <div className="w-4/5 border-r dark:border-neutral-800 shadow-sm px-4">
               {(() => {
                 switch (activeTab) {
                   case "New":
                     return (
                       <section>
-                        <h1 className="text-2xl font-[500]">
+                        <h1 className="text-2xl font-[500] dark:text-neutral-200 ">
                           Content Creation and Editing.
                         </h1>
                         <div className="">
                           <MultiStepCreatePostForm />
                         </div>
                         <div className="mt-10">
-                          <h5 className="text-lg font-[500] ">
+                          <h5 className="text-lg font-[500] dark:text-neutral-300 ">
                             Step {authStep + 1} of 5
                           </h5>
                         </div>
@@ -72,7 +70,9 @@ const EditorPageWrapper = () => {
                   case "Drafts":
                     return (
                       <section>
-                        <h1 className="text-2xl font-[500]">Drafts</h1>
+                        <h1 className="text-2xl font-[500] dark:text-neutral-300">
+                          Drafts
+                        </h1>
                         <div>
                           <Drafts />
                         </div>
@@ -81,7 +81,9 @@ const EditorPageWrapper = () => {
                   case "Schedule":
                     return (
                       <section>
-                        <h1 className="text-2xl font-[500]">Schedule</h1>
+                        <h1 className="text-2xl font-[500] dark:text-neutral-300">
+                          Schedule
+                        </h1>
                         <div>
                           <Drafts />
                         </div>
@@ -90,7 +92,9 @@ const EditorPageWrapper = () => {
                   case "Published":
                     return (
                       <section>
-                        <h1 className="text-2xl font-[500]">Published</h1>
+                        <h1 className="text-2xl font-[500] dark:text-neutral-300">
+                          Published
+                        </h1>
                         <div>
                           <Drafts />
                         </div>
@@ -106,12 +110,15 @@ const EditorPageWrapper = () => {
               })()}
             </div>
             <div className="w-1/5 p-3">
-              <h4 className="text-xl font-[500]">Steps</h4>
+              <h4 className="text-xl font-[500] dark:text-neutral-200 ">
+                Steps
+              </h4>
               <ul className=" mt-4 px-2 space-y-2 ">
                 {sideNav.map((item, index) => (
                   <li
-                    className={`"hover:text-black text-base text-neutral-500 hover:underline cursor-pointer ${
-                      authStep + 1 === index + 1 && "!text-black font-[600]  "
+                    className={`"hover:text-black text-base text-neutral-500 dark:text-neutral-400 hover:underline cursor-pointer ${
+                      authStep + 1 === index + 1 &&
+                      "text-black dark:text-neutral-200 font-[600]  "
                     } `}
                     key={item.text}
                   >
