@@ -95,7 +95,7 @@ const SettingsPageWrapper = ({}: Props) => {
                 <h1 className="text-xl font-[500] dark:text-neutral-300 capitalize">
                   {name}
                 </h1>
-                {/* <p className="text-sm text-[#696969] ">johndoe@gmail.com</p> */}
+                <p className="text-sm text-[#696969] ">johndoe@gmail.com</p>
                 <p className="about mt-0 text-[0.875rem] text-[#696969] dark:text-neutral-400 ">
                   Technical Writer, Content Creator, and Software Developer.
                 </p>
