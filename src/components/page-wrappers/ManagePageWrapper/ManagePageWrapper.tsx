@@ -151,9 +151,9 @@ const ManagePageWrapper = ({}: Props) => {
             ))}
           </div>
 
-          <div className="bg-white dark:bg-[#191919] w-full p-4 rounded-lg mt-8">
+          <div className="bg-white dark:bg-[#191919] w-full rounded-lg mt-8">
             <div className="flex ">
-              <div className="grid grid-cols-2 p-4 w-1/2 border-r dark:border-neutral-700 ">
+              <div className="grid grid-cols-2 w-1/2 border-rn dark:border-neutral-700 ">
                 <div className="">
                   <h3 className="text-xl font-[500] dark:text-neutral-300">
                     Post Stats
@@ -181,7 +181,7 @@ const ManagePageWrapper = ({}: Props) => {
                   <DoughnutChart />
                 </div>
               </div>
-              <div className="grid grid-cols-2 p-4 w-1/2 h-full">
+              <div className="grid grid-cols-2 w-1/2 pl-4 h-full">
                 <div className="">
                   <h3 className="text-xl font-[500] dark:text-neutral-300 ">
                     Engagements
