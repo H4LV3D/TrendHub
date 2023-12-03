@@ -9,17 +9,12 @@ import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { updateAvatarId } from "@/store/slices/user/UserSlice";
 import { useRouter } from "next/navigation";
 
-type Props = {
-  setNotify: (notify: boolean) => void;
-  setMessage: (message: string) => void;
-};
-
 interface LoginForm {
   email: string;
   password: string;
 }
 
-function LoginForm({ setNotify, setMessage }: Props) {
+function LoginForm() {
   const [loading, setLoading] = useState(false);
   const dispatch = useAppDispatch();
   const router = useRouter();
@@ -28,12 +23,17 @@ function LoginForm({ setNotify, setMessage }: Props) {
     register,
     formState: { errors },
     watch,
-    trigger,
-    control,
     handleSubmit,
   } = useForm<SignUpFormInput>();
 
   const email = watch("email");
+
+  useEffect(() => {
+    const isEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (isEmail.test(email)) {
+      localStorage.setItem("email", email);
+    }
+  }, [email]);
 
   useEffect(() => {
     const isEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
