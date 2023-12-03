@@ -1,27 +1,33 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Toggle from "../Toggle/Toggle";
 import TetiaryButton from "../buttons/Tetiary";
 import SecondaryButton from "../buttons/Secondary";
 import Icons from "@/components/icons/Icons";
 import icons from "@/data/icons.json";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import SearchBox from "@/components/shared/search/Search";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { showMobileSidebar } from "@/store/slices/mobileSidebar/mobileSidebarSlice";
 import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
 import BrandLogo from "../BrandLogo/BrandLogo";
+import pageData from "@/data/index.json";
 
 type Props = {
   nav?: boolean;
 };
 
 function Header({ nav }: Props) {
-  const router = useRouter();
   const path = usePathname();
   const dispatch = useAppDispatch();
+
+  let email;
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      email = localStorage.getItem("email");
+    }
+  }, []);
 
   const navItems = [
     { text: "About", link: "/about" },
@@ -31,16 +37,10 @@ function Header({ nav }: Props) {
   ];
 
   const [hasShadow, setHasShadow] = useState(false);
-  const { search, bars } = icons.icons;
+  const { bars } = icons.icons;
   const user = useAppSelector((state) => state.user.data);
-  const [blogs, setBlogs] = useState([]);
-
-  const handleClickScroll = (link: any) => {
-    const element = document.getElementById(link);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const { blogs, podcasts } = pageData;
+  const data = [...blogs, ...podcasts];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +57,7 @@ function Header({ nav }: Props) {
   const headerClasses = `font-raleway flex items-center justify-between py-3  ${
     nav
       ? `lg:border-b border-neutral-50 dark:border-[#191919] md:container mx-auto`
-      : "border-b border-neutral-100 dark:border-[#191919] sm:border-none px-8"
+      : "md:border-b border-neutral-100 dark:border-[#191919] sm:border-none"
   } ${hasShadow ? "shadow-sm border-gray-200" : ""}`;
 
   return (
@@ -89,7 +89,7 @@ function Header({ nav }: Props) {
               </div>
             ) : (
               <div className="">
-                <SearchBox blogs={blogs} />
+                <SearchBox blogs={data} />
               </div>
             )}
           </div>
@@ -97,16 +97,9 @@ function Header({ nav }: Props) {
           <div>
             <div className="sm:flex items-center space-x-4 text-black dark:text-neutral-400">
               <div className="sm:border-r border-neutral-500 space-x-0 flex items-center text-black dark:text-neutral-400">
-                {/* {hasShadow && nav && (
-                  <Icons
-                    icon={search}
-                    action={() => handleClickScroll("search")}
-                  />
-                )} */}
-
                 <Toggle />
               </div>
-              {user === null ? (
+              {email === null || email === "" ? (
                 <div className="hidden sm:flex">
                   <SecondaryButton text="Login" link="/login" />
                 </div>
