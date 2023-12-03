@@ -8,12 +8,10 @@ import React from "react";
 type Props = {};
 
 const Login = (props: Props) => {
-  const [notify, setNotify] = React.useState(false);
-  const [message, setMessage] = React.useState("");
   return (
     <>
       <AuthLayout form="login">
-        <LoginForm setNotify={setNotify} setMessage={setMessage} />
+        <LoginForm />
         <div className="mt-6 flex flex-col space-y-2">
           <p className="text-sm text-neutral-500">Sign in with ...</p>
           <SecondaryButton link="https://google.com" text="Google" />
