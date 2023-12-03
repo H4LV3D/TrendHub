@@ -140,7 +140,7 @@ const MobileSidebar: React.FC = () => {
               );
             })}
           </ul>
-          <ul>
+          <ul className="mb-[3rem]">
             <SidebarLink href="/help" text="Get Help" />
             <SidebarLink href="/contact" text="Contact Us" />
             {user ? (
