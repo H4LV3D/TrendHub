@@ -7,7 +7,9 @@ interface Props {
 
 const MaxWidthProvider: React.FC<Props> = ({ className, children }) => {
   return (
-    <div className={`${className} max-w-[1244px] mx-auto`}>{children}</div>
+    <div className={`${className} max-w-[1244px] mx-auto px-6 md:px-8  `}>
+      {children}
+    </div>
   );
 };
 
