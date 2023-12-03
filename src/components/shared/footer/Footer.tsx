@@ -81,7 +81,7 @@ function Footer({}: Props) {
       <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
         <div className="px-8 xs:px-0 md:container mx-auto xl:w-[950px]">
           <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
-            <div className="w-full sm:w-1/3 lg:w-full mb-4">
+            <div className="w-full sm:w-1/3 lg:w-full mb-8 md:mb-4 ">
               <BrandLogo />
               <p className="text-sm font-[400] sm:text-base lg:text-base !leading-6 md:!leading-7 mt-4 text-justify sm:hidden lg:block lg:w-2/3 xl:w-3/4">
                 A community of young writers, readers, and storytellers who
@@ -92,13 +92,13 @@ function Footer({}: Props) {
 
             <div className="hidden w-full md:w-2/3 lg:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
               <div className="flex flex-col">
-                <h3 className="font-raleway font-normal text-lg text-black dark:text-neutral-400 mb-4">
+                <h3 className="font-raleway font-[500] text-base md:text-lg text-black dark:text-neutral-400 mb-2 md:mb-4">
                   Resource
                 </h3>
                 <div className="flex flex-col space-y-2">
                   {footerData.resources.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
-                      <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
+                      <p className="font-raleway font-normal text-sm md:text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}
                       </p>
                     </Link>
@@ -106,13 +106,13 @@ function Footer({}: Props) {
                 </div>
               </div>
               <div className="flex flex-col">
-                <h3 className="font-raleway font-normal text-lg text-black dark:text-neutral-400 mb-4">
+                <h3 className="font-raleway font-[500] text-base md:text-lg text-black dark:text-neutral-400 mb-2 md:mb-4">
                   Pages
                 </h3>
                 <div className="flex flex-col space-y-2">
                   {footerData.pages.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
-                      <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
+                      <p className="font-raleway font-normal text-sm md:text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}
                       </p>
                     </Link>
@@ -120,13 +120,13 @@ function Footer({}: Props) {
                 </div>
               </div>
               <div className="flex flex-col">
-                <h3 className="font-raleway font-normal text-lg text-black dark:text-neutral-400 mb-4">
+                <h3 className="font-raleway font-[500] text-base md:text-lg text-black dark:text-neutral-400 mb-2 md:mb-4">
                   Company
                 </h3>
                 <div className="flex flex-col space-y-2">
                   {footerData.about.map((item) => (
                     <Link href={item.link} shallow={true} key={item.link}>
-                      <p className="font-raleway font-normal text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
+                      <p className="font-raleway font-normal text-sm md:text-base text-neutral-600 dark:text-neutral-400 cursor-pointer hover:underline">
                         {item.title}
                       </p>
                     </Link>
