@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import Image from "next/image";
 import Personal from "./personal/Personal";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -63,7 +64,7 @@ const SettingsPageWrapper = ({}: Props) => {
   const [active, setActive] = useState(1);
   const currentSetting = Settings.find((setting) => setting.id === active);
 
-  const [name, setName] = useState("John Doe");
+  const [name, setName] = useState("Toluwalope Akinkunmi");
   return (
     <>
       <MaxWidthProvider>
@@ -79,23 +80,21 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <div className="w-1/4 flex justify-center items-center">
+          <div className="flex items-center space-x-5 mx-auto ">
+            <div className="h-[220px] w-[220px] rounded-[500%] p-3 lg:w-1/4 lg:h-full flex justify-center items-center border border-black lg:border-none mb-2 lg:mb-0 ">
               <Image
-                src={`/assets/Bust/peep-${Math.floor(
-                  Math.random() * 104
-                ).toString()}.svg`}
+                src={`/assets/Bust/peep-8.svg`}
                 alt="avatar"
-                width={180}
-                height={180}
+                width={150}
+                height={150}
               />
             </div>
-            <div className="w-3/4 flex flex-col-reverse gap-y-4 xl:gap-y-0 xl:flex-row xl:items-center">
-              <div className="w-1/2 xl:border-r dark:border-neutral-800">
+            <div className="w-1/2 lg:w-3/4 flex flex-col-reverse gap-y-4 xl:gap-y-0 lg:flex-row xl:items-center">
+              <div className=" lg:w-1/2 lg:border-r dark:border-neutral-800">
                 <h1 className="text-xl font-[500] dark:text-neutral-300 capitalize">
                   {name}
                 </h1>
-                <p className="text-sm text-[#696969] ">johndoe@gmail.com</p>
+                {/* <p className="text-sm text-[#696969] ">johndoe@gmail.com</p> */}
                 <p className="about mt-0 text-[0.875rem] text-[#696969] dark:text-neutral-400 ">
                   Technical Writer, Content Creator, and Software Developer.
                 </p>
@@ -106,31 +105,31 @@ const SettingsPageWrapper = ({}: Props) => {
                 </p>
               </div>
 
-              <div className="w-1/2">
-                <div className="xl:py-6 grid grid-cols-3 sm:pr-10 md:pr-28 xl:pr-0">
+              <div className="lg:w-1/2">
+                <div className="xl:py-6 grid grid-cols-3 sm:pr-10 xl:pr-0">
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
                       23
-                    </div>
-                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                    </h4>
+                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
                       Publications
-                    </div>
+                    </p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
                       1200
-                    </div>
-                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                    </h4>
+                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
                       Followers
-                    </div>
+                    </p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
                       1028
-                    </div>
-                    <div className="text-base text-[#696969] dark:text-neutral-400 ">
+                    </h4>
+                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
                       Following
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -162,7 +161,21 @@ const SettingsPageWrapper = ({}: Props) => {
               ))}
             </div>
             <div className="hidden md:block md:w-3/4 p-6 md:p-8 lg:p-10 h-full overflow-y-auto ">
-              <div className="">
+              <motion.div
+                key={currentSetting?.title}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                initial={{
+                  y: -30,
+                  opacity: 0.3,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className=""
+              >
                 <h2 className="text-xl mb-1 dark:text-neutral-300 ">
                   {currentSetting?.title}
                 </h2>
@@ -170,7 +183,7 @@ const SettingsPageWrapper = ({}: Props) => {
                   {currentSetting?.description}
                 </p>
                 <hr className="my-2 dark:border-neutral-800" />
-              </div>
+              </motion.div>
               <Personal />
             </div>
           </div>
