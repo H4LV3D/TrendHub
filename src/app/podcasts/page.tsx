@@ -34,7 +34,7 @@ const Podcast = ({}: Props) => {
             text="Amplify your voice, wield your vote, and harness the power of video to shape narratives and drive impactful societal transformations."
           />
 
-          <MaxWidthProvider>
+          <MaxWidthProvider className="mb-[5rem] ">
             <DisplayNavBar Nav={Nav} />
             <div
               className={`"w-full grid ${
