@@ -2,14 +2,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Blog } from "@/typings/blog";
+import { Podcast } from "@/typings/podcast";
 
 type Props = {
-  blogs: Blog[];
+  blogs: Blog[] | Podcast[];
 };
 
 function SearchBox({ blogs }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredResults, setFilteredResults] = useState<Blog[]>([]);
+  const [filteredResults, setFilteredResults] = useState<Blog[] | Podcast[]>(
+    []
+  );
 
   const handleInputChange = (event: any) => {
     const { value } = event.target;
@@ -37,13 +40,12 @@ function SearchBox({ blogs }: Props) {
         <div className="group flex items-center justify-center relative w-full">
           <input
             type="text"
-            className="py-3.5 px-4 w-full sm:w-[350px] md:w-[400px] rounded-l-lg text-sm sm:text-base border dark:bg-transparent hover:border-neutral-600 dark:border-neutral-800 dark:hover:border-neutral-800 focus:outline-none dark:text-white focus:border-black dark:focus:border-neutral-700 font-raleway placeholder-neutral-400"
+            className="py-3 xl:py-3.5 px-4 w-full sm:w-[350px] md:w-[38 0px] rounded-l-lg text-sm sm:text-base border dark:bg-transparent hover:border-neutral-600 dark:border-neutral-800 dark:hover:border-neutral-800 focus:outline-none dark:text-white focus:border-black dark:focus:border-neutral-700 font-raleway placeholder-neutral-400"
             placeholder="Search key phrases, titles, words"
             value={searchQuery}
             onChange={handleInputChange}
           />
           <button className="p-4 bg-black rounded-r-lg text-white dark:text-neutral-400 dark:bg-neutral-800">
-            {/* <i className="fas fa-search fa-lg fa-fw"></i> */}
             Search
           </button>
         </div>
