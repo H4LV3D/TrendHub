@@ -81,7 +81,7 @@ const DashboardPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="bg-white dark:bg-[#191919] px-8 lg:px-0 font-raleway dark:text-neutral-400 ">
+        <div className="bg-white dark:bg-[#191919] font-raleway dark:text-neutral-400 ">
           <div className="py-10 md:py-0 md:h-[14vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-xl md:text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
               Welcome John,
@@ -91,7 +91,7 @@ const DashboardPageWrapper = ({}: Props) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4 gap-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 sm:gap-x-4 gap-y-4">
             {stats.map((stat) => (
               <div
                 className="border dark:border-neutral-800 p-4 rounded-lg cursor-pointer bg-[#f7f7f7] dark:bg-neutral-800 border-[#f7f7f7] "
