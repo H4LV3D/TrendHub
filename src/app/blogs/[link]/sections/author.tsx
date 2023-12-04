@@ -1,10 +1,11 @@
 import React from "react";
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
-import { blogs } from "@/data/index.json";
+import pageData from "@/data/index.json";
 
 type Props = {};
 
 const Author = (props: Props) => {
+  const { blogs } = pageData;
   return (
     <>
       <div className="min-h-[70vh] bg-[#f7f7f7] dark:bg-neutral-800 w-full mt-10">
