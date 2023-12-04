@@ -43,7 +43,7 @@
         }
       ],
       "link": "/blogs/0",
-      "image": "./assets/images/blog1.png",
+      "image": "/assets/images/woman.jpg",
       "duration": "5 minutes",
       "date": "May 09, 2023",
       "reactions": {
@@ -104,7 +104,7 @@
         "bad": 5
       },
       "link": "/blogs/1",
-      "image": "./assets/images/blog2.png",
+      "image": "/assets/images/woman.jpg",
       "tags": [
         "Python",
         "Data Science",
@@ -158,7 +158,7 @@
       "duration": "8 minutes",
       "date": "May 23, 2023",
       "link": "/blogs/2",
-      "image": "./assets/images/blog3.png",
+      "image": "/assets/images/woman.jpg",
       "tags": [
         "Cryptocurrency",
         "Cybersecurity",
@@ -204,7 +204,7 @@
         }
       ],
       "link": "/blogs/3",
-      "image": "./assets/images/blog3.png",
+      "image": "/assets/images/woman.jpg",
       "duration": "7 minutes",
       "date": "May 30, 2023",
       "reactions": {
@@ -257,7 +257,7 @@
         }
       ],
       "link": "/blogs/4",
-      "image": "./assets/images/blog2.png",
+      "image": "/assets/images/woman.jpg",
       "duration": "6 minutes",
       "date": "June 07, 2023",
       "reactions": {
@@ -307,7 +307,7 @@
         }
       ],
       "link": "/blogs/5",
-      "image": "./assets/images/blog4.png",
+      "image": "/assets/images/woman.jpg",
       "date": "June 14, 2023",
       "duration": "9 minutes",
       "reactions": {
@@ -356,7 +356,7 @@
         }
       ],
       "link": "/blogs/6",
-      "image": "./assets/images/blog6.png",
+      "image": "/assets/images/woman.jpg",
       "date": "June 21, 2023",
       "duration": "8 minutes",
       "tags": [
@@ -406,7 +406,7 @@
       "duration": "7 minutes",
       "date": "June 28, 2023",
       "link": "/blogs/7",
-      "image": "./assets/images/blog8.png",
+      "image": "/assets/images/woman.jpg",
       "tags": [
         "Big Data",
         "IoT (Internet of Things)",
@@ -472,7 +472,7 @@
       "duration": "10 minutes",
       "date": "Nov 28, 2023",
       "link": "/blogs/8",
-      "image": "./assets/images/blog8.png",
+      "image": "/assets/blogs/web5.png",
       "tags": [
         "Decentralization",
         "Web 5.0",
