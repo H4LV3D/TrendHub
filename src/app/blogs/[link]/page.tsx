@@ -45,7 +45,7 @@ export async function generateMetadata(
     formatDetection: {
       email: true,
       address: false,
-      telephone: false,
+      telephone: true,
     },
     alternates: {
       canonical: "/",
