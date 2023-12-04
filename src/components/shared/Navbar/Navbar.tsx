@@ -95,8 +95,8 @@ function Header({ nav }: Props) {
           </div>
 
           <div>
-            <div className="sm:flex items-center space-x-4 text-black dark:text-neutral-400">
-              <div className="sm:border-r border-neutral-500 space-x-0 flex items-center text-black dark:text-neutral-400">
+            <div className="flex items-center space-x-4 text-black dark:text-neutral-400">
+              <div className="hidden sm:flex sm:border-r border-neutral-500 space-x-0  items-center text-black dark:text-neutral-400">
                 <Toggle />
               </div>
               {email === null || email === "" ? (
