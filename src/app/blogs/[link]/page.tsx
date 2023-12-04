@@ -24,6 +24,7 @@ export async function generateMetadata(
   const { blogs } = pageData;
   const selectedBlog = await blogs[params.link];
   const previousImages = (await parent).openGraph?.images || [];
+  const previousKeywords = (await parent).keywords || [];
 
   return {
     generator: "Gen-Z Tales | Trend Hub",
@@ -35,12 +36,10 @@ export async function generateMetadata(
       "Gen-Z Tech",
       "Gen-Z Technology",
       ...selectedBlog.tags.map((tag) => tag),
+      ...previousKeywords,
     ],
     title: `${selectedBlog.title} | Gen-Z Tales`,
-    authors: [
-      { name: "Seb" },
-      { name: "Toluwalope Akinkunmi", url: "https://toluwalope.tech" },
-    ],
+    authors: [{ name: "Toluwalope Akinkunmi", url: "https://toluwalope.tech" }],
     creator: "Toluwalope Akinkunmi",
     publisher: "Toluwalope Akinkunmi",
     formatDetection: {
@@ -52,7 +51,6 @@ export async function generateMetadata(
       canonical: "/",
       languages: {
         "en-US": "/en-US",
-        "de-DE": "/de-DE",
       },
     },
     metadataBase: new URL("https://trendingstuffs.vercel.app/"),
@@ -80,13 +78,13 @@ export async function generateMetadata(
       locale: "en_US",
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
       nocache: true,
       googleBot: {
         index: true,
-        follow: false,
-        noimageindex: true,
+        follow: true,
+        noimageindex: false,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
