@@ -3,7 +3,6 @@ import type { Metadata, ResolvingMetadata } from "next";
 
 import pageData from "@/data/index.json";
 import ViewLayout from "@/layouts/ViewLayout/ViewLayout";
-import type { Blog } from "@/typings/blog";
 
 import SuggestedInfo from "@/components/shared/SuggestedInfo/SuggestedInfo";
 import Header from "./sections/header";
