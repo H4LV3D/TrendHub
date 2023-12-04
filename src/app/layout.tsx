@@ -106,13 +106,7 @@ export default function RootLayout({
           property="og:url"
           content="https://https://trendingstuffs.vercel.app"
         />
-
-        <meta
-          name="keywords"
-          content="culture, creativity, technology, TrendHub, newsletters, podcasts, blogs, Gen-Z, Tales, Gen-Z Tales, Gen-Z Tales , Express your thoughts, and opinions, in words"
-        />
         <meta name="author" content="Toluwalope Akinkunmi" />
-
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
