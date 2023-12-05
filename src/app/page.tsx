@@ -7,21 +7,12 @@ import Review from "./home/Reviews";
 import Generations from "./home/Generations";
 import Subscribe from "./home/Subscribe";
 import Banner from "@/components/shared/Banner/Banner";
-import Head from "next/head";
 import PageLayout from "@/layouts/PageLayout/PageLayout";
 
 export default function Home({}: {}) {
   const { blogs, reviews } = pageData;
-
   return (
     <>
-      <Head>
-        <title>Trending | Home</title>
-        <meta name="description" content="Gen-Z Tales" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <PageLayout>
         <div className=" md:container mx-auto px-8 xs:px-0 font-raleway">
           <Banner
