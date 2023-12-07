@@ -190,3 +190,7 @@ select {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.hello {
+  width: 100%;
+}
