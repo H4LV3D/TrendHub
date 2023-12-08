@@ -56,7 +56,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
                   </button>
                 </div>
               </div>
-              <div className="hidden lg:flex items-center justify-center lg:w-1/3 dark:hidden ">
+              <div className="hidden lg:flex items-center justify-center lg:w-1/3 dark:hidden shadow-none ">
                 <Image
                   src={`/assets/images/ai-writing-assistant.jpg`}
                   height={240}
