@@ -239,6 +239,12 @@ const ManagePageWrapper = ({}: Props) => {
             <h1 className="text-xl font-[500] dark:text-neutral-300 ">
               Ai Suggestions
             </h1>
+
+            <div className="py-4">
+              <h1 className="text-lg">
+                Hello there, you have no suggestions yet.
+              </h1>
+            </div>
           </div>
         </div>
       </MaxWidthProvider>
