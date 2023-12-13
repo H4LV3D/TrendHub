@@ -241,9 +241,7 @@ const ManagePageWrapper = ({}: Props) => {
             </h1>
 
             <div className="py-4">
-              <h1 className="text-lg">
-                Hello there, you have no suggestions yet.
-              </h1>
+              <h1 className="text-lg">Hey you, you have no suggestions yet.</h1>
             </div>
           </div>
         </div>

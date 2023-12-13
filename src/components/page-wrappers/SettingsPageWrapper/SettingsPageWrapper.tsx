@@ -80,7 +80,7 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-5 mx-auto ">
+          <div className="sm:flex items-center space-x-8 mx-auto ">
             <div className="h-[220px] w-[220px] rounded-[500%] p-3 lg:w-1/4 lg:h-full flex justify-center items-center border border-black lg:border-none mb-2 lg:mb-0 ">
               <Image
                 src={`/assets/Bust/peep-8.svg`}
@@ -106,7 +106,7 @@ const SettingsPageWrapper = ({}: Props) => {
               </div>
 
               <div className="lg:w-1/2">
-                <div className="xl:py-6 grid grid-cols-3 sm:pr-10 xl:pr-0">
+                <div className="xl:py-6 grid grid-cols-3 md:pr-10 xl:pr-0">
                   <div className="flex flex-col items-center">
                     <h4 className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
                       23
