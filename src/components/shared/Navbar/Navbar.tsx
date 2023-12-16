@@ -13,6 +13,7 @@ import { showMobileSidebar } from "@/store/slices/mobileSidebar/mobileSidebarSli
 import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
 import BrandLogo from "../BrandLogo/BrandLogo";
 import pageData from "@/data/index.json";
+import Link from "next/link";
 
 type Props = {
   nav?: boolean;
@@ -95,7 +96,7 @@ function Header({ nav }: Props) {
           </div>
 
           <div>
-            <div className="flex items-center space-x-4 text-black dark:text-neutral-400">
+            <div className="flex items-center space-x-2 text-black dark:text-neutral-400">
               <div className="hidden sm:flex sm:border-r border-neutral-500 space-x-0  items-center text-black dark:text-neutral-400">
                 <Toggle />
               </div>
@@ -104,7 +105,7 @@ function Header({ nav }: Props) {
                   <SecondaryButton text="Login" link="/login" />
                 </div>
               ) : (
-                <div className=" pr-6 flex flex-row items-center space-x-3 ">
+                <div className="flex flex-row items-center space-x-0">
                   <div className="">
                     <img
                       src={`/assets/Bust/peep-8.svg`}
@@ -113,7 +114,9 @@ function Header({ nav }: Props) {
                     />
                   </div>
                   <div>
-                    <p className="text-base m-0">Toluwalope</p>
+                    <Link href="/dashboard">
+                      <p className="text-base m-0">Toluwalope</p>
+                    </Link>
                     <TetiaryButton text="Logout" link="/logout" small={true} />
                   </div>
                 </div>
