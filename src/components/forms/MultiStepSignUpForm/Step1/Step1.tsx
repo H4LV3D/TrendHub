@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "@/components/shared/Input/Input";
 import PrimaryButton from "@/components/shared/buttons/Primary";
@@ -8,6 +8,8 @@ import { signUpSchema } from "@/components/forms/MultiStepSignUpForm/Step1/SignU
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { increaseAuthStep } from "@/store/slices/authStep/AuthStepSlice";
+import { useAppSelector } from "@/hooks/useAppSelector";
+import SecondaryButton from "@/components/shared/buttons/Secondary";
 
 type Props = {};
 
@@ -15,6 +17,7 @@ function SignUpForm({}: Props) {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<SignUpFormInput>({
     resolver: yupResolver(signUpSchema),
@@ -22,13 +25,19 @@ function SignUpForm({}: Props) {
   });
 
   const dispatch = useAppDispatch();
+  const avatarId = useAppSelector((state) => state.user.avatarId);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setValue("avatarId", avatarId);
+  }, [avatarId]);
 
   const onSubmit: SubmitHandler<SignUpFormInput> = async (
     data: SignUpFormInput
   ) => {
     console.log(data);
     dispatch(increaseAuthStep());
+    localStorage.setItem("user", JSON.stringify(data));
     // try {
     //   const URL = "https://moyinoluwa-portfolio.cyclic.app/subscribe";
     //   const response = await fetch(URL, {
@@ -60,16 +69,16 @@ function SignUpForm({}: Props) {
             id="username"
             type="text"
             label="Full Name"
-            placeholder=""
-            name="firstName"
+            placeholder="John Doe"
+            name="fullName"
             register={register}
-            error={errors.firstName?.message}
+            error={errors.fullName?.message}
           />
           <Input
             id="email"
             type="email"
             label="Email Address"
-            placeholder=""
+            placeholder="johndoe@gmail.com"
             name="email"
             register={register}
             error={errors.email?.message}
@@ -117,6 +126,11 @@ function SignUpForm({}: Props) {
           </div>
         </div>
       </form>
+      <div className="mt-8 flex flex-col space-y-2">
+        <p className="text-sm text-neutral-500">Sign up with</p>
+        <SecondaryButton link="https://google.com" text="Google" />
+        <SecondaryButton link="https://apple.com" text="Apple" />
+      </div>
     </>
   );
 }
