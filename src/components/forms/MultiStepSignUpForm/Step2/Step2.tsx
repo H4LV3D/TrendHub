@@ -4,9 +4,11 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Step2Schema } from "./Step2.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { resendOtp, verifyEmail } from "@/utils/requests/auth";
 import { useAppSelector } from "@/hooks/useAppSelector";
+import SecondaryButton from "@/components/shared/buttons/Secondary";
+import { decreaseAuthStep } from "@/store/slices/authStep/AuthStepSlice";
 
 interface FormInputs {
   code: number;
@@ -56,7 +58,7 @@ const Step2: React.FC = () => {
     try {
       setLoading(true);
       const res = await verifyEmail(selectedEmail, data.code);
-      router.push("/");
+      router.push("/dashboard");
     } catch (error: any) {
       if (error.code === "ERR_NETWORK") {
         console.log("hello ");
@@ -83,42 +85,41 @@ const Step2: React.FC = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid gap-[3.5rem]">
-          <div className="rounded-xl px-4 py-8 sm:border sm:border-gray-200 sm:shadow-lg sm:shadow-gray-200 sm:px-[3.5rem]">
-            <div className="mb-8">
-              <h1 className="mb-4 font-semibold text-[1.25rem] text-center">
-                Complete your sign up
-              </h1>
-              <p className="max-w-xs text-center mx-auto">
-                Enter the 4-digit code that we sent to your email
-              </p>
-            </div>
-            <div className="grid gap-[3rem] mb-8">
-              <div className="w-full grid place-items-center grid-cols-4 gap-x-3">
-                {otpInputs.map((value, index) => (
-                  <input
-                    key={index}
-                    type="text"
-                    name={`otp-${index}`}
-                    id={`otp-${index}`}
-                    maxLength={1} // Limit input to one character
-                    className="h-[4rem] w-[4rem] border rounded-lg text-[2rem] text-[#000] flex items-center justify-center pl-[1.5rem]"
-                    value={value}
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                    onKeyDown={(e) => handleKeyDown(index, e)}
-                    ref={(input) => (inputRefs.current[index] = input)}
-                  />
-                ))}
-              </div>
+        <div className="grid gap-[1.5rem]">
+          <div className="">
+            <p className="text-lg sm:text-xl md:text-2xl font-medium dark:text-neutral-400 font-raleway mb-3">
+              Verify your mail
+            </p>
+            <p className="max-w-xs text-neutral-500 text-sm mx-auto">
+              Enter the 4-digit code that we sent to your email
+            </p>
+          </div>
+          <div className="grid gap-[3rem] mb-8">
+            <div className="w-full grid place-items-center grid-cols-4 gap-x-3">
+              {otpInputs.map((value, index) => (
+                <input
+                  key={index}
+                  type="text"
+                  name={`otp-${index}`}
+                  id={`otp-${index}`}
+                  maxLength={1} // Limit input to one character
+                  className="h-[4rem] w-[4rem] border rounded-lg text-[2rem] text-[#000] flex items-center justify-center pl-[1.5rem] outline-[#000] "
+                  value={value}
+                  onChange={(e) => handleInputChange(index, e.target.value)}
+                  onKeyDown={(e) => handleKeyDown(index, e)}
+                  ref={(input) => (inputRefs.current[index] = input)}
+                />
+              ))}
             </div>
           </div>
+
           <div>
-            <p className="text-center mb-[1.25rem]">
+            <p className="text-center text-neutral-500 mb-[1.25rem]">
               Didn&apos;t receive the code?{" "}
               <button
                 disabled={resendingEmail}
                 onClick={() => handleClick()}
-                className="text-[#0043CE]"
+                className="text-[#000] font-[500] "
               >
                 <span>Resend</span>
               </button>
@@ -126,7 +127,7 @@ const Step2: React.FC = () => {
             <div className="grid place-items-center">
               <button
                 disabled={loading}
-                className="h-[3.5rem] w-full max-w-[21rem] bg-[#11424C] text-white font-semibold rounded-xl"
+                className="h-[3.5rem] w-full bg-[#000] text-white font-semibold rounded-xl"
               >
                 {loading ? <ButtonLoader /> : <span>Verify Email</span>}
               </button>
@@ -134,6 +135,12 @@ const Step2: React.FC = () => {
           </div>
         </div>
       </form>
+      <div className="mt-6 flex flex-col space-y-2">
+        <SecondaryButton
+          action={() => dispatch(decreaseAuthStep())}
+          text="Back"
+        />
+      </div>
     </>
   );
 };
