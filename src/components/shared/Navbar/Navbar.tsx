@@ -19,14 +19,21 @@ type Props = {
   nav?: boolean;
 };
 
+type User = {
+  fullName: string;
+  email: string;
+  avatarId: number;
+};
+
 function Header({ nav }: Props) {
   const path = usePathname();
   const dispatch = useAppDispatch();
 
-  let email;
+  let user = null;
   useEffect(() => {
     if (typeof window !== undefined) {
-      email = localStorage.getItem("email");
+      let retrievedUser = localStorage.getItem("user");
+      user = retrievedUser ? JSON.parse(retrievedUser) : null;
     }
   }, []);
 
@@ -39,7 +46,7 @@ function Header({ nav }: Props) {
 
   const [hasShadow, setHasShadow] = useState(false);
   const { bars } = icons.icons;
-  const user = useAppSelector((state) => state.user.data);
+  // const user = useAppSelector((state) => state.user.data);
   const { blogs, podcasts } = pageData;
   const data = [...blogs, ...podcasts];
 
@@ -96,11 +103,11 @@ function Header({ nav }: Props) {
           </div>
 
           <div>
-            <div className="flex items-center space-x-2 text-black dark:text-neutral-400">
+            <div className="flex items-center space-x-3 text-black dark:text-neutral-400">
               <div className="hidden sm:flex sm:border-r border-neutral-500 space-x-0  items-center text-black dark:text-neutral-400">
                 <Toggle />
               </div>
-              {email === null || email === "" ? (
+              {user === null || user === "" || user === undefined ? (
                 <div className="hidden sm:flex">
                   <SecondaryButton text="Login" link="/login" />
                 </div>
