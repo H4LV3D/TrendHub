@@ -6,6 +6,8 @@ import ButtonLoader from "@/components/shared/ButtonLoader/ButtonLoader";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import BrandLogo from "@/components/shared/BrandLogo/BrandLogo";
 import { ResolvingMetadata, Metadata } from "next";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { updateAvatarId } from "@/store/slices/user/UserSlice";
 
 type Props = {
   children: React.ReactNode;
@@ -101,9 +103,11 @@ export async function generateMetadata(
 }
 
 function AuthLayout({ children, form }: Props) {
-  const [selectedImage, setSelectedImage] = useState(8);
   const step = useAppSelector((state) => state.passwordRecoveryStep.step);
+  const authStep = useAppSelector((state) => state.authStep.step);
   const avatarId = useAppSelector((state) => state.user.avatarId);
+
+  const dispatch = useAppDispatch();
 
   return (
     <div
@@ -117,7 +121,8 @@ function AuthLayout({ children, form }: Props) {
         className="w-full h-screen bg-white dark:bg-neutral-800 hidden md:block"
       >
         <div className="mx-8 min-h-screen overflow-hidden">
-          {form !== "signup" && step !== 2 ? (
+          {(form !== "signup" && step !== 2) ||
+          (form === "signup" && authStep === 1) ? (
             <>
               <div className="flex flex-col justify-center items-center min-h-screen">
                 <div className="mb-3">
@@ -160,9 +165,9 @@ function AuthLayout({ children, form }: Props) {
                     <button
                       key={index + 1}
                       className={`mb-2 ${
-                        selectedImage === index + 1 ? "border-black" : ""
+                        avatarId === index + 1 ? "border-black" : ""
                       } border focus:border-black hover:border-neutral-700 rounded-xl  hover:shadow-xl hover:shadow-neutral-100 dark:border-neutral-700 `}
-                      onClick={() => setSelectedImage(index + 1)}
+                      onClick={() => dispatch(updateAvatarId(index + 1))}
                     >
                       <motion.img
                         src={`/assets/Bust/peep-${index + 1}.svg`}
@@ -197,7 +202,7 @@ function AuthLayout({ children, form }: Props) {
           exit={{ x: 100, opacity: 0.5 }}
           transition={{ duration: 1 }}
         >
-          <div className="md:mx-auto sm:border dark:border-neutral-800 rounded-xl sm:p-12 lg:p-10 mx-12 xl:p-12 sm:shadow-md ">
+          <div className="md:mx-auto md:min-w-[380px] md:min-h-[30rem] sm:border dark:border-neutral-800 rounded-xl sm:p-12 lg:p-10 mx-12 xl:p-12 sm:shadow-md ">
             <div className="mb-1">
               <TetiaryButton text="Back" link="/" small={true} />
             </div>
