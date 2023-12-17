@@ -6,6 +6,7 @@ import mobileSidebarReducer from "./slices/mobileSidebar/mobileSidebarSlice";
 import searchBoxReducer from "./slices/searchbox/searchBoxSlice";
 import arrangementReducer from "./slices/arrangement/arrangementSlice";
 import blogsReducer from "./slices/blogs/blogsSlice";
+import profileIconReducer from "./slices/profileIcon/profileIconSlice";
 
 const combinedReducers = combineReducers({
   authStep: authStepReducer,
@@ -15,6 +16,7 @@ const combinedReducers = combineReducers({
   searchBox: searchBoxReducer,
   arrangement: arrangementReducer,
   blogs: blogsReducer,
+  profileIcon: profileIconReducer,
 });
 
 const rootReducer = (state: any, action: any) => {
