@@ -13,7 +13,7 @@ interface User {
 
 interface InitialState {
   data: User | null;
-  avatarId?: string | number | null;
+  avatarId: number;
   networkError: boolean;
   isLoading: boolean;
   isNull: boolean;
@@ -21,7 +21,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   data: null,
-  avatarId: null,
+  avatarId: 8,
   networkError: false,
   isLoading: true,
   isNull: false,
@@ -31,10 +31,9 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    updateAvatarId: (state, action: PayloadAction<string | number | null>) => {
+    updateAvatarId: (state, action: PayloadAction<number>) => {
       state.avatarId = action.payload;
     },
-
     loginUser: (state, action: PayloadAction<User>) => {
       state.data = action.payload;
       state.isLoading = false;
