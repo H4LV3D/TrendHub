@@ -1,9 +1,10 @@
-interface SignUpFormInput {
-  firstName: string;
-  lastName: string;
+interface SignUpFormInterface {
+  // firstName: string;
+  // lastName: string;
+  fullName: string;
   email: string;
   password: string;
-  country: string;
+  avatarId: number;
 }
 
-export default SignUpFormInput;
+export default SignUpFormInterface;
