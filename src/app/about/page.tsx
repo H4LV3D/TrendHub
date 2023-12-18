@@ -24,10 +24,7 @@ const About = ({}: Props) => {
               line2: "new Generation!",
             }}
             data={blogs}
-            text="We aim
-                      to be the most creative company in the world and we're
-                      committed to building an inclusive culture where everyone
-                      is welcome."
+            text="We aim to be the most creative company in the world and we're committed to building an inclusive culture where everyone is welcome."
           />
 
           <MaxWidthProvider className=" px-8 xs:px-0">
@@ -55,20 +52,18 @@ const About = ({}: Props) => {
                   ))}
                 </div>
               </div>
-              <div className="w-1/2 mt-8">
-                <div className="">
-                  <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
-                    Hey there,
-                  </h2>
-                  <p className="!leading-7 text-justify text-sm md:text-base ">
-                    We are the intersection of culture, creativity, and
-                    technology, we are a global collective of cultural engineers
-                    building the future of brand marketing and communications.
-                    We leverage diverse mediums, and harness the power of media
-                    to forge authentic connections and catalyze cultural
-                    conversations.
-                  </p>
-                </div>
+              <div className="w-full md:w-1/2 md:mx-auto  mt-[4rem] ">
+                <h2 className="text-3xl md:text-5xl text-center font-oleo mb-[1rem] ">
+                  Hey there,
+                </h2>
+                <p className="!leading-7 text-justify  md:text-center text-sm md:text-base ">
+                  We are the intersection of culture, creativity, and
+                  technology, we are a global collective of cultural engineers
+                  building the future of brand marketing and communications. We
+                  leverage diverse mediums, and harness the power of media to
+                  forge authentic connections and catalyze cultural
+                  conversations.
+                </p>
               </div>
             </section>
             <hr />
@@ -85,25 +80,23 @@ const About = ({}: Props) => {
                     />
                   </div>
                 </div>
-                <div className="w-1/2 ml-auto ">
-                  <div className="xl:w-2/3 mr-6">
-                    <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
-                      All Collections.
-                    </h2>
-                    <p className="text-sm md:text-base !leading-7 text-justify ">
-                      We are the vanguards of progress, trailblazing a future
-                      where boundless creativity and collective empowerment
-                      redefine what's possible. We aim to be the most creative
-                      company in the world and we're committed to building an
-                      inclusive culture where everyone can thrive.
-                    </p>
-                  </div>
+                <div className="w-full md:w-1/2 md:mx-auto  mt-[4rem] ">
+                  <h2 className="text-3xl md:text-5xl text-center font-oleo mb-[1rem] ">
+                    All Collections.
+                  </h2>
+                  <p className="!leading-7 text-justify  md:text-center text-sm md:text-base ">
+                    We are the vanguards of progress, trailblazing a future
+                    where boundless creativity and collective empowerment
+                    redefine what's possible. We aim to be the most creative
+                    company in the world and we're committed to building an
+                    inclusive culture where everyone can thrive.
+                  </p>
                 </div>
               </div>
             </section>
             <hr />
-            <section className="min-h-[70vh] w-full md:container mx-auto px-8 xs:px-0">
-              <div className="w-full flex justify-center items-center pt-12">
+            <section className="min-h-[70vh] w-full md:container mx-auto px-8 pb-[4rem] xs:px-0">
+              <div className="w-full flex justify-center items-center pt-[4rem] ">
                 <div className="p-6 h-[360px] md:h-[500px] w-[360px] md:w-[500px] rounded-3xl bg-[#f9f9f9] drop-shadow-xl grid grid-cols-4 -rotate-6 ">
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7].map(
                     (item, index) => (
@@ -134,20 +127,16 @@ const About = ({}: Props) => {
                   )}
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
-                <div className="w-full flex justify-center items-center">
-                  <div className="xl:w-2/3 ml-6 ">
-                    <h2 className="text-3xl md:text-5xl font-oleo mb-[1rem] ">
-                      Peak Creativity!
-                    </h2>
-                    <p className="!leading-7 text-justify text-sm md:text-base ">
-                      We showcase the best of the best, inspiring creativity
-                      from around the globe. We are the vanguards of progress,
-                      trailblazing a future where boundless creativity and
-                      collective empowerment redefine what's possible.
-                    </p>
-                  </div>
-                </div>
+              <div className="w-full md:w-1/2 md:mx-auto  mt-[4rem] ">
+                <h2 className="text-3xl md:text-5xl text-center font-oleo mb-[1rem] ">
+                  Peak Creativity!
+                </h2>
+                <p className="!leading-7 text-justify  md:text-center text-sm md:text-base ">
+                  We showcase the best of the best, inspiring creativity from
+                  around the globe. We are the vanguards of progress,
+                  trailblazing a future where boundless creativity and
+                  collective empowerment redefine what's possible.
+                </p>
               </div>
             </section>
           </MaxWidthProvider>
