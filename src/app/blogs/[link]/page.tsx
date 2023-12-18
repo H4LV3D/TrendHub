@@ -53,7 +53,7 @@ export async function generateMetadata(
         "en-US": "/en-US",
       },
     },
-    metadataBase: new URL("https://trendingstuffs.vercel.app/"),
+    metadataBase: new URL("https://trendingstuffs.vercel.app"),
     openGraph: {
       title: `${selectedBlog.title} | Gen-Z Tales`,
       description: selectedBlog.description,
@@ -63,12 +63,12 @@ export async function generateMetadata(
       type: "article",
       images: [
         {
-          url: `https://treningstuffs.vercel.app/${selectedBlog.image}`,
+          url: `https://treningstuffs.vercel.app${selectedBlog.image}`,
           width: 800,
           height: 800,
         },
         {
-          url: `https://treningstuffs.vercel.app/${selectedBlog.image}`,
+          url: `https://treningstuffs.vercel.app${selectedBlog.image}`,
           width: 1800,
           height: 1600,
           alt: "My custom alt",
@@ -107,7 +107,7 @@ export async function generateMetadata(
       siteId: "1467726470533754880",
       creator: "@Kinkunmz_",
       creatorId: "1467726470533754880",
-      images: [`https://treningstuffs.vercel.app/${selectedBlog.image}`],
+      images: [`https://treningstuffs.vercel.app${selectedBlog.image}`],
     },
     verification: {
       google: "6l2jGxL2QK9ZvqZj2rQ9KgQa2G4R1Xb6YJ3kzWZfz9k",
