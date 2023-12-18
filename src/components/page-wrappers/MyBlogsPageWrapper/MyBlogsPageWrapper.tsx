@@ -8,7 +8,7 @@ import DisplayCard from "@/components/shared/DisplayCard/DisplayCard";
 type Props = {};
 
 const MyBlogsPageWrapper = ({}: Props) => {
-  const { blogs, reviews } = pageData;
+  const { blogs } = pageData;
   const arrangement = "cards";
   return (
     <>
