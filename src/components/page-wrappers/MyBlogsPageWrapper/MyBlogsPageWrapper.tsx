@@ -78,7 +78,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
                 ))}
             </div>
           </div>
-          <hr />
+
           <div className="bg-[#fff] dark:bg-[#191919] w-full min-h-[30vh] mt-8">
             <h3 className="text-xl font-medium">Recommended for you.</h3>
             <div className="py-5 flex flex-row items-center overflow-x-auto ">
