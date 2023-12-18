@@ -61,6 +61,10 @@ export default function RootLayout({
         <meta name="application-name" content="TrendHub  | Gen-Z Tales" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
+        <meta
+          name="google-site-verification"
+          content="P87XQ14dd_vM4ABrQLpLUhBIoPcvwWUKiOH0eMVnYy4"
+        />
 
         <meta
           name="keywords"
