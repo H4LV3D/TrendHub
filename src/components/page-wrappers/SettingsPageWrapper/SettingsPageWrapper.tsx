@@ -68,8 +68,8 @@ const SettingsPageWrapper = ({}: Props) => {
   return (
     <>
       <MaxWidthProvider>
-        <div className="px-8 sm:px-0">
-          <div className="bg-white dark:bg-[#191919] h-[14vh] w-full flex items-center">
+        <div className="">
+          <div className="bg-white dark:bg-[#191919] mb-6 sm:mb-0 sm:h-[14vh] w-full flex items-center">
             <div>
               <h1 className="text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
                 Settings
@@ -80,25 +80,25 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="sm:flex items-center space-x-8 mx-auto ">
-            <div className="h-[220px] w-[220px] rounded-[500%] p-3 lg:w-1/4 lg:h-full flex justify-center items-center border border-black lg:border-none mb-2 lg:mb-0 ">
+          <div className="sm:flex items-center sm:space-x-8 mx-auto mb-8 sm:mb-0 ">
+            <div className=" sm:h-[220px] sm:w-[220px] sm:rounded-[500%] sm:p-3 lg:w-1/4 lg:h-full sm:flex justify-center items-center sm:border border-black lg:border-none mb-2 lg:mb-0 ">
               <Image
                 src={`/assets/Bust/peep-8.svg`}
                 alt="avatar"
                 width={150}
                 height={150}
+                className="w-[90px] h-[90px] sm:w-[150px] sm:h-[150px] sm:rounded-full  "
               />
             </div>
-            <div className="w-1/2 lg:w-3/4 flex flex-col-reverse gap-y-4 xl:gap-y-0 lg:flex-row xl:items-center">
+            <div className="w-full sm:w-1/2 lg:w-3/4 grid gap-y-4 sm:flex flex-col-reverse  xl:gap-y-0 lg:flex-row xl:items-center">
               <div className=" lg:w-1/2 lg:border-r dark:border-neutral-800">
                 <h1 className="text-xl font-[500] dark:text-neutral-300 capitalize">
                   {name}
                 </h1>
-                {/* <p className="text-sm text-[#696969] ">johndoe@gmail.com</p> */}
-                <p className="about mt-0 text-[0.875rem] text-[#696969] dark:text-neutral-400 ">
+                <p className="mt-0 text-[0.75rem] sm:text-[0.875rem] text-[#696969] dark:text-neutral-400 ">
                   Technical Writer, Content Creator, and Software Developer.
                 </p>
-                <p className="about mt-1 text-[0.875rem] text-[#696969] dark:text-neutral-500 ">
+                <p className="mt-1 text-[0.75rem] sm:text-[0.875rem] text-[#696969] dark:text-neutral-500 ">
                   I write about technology, software development, and personal
                   development. I also write about my journey as a software
                   developer.
@@ -108,26 +108,26 @@ const SettingsPageWrapper = ({}: Props) => {
               <div className="lg:w-1/2">
                 <div className="xl:py-6 grid grid-cols-3 md:pr-10 xl:pr-0">
                   <div className="flex flex-col items-center">
-                    <h4 className="text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-xl sm:text-2xl font-sans text-center font-[500] dark:text-neutral-300 ">
                       23
                     </h4>
-                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
+                    <p className="text-sm sm:text-base text-[#696969] dark:text-neutral-400 ">
                       Publications
                     </p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <h4 className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-xl sm:text-2xl font-sans font-[500] dark:text-neutral-300 ">
                       1200
                     </h4>
-                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
+                    <p className="text-sm sm:text-base text-[#696969] dark:text-neutral-400 ">
                       Followers
                     </p>
                   </div>
                   <div className="flex flex-col items-center">
-                    <h4 className="text-2xl font-sans font-[500] dark:text-neutral-300 ">
+                    <h4 className="text-xl sm:text-2xl font-sans font-[500] dark:text-neutral-300 ">
                       1028
                     </h4>
-                    <p className="text-base text-[#696969] dark:text-neutral-400 ">
+                    <p className="text-sm sm:text-base text-[#696969] dark:text-neutral-400 ">
                       Following
                     </p>
                   </div>
