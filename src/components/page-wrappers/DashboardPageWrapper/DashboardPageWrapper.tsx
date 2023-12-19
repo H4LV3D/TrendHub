@@ -1,8 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MaxWidthProvider from "@/components/shared/MaxWidthProvider/MaxWidthProvider";
 import { GraphChart } from "@/components/shared/Charts/Charts";
 import Image from "next/image";
+
+type User = {
+  fullName: string;
+  email: string;
+  avatarId: number;
+};
 
 type Props = {};
 
@@ -78,8 +84,15 @@ const authors = [
 ];
 
 const DashboardPageWrapper = ({}: Props) => {
-  let retrievedUser = localStorage.getItem("user");
-  let user = retrievedUser ? JSON.parse(retrievedUser) : null;
+  const [user, setUser] = useState<User>();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const retrievedUser = localStorage.getItem("user");
+      setUser(retrievedUser ? JSON.parse(retrievedUser) : null);
+    }
+  }, []);
+
   return (
     <>
       <MaxWidthProvider>
