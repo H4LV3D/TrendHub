@@ -86,12 +86,6 @@ const Podcast = ({ params }: Props) => {
           content={selectedPodcast.date}
         />
         <meta property="article:author" content="Toluwalope Akinkunmi" />
-
-        {/* KEY WORDS */}
-        <meta
-          name="keywords"
-          content={`Gen-Z, Gen-Z Tales, Gen-Z Tech, Gen-Z Technology, Gen-Z Podcast, Gen-Z Newsletter, Gen-Z Blog, Gen-Z Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, Gen-Z Tales Podcast, Gen-Z Tales Newsletter, Gen-Z Tales Blog, Gen-Z Tales Article, ${selectedPodcast.title}, ${selectedPodcast.description}, ${selectedPodcast.tags}, ${selectedPodcast.date}, ${selectedPodcast.duration}, ${selectedPodcast.link}, ${selectedPodcast.image} `}
-        />
       </Head>
       <ViewLayout>
         <div className="bg-white dark:bg-[#191919] min-h-screen w-full">
@@ -110,10 +104,10 @@ const Podcast = ({ params }: Props) => {
                 />
               </div>
 
-              <div className="min-h-[40vh] border border-black dark:border-neutral-700 rounded-xl w-full mt-4 p-6">
+              <div className="min-h-[40vh] xxl:border border-black dark:border-neutral-700 rounded-xl w-full mt-4 p-6">
                 {/* Start */}
                 <div className="my-8">
-                  <Waveform url="/music.mp3" link={link} />
+                  <Waveform url="/assets/audio/newmusic.mp3" link={link} />
                 </div>
 
                 <div className="w-full text-black dark:text-neutral-400 mt-8">
