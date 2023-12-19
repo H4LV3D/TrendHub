@@ -113,10 +113,7 @@ const Podcast = ({ params }: Props) => {
               <div className="min-h-[40vh] border border-black dark:border-neutral-700 rounded-xl w-full mt-4 p-6">
                 {/* Start */}
                 <div className="my-8">
-                  <Waveform
-                    url="https://www.mfiles.co.uk/mp3-downloads/gs-cd-track2.mp3"
-                    link={link}
-                  />
+                  <Waveform url="/music.mp3" link={link} />
                 </div>
 
                 <div className="w-full text-black dark:text-neutral-400 mt-8">
@@ -124,10 +121,7 @@ const Podcast = ({ params }: Props) => {
                     {selectedPodcast.title}
                   </h1>
                   <div className="flex space-x-5 items-center mt-1">
-                    <Link
-                      href={``}
-                      className="font-raleway text-sm sm:text-base"
-                    >
+                    <Link href={``} className="font-raleway text-sm sm:text-sm">
                       Toluwalope Akinkunmi
                     </Link>
                     <p className="font-raleway font-normal text-sm">
