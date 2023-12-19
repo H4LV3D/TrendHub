@@ -47,7 +47,7 @@ function LoginForm() {
     console.log(data);
     setTimeout(() => {
       router.push("/dashboard");
-    }, 2000);
+    }, 1000);
   };
   return (
     <>
@@ -84,7 +84,10 @@ function LoginForm() {
             <PrimaryButton
               loading={loading}
               text="Login"
-              action={() => {}}
+              action={() => {
+                const user = localStorage.getItem("loggedOutUser");
+                user ? localStorage.setItem("user", user) : "";
+              }}
               type="submit"
             />
           </div>
