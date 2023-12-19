@@ -25,7 +25,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
   return (
     <div>
       <div className=" dark:bg-[#191919] w-full flex flex-row justify-between border-b dark:border-neutral-800 mb-8 pb-2">
-        <div className="w-full hidden md:flex items-center space-x-2">
+        <div className="w-full hidden md:flex items-center space-x-2 ">
           <Icons icon={plus} small={true} />
           {Nav.map((nav, index: number) => (
             <div key={index}>
@@ -62,7 +62,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
         {showArrangement ? (
           ""
         ) : (
-          <div className="w-full flex justify-end">
+          <div className="flex justify-end">
             <div className="flex space-x-0">
               <Icons
                 icon={square}
