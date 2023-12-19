@@ -39,8 +39,14 @@ function Header({ nav }: Props) {
   ];
 
   // const user = useAppSelector((state) => state.user.data);
-  let retrievedUser = localStorage.getItem("user");
-  let user = retrievedUser ? JSON.parse(retrievedUser) : null;
+  const [user, setUser] = useState<User>();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const retrievedUser = localStorage.getItem("user");
+      setUser(retrievedUser ? JSON.parse(retrievedUser) : null);
+    }
+  }, []);
 
   const { bars } = icons.icons;
   const { blogs, podcasts } = pageData;
@@ -104,7 +110,7 @@ function Header({ nav }: Props) {
               <div className="hidden sm:flex sm:border-r border-neutral-500 space-x-0  items-center text-black dark:text-neutral-400">
                 <Toggle />
               </div>
-              {user === null || user === "" || user === undefined ? (
+              {user === null || user === undefined ? (
                 <div className="hidden sm:flex">
                   <SecondaryButton text="Login" link="/login" />
                 </div>
