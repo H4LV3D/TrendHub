@@ -78,7 +78,7 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
 
   return (
     <div className="waveformContainer">
-      <div id="waveform" className="waveform dark:text-neutral-600"></div>
+      <div id="waveform" className="waveform dark:text-neutral-600 mb-6"></div>
       <div className="flex items-center space-x-6 justify-between md:w-3/4 mx-auto dark:text-neutral-400">
         <button
           className="flex justify-center items-center h-10 w-10 rounded-[50%] outline-none "
