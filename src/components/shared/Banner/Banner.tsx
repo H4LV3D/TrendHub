@@ -15,7 +15,7 @@ const Banner = ({ heading, text, data }: Props) => {
   return (
     <>
       <div
-        className="bg-white dark:bg-[#191919] h-[85vh] w-full flex flex-col items-center justify-center"
+        className="bg-white dark:bg-[#191919] h-[85vh] w-full flex flex-col items-center justify-center px-4 xs:px-0 "
         id="search"
       >
         <div className="flex flex-col sm:justify-center items-start sm:items-center mt-20 lg:w-[900px]">
