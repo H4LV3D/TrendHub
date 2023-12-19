@@ -21,7 +21,7 @@ const stats = [
   },
   {
     id: 3,
-    title: "Reading Time (mins)",
+    title: "Reading Time",
     description: "400",
     icon: "fas fa-clock",
   },
@@ -32,7 +32,7 @@ const stats = [
     icon: "fas fa-bookmark",
   },
   {
-    id: 4,
+    id: 5,
     title: "Written Content",
     description: "10",
     icon: "fas fa-pencil-alt",
@@ -78,13 +78,15 @@ const authors = [
 ];
 
 const DashboardPageWrapper = ({}: Props) => {
+  let retrievedUser = localStorage.getItem("user");
+  let user = retrievedUser ? JSON.parse(retrievedUser) : null;
   return (
     <>
       <MaxWidthProvider>
         <div className="bg-white dark:bg-[#191919] font-raleway dark:text-neutral-400 ">
-          <div className="py-10 md:py-0 md:h-[14vh] w-full flex flex-col items-start justify-center">
+          <div className="mb-6 sm:mb-0 sm:h-[14vh] w-full flex flex-col items-start justify-center">
             <h1 className="text-xl md:text-2xl text-black dark:text-neutral-200 font-raleway font-medium">
-              Welcome John,
+              Welcome {user?.fullName.split(" ")[0]},
             </h1>
             <p className="text-sm font-raleway font-normal dark:text-neutral-400 text-gray-800 ">
               Here's what you've been up to.
