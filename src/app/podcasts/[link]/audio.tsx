@@ -17,13 +17,16 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
   const { podcasts } = pageData;
   const { theme } = useContext(ThemeContext);
 
+  const [currentTime, setCurrentTime] = useState<number>(0);
+  const [duration, setDuration] = useState<number>(0);
+
   useEffect(() => {
     waveformRef.current = WaveSurfer.create({
       barWidth: 3,
       cursorWidth: 1,
       container: "#waveform",
       backend: "WebAudio",
-      height: 80,
+      height: 70,
       progressColor: theme === "light" ? "#000" : "#d0d0d0",
       waveColor: theme === "light" ? "#EFEFEF" : "#333",
       cursorColor: "transparent",
@@ -31,6 +34,18 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
 
     if (waveformRef.current) {
       waveformRef.current.load(url);
+    }
+
+    if (waveformRef.current) {
+      waveformRef.current.on("audioprocess", () => {
+        const currentTime = waveformRef.current?.getCurrentTime() || 0;
+        setCurrentTime(currentTime);
+      });
+
+      waveformRef.current.on("ready", () => {
+        const duration = waveformRef.current?.getDuration() || 0;
+        setDuration(duration);
+      });
     }
 
     return () => {
@@ -52,8 +67,8 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
       const currentTime = waveformRef.current.getCurrentTime();
       const newTime = Math.min(
         waveformRef.current.getDuration(),
-        currentTime + 15
-      ); // Ensure the new time is within the duration
+        currentTime + 10
+      );
       waveformRef.current.seekTo(newTime);
     }
   };
@@ -61,7 +76,7 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
   const handleRewind = () => {
     if (waveformRef.current) {
       const currentTime = waveformRef.current.getCurrentTime();
-      const newTime = Math.max(0, currentTime - 15);
+      const newTime = Math.max(0, currentTime - 10);
       waveformRef.current.seekTo(newTime);
     }
   };
@@ -76,9 +91,24 @@ const Waveform: React.FC<WaveformProps> = ({ url, link }) => {
     router.push(`/podcasts/${link - 1}`);
   };
 
+  const formatTime = (time: number): string => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${String(minutes).padStart(1, "0")}:${String(seconds).padStart(
+      2,
+      "0"
+    )}`;
+  };
+
   return (
     <div className="waveformContainer">
       <div id="waveform" className="waveform dark:text-neutral-600 mb-6"></div>
+
+      <div className="timing flex justify-between items-center">
+        <p className="">{formatTime(currentTime)} </p>
+        <p className="">{formatTime(duration)} </p>
+      </div>
+
       <div className="flex items-center space-x-6 justify-between md:w-3/4 mx-auto dark:text-neutral-400">
         <button
           className="flex justify-center items-center h-10 w-10 rounded-[50%] outline-none "
