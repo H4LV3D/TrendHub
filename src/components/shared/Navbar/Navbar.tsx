@@ -14,6 +14,7 @@ import MaxWidthProvider from "../MaxWidthProvider/MaxWidthProvider";
 import BrandLogo from "../BrandLogo/BrandLogo";
 import pageData from "@/data/index.json";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Props = {
   nav?: boolean;
@@ -26,16 +27,9 @@ type User = {
 };
 
 function Header({ nav }: Props) {
+  const router = useRouter();
   const path = usePathname();
   const dispatch = useAppDispatch();
-
-  let user = null;
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      let retrievedUser = localStorage.getItem("user");
-      user = retrievedUser ? JSON.parse(retrievedUser) : null;
-    }
-  }, []);
 
   const navItems = [
     { text: "About", link: "/about" },
@@ -44,11 +38,14 @@ function Header({ nav }: Props) {
     { text: "Newsletters", link: "/newsletters" },
   ];
 
-  const [hasShadow, setHasShadow] = useState(false);
-  const { bars } = icons.icons;
   // const user = useAppSelector((state) => state.user.data);
+  let retrievedUser = localStorage.getItem("user");
+  let user = retrievedUser ? JSON.parse(retrievedUser) : null;
+
+  const { bars } = icons.icons;
   const { blogs, podcasts } = pageData;
   const data = [...blogs, ...podcasts];
+  const [hasShadow, setHasShadow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,16 +112,30 @@ function Header({ nav }: Props) {
                 <div className="flex flex-row items-center space-x-0">
                   <div className="">
                     <img
-                      src={`/assets/Bust/peep-8.svg`}
+                      src={`/assets/Bust/peep-${user.avatarId}.svg`}
                       className="h-12 w-12"
                       alt="your custom illustration"
                     />
                   </div>
                   <div>
                     <Link href="/dashboard">
-                      <p className="text-base m-0">Toluwalope</p>
+                      <p className="text-sm font-[500] sm:text-base m-0">
+                        {user.fullName.split(" ")[0]}
+                      </p>
                     </Link>
-                    <TetiaryButton text="Logout" link="/logout" small={true} />
+                    <TetiaryButton
+                      text="Logout"
+                      action={() => {
+                        localStorage.setItem(
+                          "loggedOutUser",
+                          JSON.stringify(user)
+                        );
+                        localStorage.setItem("user", "");
+                        router.refresh();
+                      }}
+                      // link="/logout"
+                      small={true}
+                    />
                   </div>
                 </div>
               )}
