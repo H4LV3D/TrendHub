@@ -1,14 +1,19 @@
-"use client";
+// "use client";
 import React from "react";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/footer/Footer";
 import ModalProvider from "@/components/page-wrappers/ModalProvider/ModalProvider";
 import { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
+type Props = {
+  children?: React.ReactNode;
+  page?: string;
+};
+
+export async function generateMetadata({ page }: Props): Promise<Metadata> {
   return {
-    generator: "Gen-Z Tales | Trend Hub",
-    applicationName: "Gen-Z Tales | Trend Hub",
+    generator: "Info Hub",
+    applicationName: "Info Hub",
     referrer: "origin-when-cross-origin",
     authors: [{ name: "Toluwalope Akinkunmi", url: "https://toluwalope.tech" }],
     creator: "Toluwalope Akinkunmi",
@@ -48,12 +53,40 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     manifest: "https://trendingstuffs.vercel.app/manifest.json",
+    title: `${page} | Info Hub`,
+    description: `Explore the intersection of culture, creativity, and technology on InfoHub - the central hub for newsletters, podcasts, and blogs.`,
+    twitter: {
+      card: "summary_large_image",
+      title: `InfoHub`,
+      description:
+        "Explore the intersection of culture, creativity, and technology on TrendHub - the central hub for newsletters, podcasts, and blogs.",
+      creator: "@Kinkunmz_",
+      images: [
+        `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
+      ],
+    },
+    openGraph: {
+      title: `Home | InfoHub`,
+      description: `Explore the intersection of culture, creativity, and technology on TrendHub - the central hub for newsletters, podcasts, and blogs.`,
+      url: "https://trendingstuffs.vercel.app",
+      siteName: "InfoHub",
+      type: "article",
+      images: [
+        {
+          url: `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
+          width: 800,
+          height: 800,
+        },
+        {
+          url: `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
+          width: 600,
+          height: 600,
+          alt: "My custom alt",
+        },
+      ],
+    },
   };
 }
-
-type Props = {
-  children: React.ReactNode;
-};
 
 const PageLayout = ({ children }: Props) => {
   return (
