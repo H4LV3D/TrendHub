@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/footer/Footer";
 import ModalProvider from "@/components/page-wrappers/ModalProvider/ModalProvider";
-
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
