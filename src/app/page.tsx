@@ -8,56 +8,12 @@ import Generations from "./home/Generations";
 import Subscribe from "./home/Subscribe";
 import Banner from "@/components/shared/Banner/Banner";
 import PageLayout from "@/layouts/PageLayout/PageLayout";
-import { ResolvingMetadata, Metadata } from "next";
-
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const previousImages = (await parent).openGraph?.images || [];
-  return {
-    title: `Home | Info Hub`,
-    description: `Explore the intersection of culture, creativity, and technology on InfoHub - the central hub for newsletters, podcasts, and blogs.`,
-    twitter: {
-      card: "summary_large_image",
-      title: `InfoHub`,
-      description:
-        "Explore the intersection of culture, creativity, and technology on TrendHub - the central hub for newsletters, podcasts, and blogs.",
-      creator: "@Kinkunmz_",
-      images: [
-        `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
-      ],
-    },
-    openGraph: {
-      title: `Home | InfoHub`,
-      description: `Explore the intersection of culture, creativity, and technology on TrendHub - the central hub for newsletters, podcasts, and blogs.`,
-      url: "https://trendingstuffs.vercel.app",
-      siteName: "InfoHub",
-      phoneNumbers: ["+234 815 943 3370"],
-      type: "article",
-      images: [
-        {
-          url: `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
-          width: 800,
-          height: 800,
-        },
-        {
-          url: `https://treningstuffs.vercel.app/assets/images/regenerated.jpg`,
-          width: 600,
-          height: 600,
-          alt: "My custom alt",
-        },
-        ...previousImages,
-      ],
-      locale: "en_US",
-    },
-  };
-}
 
 export default function Home({}: {}) {
   const { blogs, reviews } = pageData;
   return (
     <>
-      <PageLayout>
+      <PageLayout page="Home">
         <div className=" md:container mx-auto px-8 xs:px-0 font-raleway">
           <Banner
             heading={{
