@@ -80,17 +80,17 @@ const SettingsPageWrapper = ({}: Props) => {
             </div>
           </div>
 
-          <div className="sm:flex items-center sm:space-x-8 mx-auto mb-8 sm:mb-0 ">
-            <div className=" sm:h-[220px] sm:w-[220px] sm:rounded-[500%] sm:p-3 lg:w-1/4 lg:h-full sm:flex justify-center items-center sm:border border-black lg:border-none mb-2 lg:mb-0 ">
+          <div className="sm:flex items-center sm:space-x-8 mx-auto mb-8 sm:mb-0">
+            <div className=" sm:h-[200px] sm:w-[200px] sm:rounded-[50%] sm:p-3 lg:w-1/4 lg:h-full sm:flex justify-center items-center sm:border border-black lg:border-none mb-2 lg:mb-0">
               <Image
                 src={`/assets/Bust/peep-8.svg`}
                 alt="avatar"
                 width={150}
                 height={150}
-                className="w-[90px] h-[90px] sm:w-[150px] sm:h-[150px] sm:rounded-full  "
+                className="w-[90px] h-[90px] sm:w-[150px] sm:h-[150px] sm:rounded-full "
               />
             </div>
-            <div className="w-full sm:w-1/2 lg:w-3/4 grid gap-y-4 sm:flex flex-col-reverse  xl:gap-y-0 lg:flex-row xl:items-center">
+            <div className="w-full sm:w-1/2 lg:w-3/4 grid gap-y-4 sm:flex flex-col-reverse  xl:gap-y-0 lg:flex-row lg:items-center ">
               <div className=" lg:w-1/2 lg:border-r dark:border-neutral-800">
                 <h1 className="text-xl font-[500] dark:text-neutral-300 capitalize">
                   {name}
