@@ -23,7 +23,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
             </p>
           </div>
 
-          <div className="w-full md:flex min-h-[30vh] rounded-2xl drop-shadow-xl border dark:border-neutral-700 p-6 px-12">
+          <div className="w-full md:flex min-h-[30vh] rounded-2xl drop-shadow-md bg-white dark:bg-neutral-800 border dark:border-neutral-700 p-6 px-12">
             <div className="lg:flex items-center">
               <div className="w-full lg:w-2/3">
                 <span className="py-1.5 px-4 border border-black dark:border-neutral-700 text-sm rounded-full ">
@@ -69,7 +69,7 @@ const MyBlogsPageWrapper = ({}: Props) => {
 
           <div className="bg-[#fff] dark:bg-[#191919] w-full min-h-[30vh] mt-8">
             <h3 className="text-xl font-medium">Bookmarks</h3>
-            <div className="py-5 flex flex-row overflow-x-auto ">
+            <div className="py-5 flex flex-row overflow-x-auto slide">
               {blogs &&
                 blogs?.map((blog, index) => (
                   <div key={index} className="mb-3 min-w-[23rem] mr-5 ">
