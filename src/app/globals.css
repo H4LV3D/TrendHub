@@ -171,19 +171,23 @@ select {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px !important;
+}
+
+.slide::-webkit-scrollbar {
+  width: 4px !important;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #888;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* Handle on hover */
