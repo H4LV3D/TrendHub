@@ -48,7 +48,7 @@ const EditorPageWrapper = () => {
           </div>
 
           <div className="mt-5 flex space-x-6">
-            <div className="w-4/5 border-r dark:border-neutral-800 shadow-sm px-4">
+            <div className="w-4/5 border-r dark:border-neutral-800 px-4">
               {(() => {
                 switch (activeTab) {
                   case "New":
