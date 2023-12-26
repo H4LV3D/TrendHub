@@ -451,7 +451,7 @@
           "p": "**Decentralized Identifiers (DIDs)** are a new type of identifier that enables self-sovereign identity. They are a way to create a unique identifier for a person or thing that is not controlled by any central authority. DIDs can be used to create a digital identity, which can then be used to authenticate and authorize access to resources."
         },
         {
-          "p": "**Decentralized Web Notes (DWNs)** is a personal data store containing personalinformation, documents, media, and other sensitive data, located on a decentralized network. They are not hosted by any single server, but rather distributed across many different computers, it is decentralized. "
+          "p": "**Decentralized Web Nodes (DWNs)** is a personal data store containing personalinformation, documents, media, and other sensitive data, located on a decentralized network. They are not hosted by any single server, but rather distributed across many different computers, it is decentralized. "
         },
         {
           "p": "**Verifiable Credentials (VCs)** are a new type of digital credential that can be used to prove identity, age, or other attributes. They are issued by an issuer and can be verified by a verifier. VCs are a way to prove your identity without revealing any personal information."
