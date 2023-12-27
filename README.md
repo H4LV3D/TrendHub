@@ -1,4 +1,4 @@
-# TrendHub
+# TrendHub | Info Hub
 
 ## Description
 
@@ -8,7 +8,7 @@ TrendHub is a Next.js version 13 website that serves as a central hub for newsle
 
 ## Table of Contents
 
-- [TrendHub](#trendhub)
+- [TrendHub | Info Hub](#trendhub--info-hub)
   - [Description](#description)
   - [Still under Construction !!!](#still-under-construction-)
   - [Table of Contents](#table-of-contents)

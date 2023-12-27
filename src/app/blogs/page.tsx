@@ -53,7 +53,7 @@ const Blogs = ({}: Props) => {
                   ? "grid-cols-1"
                   : arrangement === "double"
                   ? "grid-cols-2 gap-8"
-                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6"
+                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-6 md:gap-y-10"
               } `}
             >
               {blogs.map((blog, index) => (

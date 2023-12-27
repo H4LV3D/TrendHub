@@ -45,8 +45,9 @@ const DisplayCard = ({ display, arrangement }: Props) => {
             } bg-transparent dark:bg-neutral-800/50 flex items-center justify-center `}
           >
             <img
-              src={`/assets/Bust/peep-8.svg`}
-              className="w-[200px]"
+              // src={`/assets/Bust/peep-${Math.ceil(100 * Math.random())}.svg`}
+              src={`/assets/images/placeholder_image.png`}
+              className="object-cover w-full h-full rounded-xl"
               alt="An SVG illustration of a person dressed in different clothings"
             />
           </div>
