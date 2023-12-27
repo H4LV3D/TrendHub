@@ -48,14 +48,15 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
           ))}
         </div>
         <div className="md:hidden">
-          <div className="pr-[1rem] border rounded-[0.5rem] bg-[#f7f7f7] dark:bg-neutral-700 dark:border-neutral-600 cursor-pointer">
-            <select className="py-[0.75rem] px-[1rem] text-[#000] font-[500] rounded-[0.625rem] bg-[#f7f7f7]  dark:bg-neutral-700 dark:border-neutral-700 outline-none">
+          <div className="border rounded-[0.625rem] bg-[#f7f7f7] dark:bg-neutral-700 dark:border-neutral-600 cursor-pointer flex items-center px-[1rem]">
+            <select className="py-[0.75rem] cursor-pointer min-w-[7rem] text-neutral-500 focus:text-[#000] font-[500] rounded-[0.625rem] bg-transparent dark:border-neutral-700 w-full outline-none">
               {Nav.map((item, index) => (
                 <option value={item.text} key={index}>
                   {item.text}
                 </option>
               ))}
             </select>
+            <i className="fas fa-chevron-down fa-md fa-fw text-neutral-400 "></i>
           </div>
         </div>
 
@@ -63,7 +64,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
           ""
         ) : (
           <div className="flex justify-end">
-            <div className="flex space-x-2 md:space-x-0">
+            <div className="flex space-x-3 md:space-x-0">
               <Icons
                 icon={square}
                 color={arrangement === "single" ? "#000" : "#a3a3a3"}
