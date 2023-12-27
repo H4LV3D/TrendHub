@@ -63,7 +63,7 @@ const DisplayNavBar = ({ Nav, showArrangement, setTab }: Props) => {
           ""
         ) : (
           <div className="flex justify-end">
-            <div className="flex space-x-0">
+            <div className="flex space-x-2 md:space-x-0">
               <Icons
                 icon={square}
                 color={arrangement === "single" ? "#000" : "#a3a3a3"}

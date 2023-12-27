@@ -46,7 +46,7 @@ const Podcast = ({}: Props) => {
               } `}
             >
               {podcasts.map((podcast, index) => (
-                <div key={index} className="">
+                <div key={index} className="mb-6">
                   <DisplayCard display={podcast} arrangement={arrangement} />
                 </div>
               ))}
