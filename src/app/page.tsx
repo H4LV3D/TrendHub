@@ -1,16 +1,13 @@
 import React from "react";
 import HomePageWrapper from "@/components/page-wrappers/HomePageWrapper/HomePageWrapper";
 
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const previousKeywords = (await parent).keywords || [];
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `Home | InfoHub`,
     description: `Explore the intersection of culture, creativity, and technology on InfoHub - the central hub for newsletters, podcasts, and blogs.`,
-    keywords: ["Gen-Z", "Info Hub", ...previousKeywords],
+    keywords: ["Gen-Z", "Info Hub"],
     metadataBase: new URL("https://trendingstuffs.vercel.app"),
     twitter: {
       card: "summary_large_image",
