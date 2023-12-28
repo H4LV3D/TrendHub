@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SearchBox from "@/components/shared/search/Search";
 import { motion } from "framer-motion";
