@@ -10,7 +10,6 @@ type Props = {};
 
 const About = ({}: Props) => {
   const { blogs } = pageData;
-
   const angles = [-9, 0, 9];
   const images = [8, 43, 46];
 
