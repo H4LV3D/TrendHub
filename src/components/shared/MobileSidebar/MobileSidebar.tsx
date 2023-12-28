@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+"use client";
+import React, { useEffect } from "react";
 import SidebarLink from "./SidebarLink/SidebarLink";
 import { motion } from "framer-motion";
 import { hideMobileSidebar } from "../../../store/slices/mobileSidebar/mobileSidebarSlice";
@@ -19,6 +20,10 @@ const MobileSidebar: React.FC = () => {
     { page: "Settings", link: "/settings" },
   ];
   const NavigationLinks = [
+    {
+      page: "Home",
+      link: "/",
+    },
     {
       page: "About",
       link: "/about",
