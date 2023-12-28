@@ -22,7 +22,7 @@ const Generations = (props: Props) => {
           </div>
         </div>
         <div className="py-8 overflow-hidden">
-          <div className="relative sm:w-[750px] md:w-[900px] lg:w-[1100px] h-[350px]">
+          <div className="relative w-[750px] md:w-[900px] lg:w-[1100px] h-[350px]">
             <div className="absolute top-0 left-0 w-[275px * 100] flex space-x-4 animate-marquee">
               {[...Array(100)].map((_, index) => (
                 <div
