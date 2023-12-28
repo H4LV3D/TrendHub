@@ -34,11 +34,11 @@ function Genres({}: Props) {
     return (
       <div
         key={item.name}
-        className={`h-[40vh] md:h-[70vh] w-full flex ${
+        className={`h-[60vh] md:h-[80vh] w-full flex ${
           item.name === "Romance & Relationships" ? "flex-row-reverse" : ""
         } items-center`}
       >
-        <div className="w-full md:w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[40vh] md:h-[70vh] flex flex-col justify-center items-center">
+        <div className="w-full md:w-1/2 bg-[#F7F7F7] dark:bg-neutral-800/75 h-[60vh] md:h-[80vh] flex flex-col justify-center items-center">
           <h4 className="font-oleo text-3xl mb-4 dark:text-neutral-200">
             {item.name}
           </h4>
@@ -55,7 +55,7 @@ function Genres({}: Props) {
             />
           </div>
         </div>
-        <div className="hidden w-1/2 h-[70vh] md:flex justify-center items-center">
+        <div className="hidden w-1/2 h-[80vh] md:flex justify-center items-center">
           <img
             src={item.illustrativeImage}
             className="xs:w-[220px] sm:w-[45%] md:w-[48%] lg:w-[48%] xl:w-[55%] dark:opacity-80 mx-auto"
@@ -80,7 +80,7 @@ function Genres({}: Props) {
           </p>
         </div>
         <div className="pt-8 w-full overflow-hidden">
-          <div className="relative w-full mx-auto md:w-[900px] lg:w-[1100px] h-[120vh] md:h-[210vh]">
+          <div className="relative w-full mx-auto md:w-[900px] lg:w-[1100px] h-[180vh] md:h-[240vh]">
             <div className="absolute top-0 left-0 w-full">
               {genres.map((genre, index) => (
                 <div key={index}>{renderSection(genre)}</div>
