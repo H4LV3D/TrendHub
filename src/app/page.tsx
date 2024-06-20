@@ -1,6 +1,5 @@
 import React from "react";
 import HomePageWrapper from "@/components/page-wrappers/HomePageWrapper/HomePageWrapper";
-
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
